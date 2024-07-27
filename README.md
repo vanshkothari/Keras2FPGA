@@ -1,5 +1,5 @@
 # Keras2FPGA
-This is the source code for Keras to FPGA project using HLS project from (link)
+This is the source code for Keras to FPGA project using HLS project from https://scavengercircuits.wordpress.com/2024/07/27/bridging-ai-and-hardware-acceleration-from-keras-to-fpga-via-hls/
 
 autoencoder_with_gaussian(1).py is the main python code with the NN model, and the hls4ml code to generate HLS code. 
 The generated source code for HLS is stored in the ./encoder and ./decoder directories. 
