@@ -1,0 +1,565 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xD231F5FAD052E5B2",
+      "device": "xc7a35tcpg236-1",
+      "gen_directory": "../../../../autoencoder.gen/sources_1/bd/autoencoder",
+      "name": "autoencoder",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2024.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "encoder_0": "",
+      "constraint_layer_top_0": "",
+      "decoder_0": "",
+      "sig2onehot_0": "",
+      "onehot2sig_0": "",
+      "rst_clk_wiz_100M": "",
+      "AWGN_adder_0": ""
+    },
+    "ports": {
+      "reset_rtl_0": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_HIGH"
+          }
+        }
+      },
+      "sig_vld_0": {
+        "direction": "I"
+      },
+      "sig_0": {
+        "direction": "I",
+        "left": "3",
+        "right": "0"
+      },
+      "aclk_0": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "autoencoder_aclk_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "sig_1": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "sig_ack_1": {
+        "direction": "I"
+      },
+      "ap_ready_0": {
+        "direction": "O"
+      },
+      "sig_ack_0": {
+        "direction": "O"
+      },
+      "sig_vld_1": {
+        "direction": "O"
+      },
+      "SNR_0": {
+        "direction": "I",
+        "left": "3",
+        "right": "0"
+      }
+    },
+    "components": {
+      "encoder_0": {
+        "vlnv": "xilinx.com:hls:encoder:1.0",
+        "ip_revision": "2113655552",
+        "xci_name": "autoencoder_encoder_0_0",
+        "xci_path": "ip\\autoencoder_encoder_0_0\\autoencoder_encoder_0_0.xci",
+        "inst_hier_path": "encoder_0"
+      },
+      "constraint_layer_top_0": {
+        "vlnv": "xilinx.com:hls:constraint_layer_top:1.0",
+        "ip_revision": "2113663061",
+        "xci_name": "autoencoder_constraint_layer_top_0_0",
+        "xci_path": "ip\\autoencoder_constraint_layer_top_0_0\\autoencoder_constraint_layer_top_0_0.xci",
+        "inst_hier_path": "constraint_layer_top_0"
+      },
+      "decoder_0": {
+        "vlnv": "xilinx.com:hls:decoder:1.0",
+        "ip_revision": "2113655549",
+        "xci_name": "autoencoder_decoder_0_0",
+        "xci_path": "ip\\autoencoder_decoder_0_0\\autoencoder_decoder_0_0.xci",
+        "inst_hier_path": "decoder_0"
+      },
+      "sig2onehot_0": {
+        "vlnv": "xilinx.com:module_ref:sig2onehot:1.0",
+        "ip_revision": "1",
+        "xci_name": "autoencoder_sig2onehot_0_0",
+        "xci_path": "ip\\autoencoder_sig2onehot_0_0\\autoencoder_sig2onehot_0_0.xci",
+        "inst_hier_path": "sig2onehot_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "sig2onehot",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "aclk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "autoencoder_aclk_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "areset": {
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_HIGH",
+                "value_src": "const_prop"
+              }
+            }
+          },
+          "sig": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "sig_vld": {
+            "direction": "I"
+          },
+          "sig_ack": {
+            "direction": "O"
+          },
+          "onehot": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "onehot_vld": {
+            "direction": "O"
+          },
+          "onehot_ack": {
+            "direction": "I"
+          }
+        }
+      },
+      "onehot2sig_0": {
+        "vlnv": "xilinx.com:module_ref:onehot2sig:1.0",
+        "ip_revision": "1",
+        "xci_name": "autoencoder_onehot2sig_0_0",
+        "xci_path": "ip\\autoencoder_onehot2sig_0_0\\autoencoder_onehot2sig_0_0.xci",
+        "inst_hier_path": "onehot2sig_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "onehot2sig",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "aclk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "autoencoder_aclk_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "areset": {
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_HIGH",
+                "value_src": "const_prop"
+              }
+            }
+          },
+          "onehot": {
+            "direction": "I",
+            "left": "255",
+            "right": "0",
+            "parameters": {
+              "LAYERED_METADATA": {
+                "value": "undef",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "onehot_valid": {
+            "direction": "I"
+          },
+          "onehot_ack": {
+            "direction": "O"
+          },
+          "sig": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "sig_vld": {
+            "direction": "O"
+          },
+          "sig_ack": {
+            "direction": "I"
+          }
+        }
+      },
+      "rst_clk_wiz_100M": {
+        "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
+        "ip_revision": "15",
+        "xci_name": "autoencoder_rst_clk_wiz_100M_1",
+        "xci_path": "ip\\autoencoder_rst_clk_wiz_100M_1\\autoencoder_rst_clk_wiz_100M_1.xci",
+        "inst_hier_path": "rst_clk_wiz_100M"
+      },
+      "AWGN_adder_0": {
+        "vlnv": "xilinx.com:module_ref:AWGN_adder:1.0",
+        "ip_revision": "1",
+        "xci_name": "autoencoder_AWGN_adder_0_0",
+        "xci_path": "ip\\autoencoder_AWGN_adder_0_0\\autoencoder_AWGN_adder_0_0.xci",
+        "inst_hier_path": "AWGN_adder_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "AWGN_adder",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "aclk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "autoencoder_aclk_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "areset": {
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_HIGH",
+                "value_src": "const_prop"
+              }
+            }
+          },
+          "SNR": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "I": {
+            "direction": "I",
+            "left": "15",
+            "right": "0",
+            "parameters": {
+              "LAYERED_METADATA": {
+                "value": "undef",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "I_vld": {
+            "direction": "I"
+          },
+          "I_ack": {
+            "direction": "O"
+          },
+          "Q": {
+            "direction": "I",
+            "left": "15",
+            "right": "0",
+            "parameters": {
+              "LAYERED_METADATA": {
+                "value": "undef",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "Q_vld": {
+            "direction": "I"
+          },
+          "Q_ack": {
+            "direction": "O"
+          },
+          "I_noisy": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "I_noisy_vld": {
+            "direction": "O"
+          },
+          "I_noisy_ack": {
+            "direction": "I"
+          },
+          "Q_noisy": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "Q_noisy_vld": {
+            "direction": "O"
+          },
+          "Q_noisy_ack": {
+            "direction": "I"
+          }
+        }
+      }
+    },
+    "nets": {
+      "AWGN_adder_0_I_ack": {
+        "ports": [
+          "AWGN_adder_0/I_ack",
+          "constraint_layer_top_0/encoded_output_0_ap_ack"
+        ]
+      },
+      "AWGN_adder_0_I_noisy": {
+        "ports": [
+          "AWGN_adder_0/I_noisy",
+          "decoder_0/input_114_0"
+        ]
+      },
+      "AWGN_adder_0_I_noisy_vld": {
+        "ports": [
+          "AWGN_adder_0/I_noisy_vld",
+          "decoder_0/input_114_0_ap_vld"
+        ]
+      },
+      "AWGN_adder_0_Q_ack": {
+        "ports": [
+          "AWGN_adder_0/Q_ack",
+          "constraint_layer_top_0/encoded_output_1_ap_ack"
+        ]
+      },
+      "AWGN_adder_0_Q_noisy": {
+        "ports": [
+          "AWGN_adder_0/Q_noisy",
+          "decoder_0/input_114_1"
+        ]
+      },
+      "AWGN_adder_0_Q_noisy_vld": {
+        "ports": [
+          "AWGN_adder_0/Q_noisy_vld",
+          "decoder_0/input_114_1_ap_vld"
+        ]
+      },
+      "SNR_0_1": {
+        "ports": [
+          "SNR_0",
+          "AWGN_adder_0/SNR"
+        ]
+      },
+      "aclk_0_1": {
+        "ports": [
+          "aclk_0",
+          "rst_clk_wiz_100M/slowest_sync_clk",
+          "sig2onehot_0/aclk",
+          "onehot2sig_0/aclk",
+          "decoder_0/ap_clk",
+          "encoder_0/ap_clk",
+          "AWGN_adder_0/aclk",
+          "constraint_layer_top_0/ap_clk"
+        ]
+      },
+      "constraint_layer_top_0_encoded_input_0_ap_ack": {
+        "ports": [
+          "constraint_layer_top_0/encoded_input_0_ap_ack",
+          "encoder_0/layer4_out_0_ap_ack"
+        ]
+      },
+      "constraint_layer_top_0_encoded_input_1_ap_ack": {
+        "ports": [
+          "constraint_layer_top_0/encoded_input_1_ap_ack",
+          "encoder_0/layer4_out_1_ap_ack"
+        ]
+      },
+      "constraint_layer_top_0_encoded_output_0": {
+        "ports": [
+          "constraint_layer_top_0/encoded_output_0",
+          "AWGN_adder_0/I"
+        ]
+      },
+      "constraint_layer_top_0_encoded_output_0_ap_vld": {
+        "ports": [
+          "constraint_layer_top_0/encoded_output_0_ap_vld",
+          "AWGN_adder_0/I_vld"
+        ]
+      },
+      "constraint_layer_top_0_encoded_output_1": {
+        "ports": [
+          "constraint_layer_top_0/encoded_output_1",
+          "AWGN_adder_0/Q"
+        ]
+      },
+      "constraint_layer_top_0_encoded_output_1_ap_vld": {
+        "ports": [
+          "constraint_layer_top_0/encoded_output_1_ap_vld",
+          "AWGN_adder_0/Q_vld"
+        ]
+      },
+      "decoder_0_input_114_0_ap_ack": {
+        "ports": [
+          "decoder_0/input_114_0_ap_ack",
+          "AWGN_adder_0/I_noisy_ack"
+        ]
+      },
+      "decoder_0_input_114_1_ap_ack": {
+        "ports": [
+          "decoder_0/input_114_1_ap_ack",
+          "AWGN_adder_0/Q_noisy_ack"
+        ]
+      },
+      "decoder_0_layer5_out": {
+        "ports": [
+          "decoder_0/layer5_out",
+          "onehot2sig_0/onehot"
+        ]
+      },
+      "decoder_0_layer5_out_ap_vld": {
+        "ports": [
+          "decoder_0/layer5_out_ap_vld",
+          "onehot2sig_0/onehot_valid"
+        ]
+      },
+      "encoder_0_ap_ready": {
+        "ports": [
+          "encoder_0/ap_ready",
+          "ap_ready_0"
+        ]
+      },
+      "encoder_0_input_67_ap_ack": {
+        "ports": [
+          "encoder_0/input_112_ap_ack",
+          "sig2onehot_0/onehot_ack"
+        ]
+      },
+      "encoder_0_layer4_out_0": {
+        "ports": [
+          "encoder_0/layer4_out_0",
+          "constraint_layer_top_0/encoded_input_0"
+        ]
+      },
+      "encoder_0_layer4_out_0_ap_vld": {
+        "ports": [
+          "encoder_0/layer4_out_0_ap_vld",
+          "constraint_layer_top_0/encoded_input_0_ap_vld"
+        ]
+      },
+      "encoder_0_layer4_out_1": {
+        "ports": [
+          "encoder_0/layer4_out_1",
+          "constraint_layer_top_0/encoded_input_1"
+        ]
+      },
+      "encoder_0_layer4_out_1_ap_vld": {
+        "ports": [
+          "encoder_0/layer4_out_1_ap_vld",
+          "constraint_layer_top_0/encoded_input_1_ap_vld"
+        ]
+      },
+      "onehot2sig_0_onehot_ack": {
+        "ports": [
+          "onehot2sig_0/onehot_ack",
+          "decoder_0/layer5_out_ap_ack"
+        ]
+      },
+      "onehot2sig_0_sig": {
+        "ports": [
+          "onehot2sig_0/sig",
+          "sig_1"
+        ]
+      },
+      "onehot2sig_0_sig_vld": {
+        "ports": [
+          "onehot2sig_0/sig_vld",
+          "sig_vld_1"
+        ]
+      },
+      "reset_rtl_0_1": {
+        "ports": [
+          "reset_rtl_0",
+          "rst_clk_wiz_100M/ext_reset_in"
+        ]
+      },
+      "rst_clk_wiz_100M_peripheral_aresetn": {
+        "ports": [
+          "rst_clk_wiz_100M/peripheral_aresetn",
+          "decoder_0/ap_start",
+          "encoder_0/ap_start",
+          "constraint_layer_top_0/ap_start"
+        ]
+      },
+      "rst_clk_wiz_100M_peripheral_reset": {
+        "ports": [
+          "rst_clk_wiz_100M/peripheral_reset",
+          "sig2onehot_0/areset",
+          "onehot2sig_0/areset",
+          "decoder_0/ap_rst",
+          "encoder_0/ap_rst",
+          "AWGN_adder_0/areset",
+          "constraint_layer_top_0/ap_rst"
+        ]
+      },
+      "sig2onehot_0_onehot": {
+        "ports": [
+          "sig2onehot_0/onehot",
+          "encoder_0/input_112"
+        ]
+      },
+      "sig2onehot_0_onehot_vld": {
+        "ports": [
+          "sig2onehot_0/onehot_vld",
+          "encoder_0/input_112_ap_vld"
+        ]
+      },
+      "sig2onehot_0_sig_ack": {
+        "ports": [
+          "sig2onehot_0/sig_ack",
+          "sig_ack_0"
+        ]
+      },
+      "sig_0_1": {
+        "ports": [
+          "sig_0",
+          "sig2onehot_0/sig"
+        ]
+      },
+      "sig_ack_0_1": {
+        "ports": [
+          "sig_ack_1",
+          "onehot2sig_0/sig_ack"
+        ]
+      },
+      "sig_vld_0_1": {
+        "ports": [
+          "sig_vld_0",
+          "sig2onehot_0/sig_vld"
+        ]
+      }
+    }
+  }
+}

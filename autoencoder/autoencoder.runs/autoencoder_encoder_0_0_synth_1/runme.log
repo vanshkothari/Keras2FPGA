@@ -1,0 +1,693 @@
+
+*** Running vivado
+    with args -log autoencoder_encoder_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source autoencoder_encoder_0_0.tcl
+
+
+
+****** Vivado v2024.1 (64-bit)
+  **** SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+  **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+  **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+  **** Start of session at: Sun Jul 21 17:09:02 2024
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source autoencoder_encoder_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:15 . Memory (MB): peak = 514.969 ; gain = 198.465
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Vansh/vck/NN_on_FPGA/encoder_ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Vansh/vck/NN_on_FPGA/contraint_layer_ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Vansh/vck/NN_on_FPGA/decoder_ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2024.1/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: autoencoder_encoder_0_0
+Command: synth_design -top autoencoder_encoder_0_0 -part xc7a35tcpg236-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Device 21-9227] Part: xc7a35tcpg236-1 does not have CEAM library.
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 22844
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:13 . Memory (MB): peak = 1374.766 ; gain = 447.070
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'autoencoder_encoder_0_0' [c:/Users/Vansh/vck/NN_on_FPGA/autoencoder/autoencoder.gen/sources_1/bd/autoencoder/ip/autoencoder_encoder_0_0/synth/autoencoder_encoder_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'encoder' [c:/Users/Vansh/vck/NN_on_FPGA/autoencoder/autoencoder.gen/sources_1/bd/autoencoder/ipshared/cd8b/hdl/verilog/encoder.v:9]
+INFO: [Synth 8-6157] synthesizing module 'encoder_dense_latency_ap_uint_1_ap_fixed_16_6_5_3_0_config2_s' [c:/Users/Vansh/vck/NN_on_FPGA/autoencoder/autoencoder.gen/sources_1/bd/autoencoder/ipshared/cd8b/hdl/verilog/encoder_dense_latency_ap_uint_1_ap_fixed_16_6_5_3_0_config2_s.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'encoder_dense_latency_ap_uint_1_ap_fixed_16_6_5_3_0_config2_s' (0#1) [c:/Users/Vansh/vck/NN_on_FPGA/autoencoder/autoencoder.gen/sources_1/bd/autoencoder/ipshared/cd8b/hdl/verilog/encoder_dense_latency_ap_uint_1_ap_fixed_16_6_5_3_0_config2_s.v:9]
+INFO: [Synth 8-6157] synthesizing module 'encoder_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config3_s' [c:/Users/Vansh/vck/NN_on_FPGA/autoencoder/autoencoder.gen/sources_1/bd/autoencoder/ipshared/cd8b/hdl/verilog/encoder_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config3_s.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'encoder_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config3_s' (0#1) [c:/Users/Vansh/vck/NN_on_FPGA/autoencoder/autoencoder.gen/sources_1/bd/autoencoder/ipshared/cd8b/hdl/verilog/encoder_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config3_s.v:9]
+INFO: [Synth 8-6157] synthesizing module 'encoder_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config4_s' [c:/Users/Vansh/vck/NN_on_FPGA/autoencoder/autoencoder.gen/sources_1/bd/autoencoder/ipshared/cd8b/hdl/verilog/encoder_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config4_s.v:9]
+INFO: [Synth 8-6157] synthesizing module 'encoder_mul_16s_14s_26_1_1' [c:/Users/Vansh/vck/NN_on_FPGA/autoencoder/autoencoder.gen/sources_1/bd/autoencoder/ipshared/cd8b/hdl/verilog/encoder_mul_16s_14s_26_1_1.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'encoder_mul_16s_14s_26_1_1' (0#1) [c:/Users/Vansh/vck/NN_on_FPGA/autoencoder/autoencoder.gen/sources_1/bd/autoencoder/ipshared/cd8b/hdl/verilog/encoder_mul_16s_14s_26_1_1.v:5]
+INFO: [Synth 8-6157] synthesizing module 'encoder_mul_16s_13s_26_1_1' [c:/Users/Vansh/vck/NN_on_FPGA/autoencoder/autoencoder.gen/sources_1/bd/autoencoder/ipshared/cd8b/hdl/verilog/encoder_mul_16s_13s_26_1_1.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'encoder_mul_16s_13s_26_1_1' (0#1) [c:/Users/Vansh/vck/NN_on_FPGA/autoencoder/autoencoder.gen/sources_1/bd/autoencoder/ipshared/cd8b/hdl/verilog/encoder_mul_16s_13s_26_1_1.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'encoder_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config4_s' (0#1) [c:/Users/Vansh/vck/NN_on_FPGA/autoencoder/autoencoder.gen/sources_1/bd/autoencoder/ipshared/cd8b/hdl/verilog/encoder_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config4_s.v:9]
+INFO: [Synth 8-6157] synthesizing module 'encoder_regslice_both' [c:/Users/Vansh/vck/NN_on_FPGA/autoencoder/autoencoder.gen/sources_1/bd/autoencoder/ipshared/cd8b/hdl/verilog/encoder_regslice_both.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'encoder_regslice_both' (0#1) [c:/Users/Vansh/vck/NN_on_FPGA/autoencoder/autoencoder.gen/sources_1/bd/autoencoder/ipshared/cd8b/hdl/verilog/encoder_regslice_both.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'encoder' (0#1) [c:/Users/Vansh/vck/NN_on_FPGA/autoencoder/autoencoder.gen/sources_1/bd/autoencoder/ipshared/cd8b/hdl/verilog/encoder.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'autoencoder_encoder_0_0' (0#1) [c:/Users/Vansh/vck/NN_on_FPGA/autoencoder/autoencoder.gen/sources_1/bd/autoencoder/ip/autoencoder_encoder_0_0/synth/autoencoder_encoder_0_0.v:53]
+WARNING: [Synth 8-7129] Port ap_rst in module encoder_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config3_s is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:18 . Memory (MB): peak = 1505.773 ; gain = 578.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:18 . Memory (MB): peak = 1505.773 ; gain = 578.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:18 . Memory (MB): peak = 1505.773 ; gain = 578.078
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.110 . Memory (MB): peak = 1505.773 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/Vansh/vck/NN_on_FPGA/autoencoder/autoencoder.gen/sources_1/bd/autoencoder/ip/autoencoder_encoder_0_0/constraints/encoder_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [c:/Users/Vansh/vck/NN_on_FPGA/autoencoder/autoencoder.gen/sources_1/bd/autoencoder/ip/autoencoder_encoder_0_0/constraints/encoder_ooc.xdc] for cell 'inst'
+Parsing XDC File [C:/Users/Vansh/vck/NN_on_FPGA/autoencoder/autoencoder.runs/autoencoder_encoder_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/Vansh/vck/NN_on_FPGA/autoencoder/autoencoder.runs/autoencoder_encoder_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1565.562 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.145 . Memory (MB): peak = 1567.980 ; gain = 2.418
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:38 . Memory (MB): peak = 1567.980 ; gain = 640.285
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:22 ; elapsed = 00:00:38 . Memory (MB): peak = 1567.980 ; gain = 640.285
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  C:/Users/Vansh/vck/NN_on_FPGA/autoencoder/autoencoder.runs/autoencoder_encoder_0_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:38 . Memory (MB): peak = 1567.980 ; gain = 640.285
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'encoder_regslice_both'
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'encoder_regslice_both'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:40 . Memory (MB): peak = 1567.980 ; gain = 640.285
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input   26 Bit       Adders := 1     
+	   2 Input   16 Bit       Adders := 5     
+	   3 Input   16 Bit       Adders := 7     
+	   4 Input   16 Bit       Adders := 3     
+	   4 Input   13 Bit       Adders := 6     
+	   3 Input   13 Bit       Adders := 4     
+	   6 Input   13 Bit       Adders := 1     
+	   3 Input   12 Bit       Adders := 6     
+	   2 Input   12 Bit       Adders := 2     
+	   2 Input   11 Bit       Adders := 35    
+	   3 Input   11 Bit       Adders := 5     
+	   2 Input   10 Bit       Adders := 22    
+	   3 Input   10 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 73    
+	               15 Bit    Registers := 1     
+	               13 Bit    Registers := 1     
+	               12 Bit    Registers := 1     
+	               11 Bit    Registers := 6     
+	               10 Bit    Registers := 4     
+	                8 Bit    Registers := 2     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 24    
++---Muxes : 
+	   2 Input   16 Bit        Muxes := 10    
+	   2 Input   15 Bit        Muxes := 16    
+	   3 Input   11 Bit        Muxes := 1     
+	   4 Input   11 Bit        Muxes := 6     
+	   4 Input   10 Bit        Muxes := 31    
+	   3 Input   10 Bit        Muxes := 36    
+	   2 Input   10 Bit        Muxes := 2     
+	   2 Input    9 Bit        Muxes := 33    
+	   3 Input    9 Bit        Muxes := 15    
+	   4 Input    9 Bit        Muxes := 17    
+	   3 Input    8 Bit        Muxes := 6     
+	   2 Input    8 Bit        Muxes := 18    
+	   4 Input    8 Bit        Muxes := 2     
+	   3 Input    7 Bit        Muxes := 5     
+	   2 Input    7 Bit        Muxes := 7     
+	   4 Input    7 Bit        Muxes := 2     
+	   2 Input    6 Bit        Muxes := 8     
+	   2 Input    5 Bit        Muxes := 2     
+	   2 Input    4 Bit        Muxes := 2     
+	   2 Input    3 Bit        Muxes := 2     
+	   5 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 23    
+	   3 Input    2 Bit        Muxes := 6     
+	   4 Input    2 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 12    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+DSP Report: Generating DSP mul_16s_14s_26_1_1_U18/tmp_product, operation Mode is: A*B.
+DSP Report: operator mul_16s_14s_26_1_1_U18/tmp_product is absorbed into DSP mul_16s_14s_26_1_1_U18/tmp_product.
+DSP Report: Generating DSP mul_16s_13s_26_1_1_U19/tmp_product, operation Mode is: A*B.
+DSP Report: operator mul_16s_13s_26_1_1_U19/tmp_product is absorbed into DSP mul_16s_13s_26_1_1_U19/tmp_product.
+DSP Report: Generating DSP mul_16s_13s_26_1_1_U21/tmp_product, operation Mode is: A*B.
+DSP Report: operator mul_16s_13s_26_1_1_U21/tmp_product is absorbed into DSP mul_16s_13s_26_1_1_U21/tmp_product.
+DSP Report: Generating DSP mul_16s_14s_26_1_1_U20/tmp_product, operation Mode is: A*B.
+DSP Report: operator mul_16s_14s_26_1_1_U20/tmp_product is absorbed into DSP mul_16s_14s_26_1_1_U20/tmp_product.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:55 . Memory (MB): peak = 1567.980 ; gain = 640.285
+---------------------------------------------------------------------------------
+ Sort Area is  mul_16s_14s_26_1_1_U18/tmp_product_0 : 0 0 : 1659 1659 : Used 1 time 0
+ Sort Area is  mul_16s_13s_26_1_1_U19/tmp_product_2 : 0 0 : 1497 1497 : Used 1 time 0
+ Sort Area is  mul_16s_13s_26_1_1_U21/tmp_product_5 : 0 0 : 1497 1497 : Used 1 time 0
+ Sort Area is  mul_16s_14s_26_1_1_U20/tmp_product_4 : 0 0 : 1497 1497 : Used 1 time 0
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++---------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name                | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++---------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|encoder_mul_16s_14s_26_1_1 | A*B         | 16     | 14     | -      | -      | 30     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|encoder_mul_16s_13s_26_1_1 | A*B         | 16     | 13     | -      | -      | 29     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|encoder_mul_16s_13s_26_1_1 | A*B         | 16     | 13     | -      | -      | 29     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|encoder_mul_16s_14s_26_1_1 | A*B         | 16     | 13     | -      | -      | 29     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++---------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:43 ; elapsed = 00:01:14 . Memory (MB): peak = 1567.980 ; gain = 640.285
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:45 ; elapsed = 00:01:18 . Memory (MB): peak = 1567.980 ; gain = 640.285
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:46 ; elapsed = 00:01:20 . Memory (MB): peak = 1567.980 ; gain = 640.285
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:55 ; elapsed = 00:01:35 . Memory (MB): peak = 1574.461 ; gain = 646.766
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:55 ; elapsed = 00:01:35 . Memory (MB): peak = 1574.461 ; gain = 646.766
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:55 ; elapsed = 00:01:36 . Memory (MB): peak = 1574.461 ; gain = 646.766
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:55 ; elapsed = 00:01:36 . Memory (MB): peak = 1574.461 ; gain = 646.766
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:55 ; elapsed = 00:01:36 . Memory (MB): peak = 1574.461 ; gain = 646.766
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:55 ; elapsed = 00:01:36 . Memory (MB): peak = 1574.461 ; gain = 646.766
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++---------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name                | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++---------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|encoder_mul_16s_13s_26_1_1 | A*B         | 15     | 18     | -      | -      | 29     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|encoder_mul_16s_13s_26_1_1 | A*B         | 15     | 18     | -      | -      | 29     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|encoder_mul_16s_14s_26_1_1 | A*B         | 15     | 18     | -      | -      | 30     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|encoder_mul_16s_14s_26_1_1 | A*B         | 15     | 18     | -      | -      | 29     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++---------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |CARRY4  |   349|
+|2     |DSP48E1 |     4|
+|3     |LUT1    |    70|
+|4     |LUT2    |   774|
+|5     |LUT3    |   480|
+|6     |LUT4    |   552|
+|7     |LUT5    |   252|
+|8     |LUT6    |   305|
+|9     |FDRE    |  1186|
+|10    |FDSE    |     5|
++------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:55 ; elapsed = 00:01:36 . Memory (MB): peak = 1574.461 ; gain = 646.766
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:42 ; elapsed = 00:01:30 . Memory (MB): peak = 1574.461 ; gain = 584.559
+Synthesis Optimization Complete : Time (s): cpu = 00:00:56 ; elapsed = 00:01:36 . Memory (MB): peak = 1574.461 ; gain = 646.766
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.107 . Memory (MB): peak = 1574.461 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 353 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1574.461 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 7ca9d93e
+INFO: [Common 17-83] Releasing license: Synthesis
+43 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:03 ; elapsed = 00:01:51 . Memory (MB): peak = 1574.461 ; gain = 1047.867
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 1574.461 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Vansh/vck/NN_on_FPGA/autoencoder/autoencoder.runs/autoencoder_encoder_0_0_synth_1/autoencoder_encoder_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP autoencoder_encoder_0_0, cache-ID = 781a5b2126ef1c35
+INFO: [Coretcl 2-1174] Renamed 10 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 1574.461 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Vansh/vck/NN_on_FPGA/autoencoder/autoencoder.runs/autoencoder_encoder_0_0_synth_1/autoencoder_encoder_0_0.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file autoencoder_encoder_0_0_utilization_synth.rpt -pb autoencoder_encoder_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Jul 21 17:11:20 2024...
+
+*** Running vivado
+    with args -log autoencoder_encoder_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source autoencoder_encoder_0_0.tcl
+
+
+
+****** Vivado v2024.1 (64-bit)
+  **** SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+  **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+  **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+  **** Start of session at: Fri Jul 26 19:52:46 2024
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source autoencoder_encoder_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:12 . Memory (MB): peak = 513.629 ; gain = 200.578
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Vansh/vck/NN_on_FPGA/encoder_ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Vansh/vck/NN_on_FPGA/contraint_layer_ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Vansh/vck/NN_on_FPGA/decoder_ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2024.1/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: autoencoder_encoder_0_0
+Command: synth_design -top autoencoder_encoder_0_0 -part xc7a35tcpg236-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Device 21-9227] Part: xc7a35tcpg236-1 does not have CEAM library.
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 31832
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:13 . Memory (MB): peak = 1375.000 ; gain = 447.840
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'autoencoder_encoder_0_0' [c:/Users/Vansh/vck/NN_on_FPGA/autoencoder/autoencoder.gen/sources_1/bd/autoencoder/ip/autoencoder_encoder_0_0/synth/autoencoder_encoder_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'encoder' [c:/Users/Vansh/vck/NN_on_FPGA/autoencoder/autoencoder.gen/sources_1/bd/autoencoder/ipshared/b249/hdl/verilog/encoder.v:9]
+INFO: [Synth 8-6157] synthesizing module 'encoder_dense_latency_ap_uint_1_ap_fixed_16_6_5_3_0_config2_s' [c:/Users/Vansh/vck/NN_on_FPGA/autoencoder/autoencoder.gen/sources_1/bd/autoencoder/ipshared/b249/hdl/verilog/encoder_dense_latency_ap_uint_1_ap_fixed_16_6_5_3_0_config2_s.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'encoder_dense_latency_ap_uint_1_ap_fixed_16_6_5_3_0_config2_s' (0#1) [c:/Users/Vansh/vck/NN_on_FPGA/autoencoder/autoencoder.gen/sources_1/bd/autoencoder/ipshared/b249/hdl/verilog/encoder_dense_latency_ap_uint_1_ap_fixed_16_6_5_3_0_config2_s.v:9]
+INFO: [Synth 8-6157] synthesizing module 'encoder_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config3_s' [c:/Users/Vansh/vck/NN_on_FPGA/autoencoder/autoencoder.gen/sources_1/bd/autoencoder/ipshared/b249/hdl/verilog/encoder_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config3_s.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'encoder_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config3_s' (0#1) [c:/Users/Vansh/vck/NN_on_FPGA/autoencoder/autoencoder.gen/sources_1/bd/autoencoder/ipshared/b249/hdl/verilog/encoder_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config3_s.v:9]
+INFO: [Synth 8-6157] synthesizing module 'encoder_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config4_s' [c:/Users/Vansh/vck/NN_on_FPGA/autoencoder/autoencoder.gen/sources_1/bd/autoencoder/ipshared/b249/hdl/verilog/encoder_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config4_s.v:9]
+INFO: [Synth 8-6157] synthesizing module 'encoder_mul_16s_14s_26_1_1' [c:/Users/Vansh/vck/NN_on_FPGA/autoencoder/autoencoder.gen/sources_1/bd/autoencoder/ipshared/b249/hdl/verilog/encoder_mul_16s_14s_26_1_1.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'encoder_mul_16s_14s_26_1_1' (0#1) [c:/Users/Vansh/vck/NN_on_FPGA/autoencoder/autoencoder.gen/sources_1/bd/autoencoder/ipshared/b249/hdl/verilog/encoder_mul_16s_14s_26_1_1.v:5]
+INFO: [Synth 8-6157] synthesizing module 'encoder_mul_16s_13s_26_1_1' [c:/Users/Vansh/vck/NN_on_FPGA/autoencoder/autoencoder.gen/sources_1/bd/autoencoder/ipshared/b249/hdl/verilog/encoder_mul_16s_13s_26_1_1.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'encoder_mul_16s_13s_26_1_1' (0#1) [c:/Users/Vansh/vck/NN_on_FPGA/autoencoder/autoencoder.gen/sources_1/bd/autoencoder/ipshared/b249/hdl/verilog/encoder_mul_16s_13s_26_1_1.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'encoder_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config4_s' (0#1) [c:/Users/Vansh/vck/NN_on_FPGA/autoencoder/autoencoder.gen/sources_1/bd/autoencoder/ipshared/b249/hdl/verilog/encoder_dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config4_s.v:9]
+INFO: [Synth 8-6157] synthesizing module 'encoder_regslice_both' [c:/Users/Vansh/vck/NN_on_FPGA/autoencoder/autoencoder.gen/sources_1/bd/autoencoder/ipshared/b249/hdl/verilog/encoder_regslice_both.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'encoder_regslice_both' (0#1) [c:/Users/Vansh/vck/NN_on_FPGA/autoencoder/autoencoder.gen/sources_1/bd/autoencoder/ipshared/b249/hdl/verilog/encoder_regslice_both.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'encoder' (0#1) [c:/Users/Vansh/vck/NN_on_FPGA/autoencoder/autoencoder.gen/sources_1/bd/autoencoder/ipshared/b249/hdl/verilog/encoder.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'autoencoder_encoder_0_0' (0#1) [c:/Users/Vansh/vck/NN_on_FPGA/autoencoder/autoencoder.gen/sources_1/bd/autoencoder/ip/autoencoder_encoder_0_0/synth/autoencoder_encoder_0_0.v:53]
+WARNING: [Synth 8-7129] Port ap_rst in module encoder_relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config3_s is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:17 . Memory (MB): peak = 1506.652 ; gain = 579.492
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 1506.652 ; gain = 579.492
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 1506.652 ; gain = 579.492
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.096 . Memory (MB): peak = 1506.652 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/Vansh/vck/NN_on_FPGA/autoencoder/autoencoder.gen/sources_1/bd/autoencoder/ip/autoencoder_encoder_0_0/constraints/encoder_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [c:/Users/Vansh/vck/NN_on_FPGA/autoencoder/autoencoder.gen/sources_1/bd/autoencoder/ip/autoencoder_encoder_0_0/constraints/encoder_ooc.xdc] for cell 'inst'
+Parsing XDC File [C:/Users/Vansh/vck/NN_on_FPGA/autoencoder/autoencoder.runs/autoencoder_encoder_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/Vansh/vck/NN_on_FPGA/autoencoder/autoencoder.runs/autoencoder_encoder_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1546.223 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.096 . Memory (MB): peak = 1550.020 ; gain = 3.797
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:21 ; elapsed = 00:00:34 . Memory (MB): peak = 1550.020 ; gain = 622.859
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:00:34 . Memory (MB): peak = 1550.020 ; gain = 622.859
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  C:/Users/Vansh/vck/NN_on_FPGA/autoencoder/autoencoder.runs/autoencoder_encoder_0_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:34 . Memory (MB): peak = 1550.020 ; gain = 622.859
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'encoder_regslice_both'
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'encoder_regslice_both'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:36 . Memory (MB): peak = 1550.020 ; gain = 622.859
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input   26 Bit       Adders := 1     
+	   2 Input   16 Bit       Adders := 3     
+	   3 Input   16 Bit       Adders := 9     
+	   4 Input   16 Bit       Adders := 3     
+	   3 Input   13 Bit       Adders := 5     
+	   2 Input   13 Bit       Adders := 1     
+	   5 Input   13 Bit       Adders := 1     
+	   4 Input   13 Bit       Adders := 1     
+	   2 Input   12 Bit       Adders := 5     
+	   3 Input   12 Bit       Adders := 6     
+	   2 Input   11 Bit       Adders := 22    
+	   3 Input   11 Bit       Adders := 15    
+	   4 Input   11 Bit       Adders := 1     
+	   2 Input   10 Bit       Adders := 20    
+	   2 Input    9 Bit       Adders := 2     
++---Registers : 
+	               16 Bit    Registers := 79    
+	               15 Bit    Registers := 1     
+	               12 Bit    Registers := 1     
+	               11 Bit    Registers := 6     
+	               10 Bit    Registers := 10    
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 24    
++---Muxes : 
+	   2 Input   16 Bit        Muxes := 2     
+	   2 Input   15 Bit        Muxes := 16    
+	   4 Input   11 Bit        Muxes := 13    
+	   3 Input   10 Bit        Muxes := 37    
+	   4 Input   10 Bit        Muxes := 25    
+	   2 Input    9 Bit        Muxes := 25    
+	   4 Input    9 Bit        Muxes := 10    
+	   3 Input    9 Bit        Muxes := 23    
+	   2 Input    8 Bit        Muxes := 28    
+	   3 Input    8 Bit        Muxes := 8     
+	   4 Input    8 Bit        Muxes := 3     
+	   3 Input    7 Bit        Muxes := 2     
+	   4 Input    7 Bit        Muxes := 4     
+	   2 Input    7 Bit        Muxes := 12    
+	   2 Input    6 Bit        Muxes := 7     
+	   2 Input    5 Bit        Muxes := 1     
+	   3 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 3     
+	   2 Input    3 Bit        Muxes := 4     
+	   5 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 24    
+	   3 Input    2 Bit        Muxes := 6     
+	   4 Input    2 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 12    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+DSP Report: Generating DSP mul_16s_13s_26_1_1_U21/tmp_product, operation Mode is: A*B.
+DSP Report: operator mul_16s_13s_26_1_1_U21/tmp_product is absorbed into DSP mul_16s_13s_26_1_1_U21/tmp_product.
+DSP Report: Generating DSP mul_16s_13s_26_1_1_U19/tmp_product, operation Mode is: A*B.
+DSP Report: operator mul_16s_13s_26_1_1_U19/tmp_product is absorbed into DSP mul_16s_13s_26_1_1_U19/tmp_product.
+DSP Report: Generating DSP mul_16s_13s_26_1_1_U20/tmp_product, operation Mode is: A*B.
+DSP Report: operator mul_16s_13s_26_1_1_U20/tmp_product is absorbed into DSP mul_16s_13s_26_1_1_U20/tmp_product.
+DSP Report: Generating DSP mul_16s_14s_26_1_1_U18/tmp_product, operation Mode is: A*B.
+DSP Report: operator mul_16s_14s_26_1_1_U18/tmp_product is absorbed into DSP mul_16s_14s_26_1_1_U18/tmp_product.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:51 . Memory (MB): peak = 1550.020 ; gain = 622.859
+---------------------------------------------------------------------------------
+ Sort Area is  mul_16s_13s_26_1_1_U19/tmp_product_2 : 0 0 : 1497 1497 : Used 1 time 0
+ Sort Area is  mul_16s_13s_26_1_1_U20/tmp_product_4 : 0 0 : 1497 1497 : Used 1 time 0
+ Sort Area is  mul_16s_13s_26_1_1_U21/tmp_product_3 : 0 0 : 1497 1497 : Used 1 time 0
+ Sort Area is  mul_16s_14s_26_1_1_U18/tmp_product_0 : 0 0 : 1497 1497 : Used 1 time 0
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++---------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name                | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++---------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|encoder_mul_16s_13s_26_1_1 | A*B         | 16     | 13     | -      | -      | 29     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|encoder_mul_16s_13s_26_1_1 | A*B         | 16     | 13     | -      | -      | 29     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|encoder_mul_16s_13s_26_1_1 | A*B         | 16     | 13     | -      | -      | 29     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|encoder_mul_16s_14s_26_1_1 | A*B         | 16     | 13     | -      | -      | 29     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++---------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:45 ; elapsed = 00:01:08 . Memory (MB): peak = 1550.020 ; gain = 622.859
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:49 ; elapsed = 00:01:12 . Memory (MB): peak = 1590.070 ; gain = 662.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:51 ; elapsed = 00:01:15 . Memory (MB): peak = 1590.070 ; gain = 662.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:58 ; elapsed = 00:01:26 . Memory (MB): peak = 1594.027 ; gain = 666.867
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:58 ; elapsed = 00:01:26 . Memory (MB): peak = 1594.027 ; gain = 666.867
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:58 ; elapsed = 00:01:26 . Memory (MB): peak = 1594.027 ; gain = 666.867
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:58 ; elapsed = 00:01:26 . Memory (MB): peak = 1594.027 ; gain = 666.867
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:58 ; elapsed = 00:01:26 . Memory (MB): peak = 1594.027 ; gain = 666.867
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:59 ; elapsed = 00:01:26 . Memory (MB): peak = 1594.027 ; gain = 666.867
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++---------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name                | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++---------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|encoder_mul_16s_13s_26_1_1 | A*B         | 15     | 18     | -      | -      | 29     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|encoder_mul_16s_13s_26_1_1 | A*B         | 15     | 18     | -      | -      | 29     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|encoder_mul_16s_13s_26_1_1 | A*B         | 15     | 18     | -      | -      | 29     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|encoder_mul_16s_14s_26_1_1 | A*B         | 15     | 18     | -      | -      | 29     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++---------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |CARRY4  |   343|
+|2     |DSP48E1 |     4|
+|3     |LUT1    |    86|
+|4     |LUT2    |   702|
+|5     |LUT3    |   449|
+|6     |LUT4    |   553|
+|7     |LUT5    |   232|
+|8     |LUT6    |   385|
+|9     |FDRE    |  1326|
+|10    |FDSE    |     5|
++------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:59 ; elapsed = 00:01:26 . Memory (MB): peak = 1594.027 ; gain = 666.867
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:46 ; elapsed = 00:01:22 . Memory (MB): peak = 1594.027 ; gain = 623.500
+Synthesis Optimization Complete : Time (s): cpu = 00:00:59 ; elapsed = 00:01:27 . Memory (MB): peak = 1594.027 ; gain = 666.867
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.098 . Memory (MB): peak = 1603.246 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 347 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1606.910 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 9ffe2771
+INFO: [Common 17-83] Releasing license: Synthesis
+43 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:06 ; elapsed = 00:01:38 . Memory (MB): peak = 1606.910 ; gain = 1080.688
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 1606.910 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Vansh/vck/NN_on_FPGA/autoencoder/autoencoder.runs/autoencoder_encoder_0_0_synth_1/autoencoder_encoder_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP autoencoder_encoder_0_0, cache-ID = 1ac8b9a5f420e2b8
+INFO: [Coretcl 2-1174] Renamed 10 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 1606.910 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Vansh/vck/NN_on_FPGA/autoencoder/autoencoder.runs/autoencoder_encoder_0_0_synth_1/autoencoder_encoder_0_0.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file autoencoder_encoder_0_0_utilization_synth.rpt -pb autoencoder_encoder_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Jul 26 19:54:44 2024...

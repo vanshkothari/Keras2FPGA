@@ -1,0 +1,594 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Jul 26 18:13:17 2024" VIVADOVERSION="2024.1">
+
+  <SYSTEMINFO ARCH="artix7" DEVICE="7a35t" NAME="autoencoder" PACKAGE="cpg236" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT DIR="I" LEFT="3" NAME="SNR_0" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_SNR_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="AWGN_adder_0" PORT="SNR"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="aclk_0" SIGIS="clk" SIGNAME="External_Ports_aclk_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="rst_clk_wiz_100M" PORT="slowest_sync_clk"/>
+        <CONNECTION INSTANCE="sig2onehot_0" PORT="aclk"/>
+        <CONNECTION INSTANCE="onehot2sig_0" PORT="aclk"/>
+        <CONNECTION INSTANCE="decoder_0" PORT="ap_clk"/>
+        <CONNECTION INSTANCE="encoder_0" PORT="ap_clk"/>
+        <CONNECTION INSTANCE="AWGN_adder_0" PORT="aclk"/>
+        <CONNECTION INSTANCE="constraint_layer_top_0" PORT="ap_clk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="ap_ready_0" SIGIS="undef" SIGNAME="encoder_0_ap_ready">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="encoder_0" PORT="ap_ready"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="reset_rtl_0" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="External_Ports_reset_rtl_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="rst_clk_wiz_100M" PORT="ext_reset_in"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="3" NAME="sig_0" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_sig_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="sig2onehot_0" PORT="sig"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="3" NAME="sig_1" RIGHT="0" SIGIS="undef" SIGNAME="onehot2sig_0_sig">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="onehot2sig_0" PORT="sig"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="sig_ack_0" SIGIS="undef" SIGNAME="sig2onehot_0_sig_ack">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="sig2onehot_0" PORT="sig_ack"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="sig_ack_1" SIGIS="undef" SIGNAME="External_Ports_sig_ack_1">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="onehot2sig_0" PORT="sig_ack"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="sig_vld_0" SIGIS="undef" SIGNAME="External_Ports_sig_vld_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="sig2onehot_0" PORT="sig_vld"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="sig_vld_1" SIGIS="undef" SIGNAME="onehot2sig_0_sig_vld">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="onehot2sig_0" PORT="sig_vld"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE COREREVISION="1" FULLNAME="/AWGN_adder_0" HWVERSION="1.0" INSTANCE="AWGN_adder_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="AWGN_adder" VLNV="xilinx.com:module_ref:AWGN_adder:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="autoencoder_AWGN_adder_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="15" NAME="I" RIGHT="0" SIGIS="undef" SIGNAME="constraint_layer_top_0_encoded_output_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="constraint_layer_top_0" PORT="encoded_output_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="I_ack" SIGIS="undef" SIGNAME="AWGN_adder_0_I_ack">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="constraint_layer_top_0" PORT="encoded_output_0_ap_ack"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="I_noisy" RIGHT="0" SIGIS="undef" SIGNAME="AWGN_adder_0_I_noisy">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="decoder_0" PORT="input_114_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="I_noisy_ack" SIGIS="undef" SIGNAME="decoder_0_input_114_0_ap_ack">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="decoder_0" PORT="input_114_0_ap_ack"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="I_noisy_vld" SIGIS="undef" SIGNAME="AWGN_adder_0_I_noisy_vld">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="decoder_0" PORT="input_114_0_ap_vld"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="I_vld" SIGIS="undef" SIGNAME="constraint_layer_top_0_encoded_output_0_ap_vld">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="constraint_layer_top_0" PORT="encoded_output_0_ap_vld"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="Q" RIGHT="0" SIGIS="undef" SIGNAME="constraint_layer_top_0_encoded_output_1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="constraint_layer_top_0" PORT="encoded_output_1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="Q_ack" SIGIS="undef" SIGNAME="AWGN_adder_0_Q_ack">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="constraint_layer_top_0" PORT="encoded_output_1_ap_ack"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="Q_noisy" RIGHT="0" SIGIS="undef" SIGNAME="AWGN_adder_0_Q_noisy">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="decoder_0" PORT="input_114_1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="Q_noisy_ack" SIGIS="undef" SIGNAME="decoder_0_input_114_1_ap_ack">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="decoder_0" PORT="input_114_1_ap_ack"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="Q_noisy_vld" SIGIS="undef" SIGNAME="AWGN_adder_0_Q_noisy_vld">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="decoder_0" PORT="input_114_1_ap_vld"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="Q_vld" SIGIS="undef" SIGNAME="constraint_layer_top_0_encoded_output_1_ap_vld">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="constraint_layer_top_0" PORT="encoded_output_1_ap_vld"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="SNR" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_SNR_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="SNR_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="External_Ports_aclk_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="aclk_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="areset" POLARITY="ACTIVE_HIGH" SIGIS="undef" SIGNAME="rst_clk_wiz_100M_peripheral_reset">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_clk_wiz_100M" PORT="peripheral_reset"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="2113663061" FULLNAME="/constraint_layer_top_0" HWVERSION="1.0" INSTANCE="constraint_layer_top_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="constraint_layer_top" VLNV="xilinx.com:hls:constraint_layer_top:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="autoencoder_constraint_layer_top_0_0"/>
+        <PARAMETER NAME="II" VALUE="1"/>
+        <PARAMETER NAME="clk_period" VALUE="10"/>
+        <PARAMETER NAME="combinational" VALUE="0"/>
+        <PARAMETER NAME="latency" VALUE="22"/>
+        <PARAMETER NAME="machine" VALUE="64"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="ap_clk" SIGIS="clk" SIGNAME="External_Ports_aclk_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="aclk_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="ap_done" SIGIS="undef"/>
+        <PORT DIR="O" NAME="ap_idle" SIGIS="undef"/>
+        <PORT DIR="O" NAME="ap_ready" SIGIS="undef"/>
+        <PORT DIR="I" NAME="ap_rst" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="rst_clk_wiz_100M_peripheral_reset">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_clk_wiz_100M" PORT="peripheral_reset"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ap_start" POLARITY="ACTIVE_LOW" SIGIS="undef" SIGNAME="rst_clk_wiz_100M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_clk_wiz_100M" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="encoded_input_0" RIGHT="0" SIGIS="data" SIGNAME="encoder_0_layer4_out_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="encoder_0" PORT="layer4_out_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="encoded_input_0_ap_ack" SIGIS="undef" SIGNAME="constraint_layer_top_0_encoded_input_0_ap_ack">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="encoder_0" PORT="layer4_out_0_ap_ack"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="encoded_input_0_ap_vld" SIGIS="undef" SIGNAME="encoder_0_layer4_out_0_ap_vld">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="encoder_0" PORT="layer4_out_0_ap_vld"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="encoded_input_1" RIGHT="0" SIGIS="data" SIGNAME="encoder_0_layer4_out_1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="encoder_0" PORT="layer4_out_1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="encoded_input_1_ap_ack" SIGIS="undef" SIGNAME="constraint_layer_top_0_encoded_input_1_ap_ack">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="encoder_0" PORT="layer4_out_1_ap_ack"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="encoded_input_1_ap_vld" SIGIS="undef" SIGNAME="encoder_0_layer4_out_1_ap_vld">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="encoder_0" PORT="layer4_out_1_ap_vld"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="encoded_output_0" RIGHT="0" SIGIS="data" SIGNAME="constraint_layer_top_0_encoded_output_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="AWGN_adder_0" PORT="I"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="encoded_output_0_ap_ack" SIGIS="undef" SIGNAME="AWGN_adder_0_I_ack">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="AWGN_adder_0" PORT="I_ack"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="encoded_output_0_ap_vld" SIGIS="undef" SIGNAME="constraint_layer_top_0_encoded_output_0_ap_vld">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="AWGN_adder_0" PORT="I_vld"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="encoded_output_1" RIGHT="0" SIGIS="data" SIGNAME="constraint_layer_top_0_encoded_output_1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="AWGN_adder_0" PORT="Q"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="encoded_output_1_ap_ack" SIGIS="undef" SIGNAME="AWGN_adder_0_Q_ack">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="AWGN_adder_0" PORT="Q_ack"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="encoded_output_1_ap_vld" SIGIS="undef" SIGNAME="constraint_layer_top_0_encoded_output_1_ap_vld">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="AWGN_adder_0" PORT="Q_vld"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="ap_ctrl" TYPE="TARGET" VLNV="xilinx.com:interface:acc_handshake:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="done" PHYSICAL="ap_done"/>
+            <PORTMAP LOGICAL="idle" PHYSICAL="ap_idle"/>
+            <PORTMAP LOGICAL="ready" PHYSICAL="ap_ready"/>
+            <PORTMAP LOGICAL="start" PHYSICAL="ap_start"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE COREREVISION="2113655549" FULLNAME="/decoder_0" HWVERSION="1.0" INSTANCE="decoder_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="decoder" VLNV="xilinx.com:hls:decoder:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="autoencoder_decoder_0_0"/>
+        <PARAMETER NAME="II" VALUE="8"/>
+        <PARAMETER NAME="clk_period" VALUE="10"/>
+        <PARAMETER NAME="combinational" VALUE="0"/>
+        <PARAMETER NAME="latency" VALUE="29"/>
+        <PARAMETER NAME="machine" VALUE="64"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="ap_clk" SIGIS="clk" SIGNAME="External_Ports_aclk_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="aclk_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="ap_done" SIGIS="undef"/>
+        <PORT DIR="O" NAME="ap_idle" SIGIS="undef"/>
+        <PORT DIR="O" NAME="ap_ready" SIGIS="undef"/>
+        <PORT DIR="I" NAME="ap_rst" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="rst_clk_wiz_100M_peripheral_reset">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_clk_wiz_100M" PORT="peripheral_reset"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ap_start" POLARITY="ACTIVE_LOW" SIGIS="undef" SIGNAME="rst_clk_wiz_100M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_clk_wiz_100M" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="input_114_0" RIGHT="0" SIGIS="data" SIGNAME="AWGN_adder_0_I_noisy">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="AWGN_adder_0" PORT="I_noisy"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="input_114_0_ap_ack" SIGIS="undef" SIGNAME="decoder_0_input_114_0_ap_ack">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="AWGN_adder_0" PORT="I_noisy_ack"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="input_114_0_ap_vld" SIGIS="undef" SIGNAME="AWGN_adder_0_I_noisy_vld">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="AWGN_adder_0" PORT="I_noisy_vld"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="input_114_1" RIGHT="0" SIGIS="data" SIGNAME="AWGN_adder_0_Q_noisy">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="AWGN_adder_0" PORT="Q_noisy"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="input_114_1_ap_ack" SIGIS="undef" SIGNAME="decoder_0_input_114_1_ap_ack">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="AWGN_adder_0" PORT="Q_noisy_ack"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="input_114_1_ap_vld" SIGIS="undef" SIGNAME="AWGN_adder_0_Q_noisy_vld">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="AWGN_adder_0" PORT="Q_noisy_vld"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="255" NAME="layer5_out" RIGHT="0" SIGIS="data" SIGNAME="decoder_0_layer5_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="onehot2sig_0" PORT="onehot"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="layer5_out_ap_ack" SIGIS="undef" SIGNAME="onehot2sig_0_onehot_ack">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="onehot2sig_0" PORT="onehot_ack"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="layer5_out_ap_vld" SIGIS="undef" SIGNAME="decoder_0_layer5_out_ap_vld">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="onehot2sig_0" PORT="onehot_valid"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="ap_ctrl" TYPE="TARGET" VLNV="xilinx.com:interface:acc_handshake:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="done" PHYSICAL="ap_done"/>
+            <PORTMAP LOGICAL="idle" PHYSICAL="ap_idle"/>
+            <PORTMAP LOGICAL="ready" PHYSICAL="ap_ready"/>
+            <PORTMAP LOGICAL="start" PHYSICAL="ap_start"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE COREREVISION="2113655552" FULLNAME="/encoder_0" HWVERSION="1.0" INSTANCE="encoder_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="encoder" VLNV="xilinx.com:hls:encoder:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="autoencoder_encoder_0_0"/>
+        <PARAMETER NAME="II" VALUE="8"/>
+        <PARAMETER NAME="clk_period" VALUE="10"/>
+        <PARAMETER NAME="combinational" VALUE="0"/>
+        <PARAMETER NAME="latency" VALUE="13"/>
+        <PARAMETER NAME="machine" VALUE="64"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="ap_clk" SIGIS="clk" SIGNAME="External_Ports_aclk_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="aclk_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="ap_done" SIGIS="undef"/>
+        <PORT DIR="O" NAME="ap_idle" SIGIS="undef"/>
+        <PORT DIR="O" NAME="ap_ready" SIGIS="undef" SIGNAME="encoder_0_ap_ready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ap_ready_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ap_rst" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="rst_clk_wiz_100M_peripheral_reset">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_clk_wiz_100M" PORT="peripheral_reset"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ap_start" POLARITY="ACTIVE_LOW" SIGIS="undef" SIGNAME="rst_clk_wiz_100M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_clk_wiz_100M" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="input_112" RIGHT="0" SIGIS="data" SIGNAME="sig2onehot_0_onehot">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="sig2onehot_0" PORT="onehot"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="input_112_ap_ack" SIGIS="undef" SIGNAME="encoder_0_input_112_ap_ack">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="sig2onehot_0" PORT="onehot_ack"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="input_112_ap_vld" SIGIS="undef" SIGNAME="sig2onehot_0_onehot_vld">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="sig2onehot_0" PORT="onehot_vld"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="layer4_out_0" RIGHT="0" SIGIS="data" SIGNAME="encoder_0_layer4_out_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="constraint_layer_top_0" PORT="encoded_input_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="layer4_out_0_ap_ack" SIGIS="undef" SIGNAME="constraint_layer_top_0_encoded_input_0_ap_ack">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="constraint_layer_top_0" PORT="encoded_input_0_ap_ack"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="layer4_out_0_ap_vld" SIGIS="undef" SIGNAME="encoder_0_layer4_out_0_ap_vld">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="constraint_layer_top_0" PORT="encoded_input_0_ap_vld"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="layer4_out_1" RIGHT="0" SIGIS="data" SIGNAME="encoder_0_layer4_out_1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="constraint_layer_top_0" PORT="encoded_input_1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="layer4_out_1_ap_ack" SIGIS="undef" SIGNAME="constraint_layer_top_0_encoded_input_1_ap_ack">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="constraint_layer_top_0" PORT="encoded_input_1_ap_ack"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="layer4_out_1_ap_vld" SIGIS="undef" SIGNAME="encoder_0_layer4_out_1_ap_vld">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="constraint_layer_top_0" PORT="encoded_input_1_ap_vld"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="ap_ctrl" TYPE="TARGET" VLNV="xilinx.com:interface:acc_handshake:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="done" PHYSICAL="ap_done"/>
+            <PORTMAP LOGICAL="idle" PHYSICAL="ap_idle"/>
+            <PORTMAP LOGICAL="ready" PHYSICAL="ap_ready"/>
+            <PORTMAP LOGICAL="start" PHYSICAL="ap_start"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/onehot2sig_0" HWVERSION="1.0" INSTANCE="onehot2sig_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="onehot2sig" VLNV="xilinx.com:module_ref:onehot2sig:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DATA_WIDTH" VALUE="16"/>
+        <PARAMETER NAME="FRACTIONAL_BITS" VALUE="10"/>
+        <PARAMETER NAME="THRESHOLD_NEG_POW_2" VALUE="4"/>
+        <PARAMETER NAME="Component_Name" VALUE="autoencoder_onehot2sig_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="External_Ports_aclk_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="aclk_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="areset" POLARITY="ACTIVE_HIGH" SIGIS="undef" SIGNAME="rst_clk_wiz_100M_peripheral_reset">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_clk_wiz_100M" PORT="peripheral_reset"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="255" NAME="onehot" RIGHT="0" SIGIS="undef" SIGNAME="decoder_0_layer5_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="decoder_0" PORT="layer5_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="onehot_ack" SIGIS="undef" SIGNAME="onehot2sig_0_onehot_ack">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="decoder_0" PORT="layer5_out_ap_ack"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="onehot_valid" SIGIS="undef" SIGNAME="decoder_0_layer5_out_ap_vld">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="decoder_0" PORT="layer5_out_ap_vld"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="sig" RIGHT="0" SIGIS="undef" SIGNAME="onehot2sig_0_sig">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sig_1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="sig_ack" SIGIS="undef" SIGNAME="External_Ports_sig_ack_1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sig_ack_1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="sig_vld" SIGIS="undef" SIGNAME="onehot2sig_0_sig_vld">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sig_vld_1"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="15" FULLNAME="/rst_clk_wiz_100M" HWVERSION="5.0" INSTANCE="rst_clk_wiz_100M" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="proc_sys_reset" VLNV="xilinx.com:ip:proc_sys_reset:5.0">
+      <DOCUMENTS>
+        <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=proc_sys_reset;v=v5_0;d=pg164-proc-sys-reset.pdf"/>
+      </DOCUMENTS>
+      <PARAMETERS>
+        <PARAMETER NAME="C_AUX_RESET_HIGH" VALUE="0"/>
+        <PARAMETER NAME="C_AUX_RST_WIDTH" VALUE="4"/>
+        <PARAMETER NAME="C_EXT_RESET_HIGH" VALUE="1"/>
+        <PARAMETER NAME="C_EXT_RST_WIDTH" VALUE="4"/>
+        <PARAMETER NAME="C_FAMILY" VALUE="artix7"/>
+        <PARAMETER NAME="C_NUM_BUS_RST" VALUE="1"/>
+        <PARAMETER NAME="C_NUM_INTERCONNECT_ARESETN" VALUE="1"/>
+        <PARAMETER NAME="C_NUM_PERP_ARESETN" VALUE="1"/>
+        <PARAMETER NAME="C_NUM_PERP_RST" VALUE="1"/>
+        <PARAMETER NAME="Component_Name" VALUE="autoencoder_rst_clk_wiz_100M_1"/>
+        <PARAMETER NAME="RESET_BOARD_INTERFACE" VALUE="Custom"/>
+        <PARAMETER NAME="USE_BOARD_FLOW" VALUE="false"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="aux_reset_in" POLARITY="ACTIVE_LOW" SIGIS="rst"/>
+        <PORT DIR="O" LEFT="0" NAME="bus_struct_reset" POLARITY="ACTIVE_HIGH" RIGHT="0" SIGIS="rst"/>
+        <PORT DIR="I" NAME="dcm_locked" SIGIS="undef"/>
+        <PORT DIR="I" NAME="ext_reset_in" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="External_Ports_reset_rtl_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="reset_rtl_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="interconnect_aresetn" POLARITY="ACTIVE_LOW" RIGHT="0" SIGIS="rst"/>
+        <PORT DIR="I" NAME="mb_debug_sys_rst" POLARITY="ACTIVE_HIGH" SIGIS="rst"/>
+        <PORT DIR="O" NAME="mb_reset" POLARITY="ACTIVE_HIGH" SIGIS="rst"/>
+        <PORT DIR="O" LEFT="0" NAME="peripheral_aresetn" POLARITY="ACTIVE_LOW" RIGHT="0" SIGIS="rst" SIGNAME="rst_clk_wiz_100M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="decoder_0" PORT="ap_start"/>
+            <CONNECTION INSTANCE="encoder_0" PORT="ap_start"/>
+            <CONNECTION INSTANCE="constraint_layer_top_0" PORT="ap_start"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="peripheral_reset" POLARITY="ACTIVE_HIGH" RIGHT="0" SIGIS="rst" SIGNAME="rst_clk_wiz_100M_peripheral_reset">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="sig2onehot_0" PORT="areset"/>
+            <CONNECTION INSTANCE="onehot2sig_0" PORT="areset"/>
+            <CONNECTION INSTANCE="decoder_0" PORT="ap_rst"/>
+            <CONNECTION INSTANCE="encoder_0" PORT="ap_rst"/>
+            <CONNECTION INSTANCE="AWGN_adder_0" PORT="areset"/>
+            <CONNECTION INSTANCE="constraint_layer_top_0" PORT="ap_rst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="slowest_sync_clk" SIGIS="clk" SIGNAME="External_Ports_aclk_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="aclk_0"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/sig2onehot_0" HWVERSION="1.0" INSTANCE="sig2onehot_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="sig2onehot" VLNV="xilinx.com:module_ref:sig2onehot:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="autoencoder_sig2onehot_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="External_Ports_aclk_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="aclk_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="areset" POLARITY="ACTIVE_HIGH" SIGIS="undef" SIGNAME="rst_clk_wiz_100M_peripheral_reset">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_clk_wiz_100M" PORT="peripheral_reset"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="onehot" RIGHT="0" SIGIS="undef" SIGNAME="sig2onehot_0_onehot">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="encoder_0" PORT="input_112"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="onehot_ack" SIGIS="undef" SIGNAME="encoder_0_input_112_ap_ack">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="encoder_0" PORT="input_112_ap_ack"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="onehot_vld" SIGIS="undef" SIGNAME="sig2onehot_0_onehot_vld">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="encoder_0" PORT="input_112_ap_vld"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="sig" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_sig_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sig_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="sig_ack" SIGIS="undef" SIGNAME="sig2onehot_0_sig_ack">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sig_ack_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="sig_vld" SIGIS="undef" SIGNAME="External_Ports_sig_vld_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sig_vld_0"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

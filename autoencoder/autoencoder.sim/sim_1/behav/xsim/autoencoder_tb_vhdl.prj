@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../autoencoder.gen/sources_1/ip/snr_mult/sim/snr_mult.vhd" \
+"../../../../autoencoder.gen/sources_1/bd/autoencoder/ip/autoencoder_rst_clk_wiz_100M_1/sim/autoencoder_rst_clk_wiz_100M_1.vhd" \
+
+# Do not sort compile order
+nosort

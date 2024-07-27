@@ -1,0 +1,1 @@
+snr_mult.vhd,vhdl,xil_defaultlib,../../../../autoencoder.gen/sources_1/ip/snr_mult/sim/snr_mult.vhd,

@@ -1,0 +1,68 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.397685",
+   "Default View_TopLeft":"-1059,-651",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.7.1 2023-07-26 3bc4126617 VDI=43 GEI=38 GUI=JA:21.0
+#  -string -flagsOSRD
+preplace port port-id_reset_rtl_0 -pg 1 -lvl 0 -x -940 -y -180 -defaultsOSRD
+preplace port port-id_sig_vld_0 -pg 1 -lvl 0 -x -940 -y -60 -defaultsOSRD
+preplace port port-id_aclk_0 -pg 1 -lvl 0 -x -940 -y -120 -defaultsOSRD
+preplace port port-id_sig_ack_1 -pg 1 -lvl 0 -x -940 -y 200 -defaultsOSRD
+preplace port port-id_ap_ready_0 -pg 1 -lvl 7 -x 1500 -y -140 -defaultsOSRD
+preplace port port-id_sig_ack_0 -pg 1 -lvl 7 -x 1500 -y -280 -defaultsOSRD
+preplace port port-id_sig_vld_1 -pg 1 -lvl 7 -x 1500 -y -20 -defaultsOSRD
+preplace portBus sig_0 -pg 1 -lvl 0 -x -940 -y -150 -defaultsOSRD
+preplace portBus sig_1 -pg 1 -lvl 7 -x 1500 -y -50 -defaultsOSRD
+preplace portBus SNR_0 -pg 1 -lvl 0 -x -940 -y -90 -defaultsOSRD
+preplace inst encoder_0 -pg 1 -lvl 2 -x -350 -y -100 -defaultsOSRD
+preplace inst constraint_layer_top_0 -pg 1 -lvl 3 -x 140 -y -80 -defaultsOSRD
+preplace inst decoder_0 -pg 1 -lvl 5 -x 970 -y -30 -defaultsOSRD
+preplace inst sig2onehot_0 -pg 1 -lvl 1 -x -750 -y -80 -defaultsOSRD
+preplace inst onehot2sig_0 -pg 1 -lvl 6 -x 1330 -y -40 -defaultsOSRD
+preplace inst rst_clk_wiz_100M -pg 1 -lvl 2 -x -350 -y -460 -defaultsOSRD
+preplace inst AWGN_adder_0 -pg 1 -lvl 4 -x 560 -y -80 -defaultsOSRD
+preplace netloc AWGN_adder_0_I_ack 1 2 3 -90 -320 NJ -320 700
+preplace netloc AWGN_adder_0_I_noisy 1 4 1 710 -90n
+preplace netloc AWGN_adder_0_I_noisy_vld 1 4 1 N -70
+preplace netloc AWGN_adder_0_Q_ack 1 2 3 -80 -260 NJ -260 690
+preplace netloc AWGN_adder_0_Q_noisy 1 4 1 700 -50n
+preplace netloc AWGN_adder_0_Q_noisy_vld 1 4 1 760 -50n
+preplace netloc SNR_0_1 1 0 4 -910J -270 NJ -270 NJ -270 390J
+preplace netloc aclk_0_1 1 0 6 -900 -180 -590 -320 -120 -300 410 -240 770 -180 1190
+preplace netloc constraint_layer_top_0_encoded_input_0_ap_ack 1 1 3 -560 -290 NJ -290 360
+preplace netloc constraint_layer_top_0_encoded_input_1_ap_ack 1 1 3 -550 -280 NJ -280 370
+preplace netloc constraint_layer_top_0_encoded_output_0 1 3 1 380 -100n
+preplace netloc constraint_layer_top_0_encoded_output_0_ap_vld 1 3 1 360 -90n
+preplace netloc constraint_layer_top_0_encoded_output_1 1 3 1 400 -60n
+preplace netloc constraint_layer_top_0_encoded_output_1_ap_vld 1 3 1 360 -70n
+preplace netloc decoder_0_input_114_0_ap_ack 1 3 3 430 -280 NJ -280 1170
+preplace netloc decoder_0_input_114_1_ap_ack 1 3 3 420 -250 NJ -250 1160
+preplace netloc decoder_0_layer5_out 1 5 1 1180 -40n
+preplace netloc decoder_0_layer5_out_ap_vld 1 5 1 N -20
+preplace netloc encoder_0_ap_ready 1 1 6 -540 -250 NJ -250 400J -270 N -270 NJ -270 1470J
+preplace netloc encoder_0_input_67_ap_ack 1 0 3 -890 -240 N -240 -160
+preplace netloc encoder_0_layer4_out_0 1 2 1 -150 -80n
+preplace netloc encoder_0_layer4_out_0_ap_vld 1 2 1 -160 -130n
+preplace netloc encoder_0_layer4_out_1 1 2 1 -160 -60n
+preplace netloc encoder_0_layer4_out_1_ap_vld 1 2 1 -110 -110n
+preplace netloc onehot2sig_0_onehot_ack 1 4 3 780 -190 N -190 1460
+preplace netloc onehot2sig_0_sig 1 6 1 1460J -50n
+preplace netloc onehot2sig_0_sig_vld 1 6 1 N -20
+preplace netloc reset_rtl_0_1 1 0 2 -920J -480 N
+preplace netloc rst_clk_wiz_100M_peripheral_aresetn 1 1 4 -570 -300 -150 -240 400 -230 760
+preplace netloc rst_clk_wiz_100M_peripheral_reset 1 0 6 -880 -190 -580 -260 -100 -230 380 -220 750 -170 1180
+preplace netloc sig2onehot_0_onehot 1 1 1 -620 -80n
+preplace netloc sig2onehot_0_onehot_vld 1 1 1 -610 -120n
+preplace netloc sig2onehot_0_sig_ack 1 1 6 -620J -310 NJ -310 NJ -310 N -310 NJ -310 1470J
+preplace netloc sig_0_1 1 0 1 -920J -150n
+preplace netloc sig_ack_0_1 1 0 6 NJ 200 NJ 200 NJ 200 NJ 200 N 200 1190J
+preplace netloc sig_vld_0_1 1 0 1 NJ -60
+levelinfo -pg 1 -940 -750 -350 140 560 970 1330 1500
+pagesize -pg 1 -db -bbox -sgen -1080 -1070 1630 1070
+"
+}
+{
+   "da_board_cnt":"3",
+   "da_clkrst_cnt":"8"
+}

@@ -1,0 +1,689 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Fri Jul 26 18:12:54 2024
+| Host         : DESKTOP-UUAKG5T running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a35tcpg236-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'autoencoder_constraint_layer_top_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of autoencoder_constraint_layer_top_0_0 (xilinx.com:hls:constraint_layer_top:1.0) from (Rev. 2113662995) to (Rev. 2113663061)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Fri Jul 26 17:10:27 2024
+| Host         : DESKTOP-UUAKG5T running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a35tcpg236-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'autoencoder_constraint_layer_top_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of autoencoder_constraint_layer_top_0_0 (xilinx.com:hls:constraint_layer_top:1.0) from (Rev. 2113655525) to (Rev. 2113662995)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Tue Jul 23 16:41:43 2024
+| Host         : DESKTOP-UUAKG5T running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a35tcpg236-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'autoencoder_encoder_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the update of autoencoder_encoder_0_0 (xilinx.com:hls:encoder:1.0 (Rev. 2113655552)) to current project options.
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Tue Jul 23 16:41:43 2024
+| Host         : DESKTOP-UUAKG5T running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a35tcpg236-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'autoencoder_decoder_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the update of autoencoder_decoder_0_0 (xilinx.com:hls:decoder:1.0 (Rev. 2113655549)) to current project options.
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Tue Jul 23 16:41:43 2024
+| Host         : DESKTOP-UUAKG5T running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a35tcpg236-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'autoencoder_constraint_layer_top_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the update of autoencoder_constraint_layer_top_0_0 (xilinx.com:hls:constraint_layer_top:1.0 (Rev. 2113655525)) to current project options.
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Sun Jul 21 18:34:18 2024
+| Host         : DESKTOP-UUAKG5T running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a35tcpg236-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'autoencoder_encoder_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of autoencoder_encoder_0_0 (xilinx.com:hls:encoder:1.0) from (Rev. 2113655527) to (Rev. 2113655552)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'autoencoder_encoder_0_0'. These changes may impact your design.
+
+
+-Upgrade has added port 'input_112_ap_ack'
+
+-Upgrade has added port 'layer4_out_0_ap_ack'
+
+-Upgrade has added port 'layer4_out_1_ap_ack'
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Sun Jul 21 18:34:18 2024
+| Host         : DESKTOP-UUAKG5T running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a35tcpg236-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'autoencoder_decoder_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of autoencoder_decoder_0_0 (xilinx.com:hls:decoder:1.0) from (Rev. 2113655530) to (Rev. 2113655549)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'autoencoder_decoder_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'input_114'
+
+-Upgrade has removed port 'input_114_ap_vld'
+
+-Upgrade has removed port 'layer5_out_0'
+
+-Upgrade has removed port 'layer5_out_0_ap_vld'
+
+-Upgrade has removed port 'layer5_out_1'
+
+-Upgrade has removed port 'layer5_out_10'
+
+-Upgrade has removed port 'layer5_out_10_ap_vld'
+
+-Upgrade has removed port 'layer5_out_11'
+
+-Upgrade has removed port 'layer5_out_11_ap_vld'
+
+-Upgrade has removed port 'layer5_out_12'
+
+-Upgrade has removed port 'layer5_out_12_ap_vld'
+
+-Upgrade has removed port 'layer5_out_13'
+
+-Upgrade has removed port 'layer5_out_13_ap_vld'
+
+-Upgrade has removed port 'layer5_out_14'
+
+-Upgrade has removed port 'layer5_out_14_ap_vld'
+
+-Upgrade has removed port 'layer5_out_15'
+
+-Upgrade has removed port 'layer5_out_15_ap_vld'
+
+-Upgrade has removed port 'layer5_out_1_ap_vld'
+
+-Upgrade has removed port 'layer5_out_2'
+
+-Upgrade has removed port 'layer5_out_2_ap_vld'
+
+-Upgrade has removed port 'layer5_out_3'
+
+-Upgrade has removed port 'layer5_out_3_ap_vld'
+
+-Upgrade has removed port 'layer5_out_4'
+
+-Upgrade has removed port 'layer5_out_4_ap_vld'
+
+-Upgrade has removed port 'layer5_out_5'
+
+-Upgrade has removed port 'layer5_out_5_ap_vld'
+
+-Upgrade has removed port 'layer5_out_6'
+
+-Upgrade has removed port 'layer5_out_6_ap_vld'
+
+-Upgrade has removed port 'layer5_out_7'
+
+-Upgrade has removed port 'layer5_out_7_ap_vld'
+
+-Upgrade has removed port 'layer5_out_8'
+
+-Upgrade has removed port 'layer5_out_8_ap_vld'
+
+-Upgrade has removed port 'layer5_out_9'
+
+-Upgrade has removed port 'layer5_out_9_ap_vld'
+
+-Upgrade has added port 'input_114_0'
+
+-Upgrade has added port 'input_114_0_ap_ack'
+
+-Upgrade has added port 'input_114_0_ap_vld'
+
+-Upgrade has added port 'input_114_1'
+
+-Upgrade has added port 'input_114_1_ap_ack'
+
+-Upgrade has added port 'input_114_1_ap_vld'
+
+-Upgrade has added port 'layer5_out'
+
+-Upgrade has added port 'layer5_out_ap_ack'
+
+-Upgrade has added port 'layer5_out_ap_vld'
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Sun Jul 21 18:13:17 2024
+| Host         : DESKTOP-UUAKG5T running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a35tcpg236-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'autoencoder_encoder_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of autoencoder_encoder_0_0 (xilinx.com:hls:encoder:1.0) from (Rev. 2113654399) to (Rev. 2113655527)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'autoencoder_encoder_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'input_67'
+
+-Upgrade has removed port 'input_67_ap_ack'
+
+-Upgrade has removed port 'input_67_ap_vld'
+
+-Upgrade has removed port 'layer4_out_0_ap_ack'
+
+-Upgrade has removed port 'layer4_out_1_ap_ack'
+
+-Upgrade has added port 'input_112'
+
+-Upgrade has added port 'input_112_ap_vld'
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Sun Jul 21 18:13:17 2024
+| Host         : DESKTOP-UUAKG5T running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a35tcpg236-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'autoencoder_decoder_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of autoencoder_decoder_0_0 (xilinx.com:hls:decoder:1.0) from (Rev. 2113654486) to (Rev. 2113655530)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'autoencoder_decoder_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'input_111_0'
+
+-Upgrade has removed port 'input_111_0_ap_ack'
+
+-Upgrade has removed port 'input_111_0_ap_vld'
+
+-Upgrade has removed port 'input_111_1'
+
+-Upgrade has removed port 'input_111_1_ap_ack'
+
+-Upgrade has removed port 'input_111_1_ap_vld'
+
+-Upgrade has removed port 'layer5_out'
+
+-Upgrade has removed port 'layer5_out_ap_ack'
+
+-Upgrade has removed port 'layer5_out_ap_vld'
+
+-Upgrade has added port 'input_114'
+
+-Upgrade has added port 'input_114_ap_vld'
+
+-Upgrade has added port 'layer5_out_0'
+
+-Upgrade has added port 'layer5_out_0_ap_vld'
+
+-Upgrade has added port 'layer5_out_1'
+
+-Upgrade has added port 'layer5_out_10'
+
+-Upgrade has added port 'layer5_out_10_ap_vld'
+
+-Upgrade has added port 'layer5_out_11'
+
+-Upgrade has added port 'layer5_out_11_ap_vld'
+
+-Upgrade has added port 'layer5_out_12'
+
+-Upgrade has added port 'layer5_out_12_ap_vld'
+
+-Upgrade has added port 'layer5_out_13'
+
+-Upgrade has added port 'layer5_out_13_ap_vld'
+
+-Upgrade has added port 'layer5_out_14'
+
+-Upgrade has added port 'layer5_out_14_ap_vld'
+
+-Upgrade has added port 'layer5_out_15'
+
+-Upgrade has added port 'layer5_out_15_ap_vld'
+
+-Upgrade has added port 'layer5_out_1_ap_vld'
+
+-Upgrade has added port 'layer5_out_2'
+
+-Upgrade has added port 'layer5_out_2_ap_vld'
+
+-Upgrade has added port 'layer5_out_3'
+
+-Upgrade has added port 'layer5_out_3_ap_vld'
+
+-Upgrade has added port 'layer5_out_4'
+
+-Upgrade has added port 'layer5_out_4_ap_vld'
+
+-Upgrade has added port 'layer5_out_5'
+
+-Upgrade has added port 'layer5_out_5_ap_vld'
+
+-Upgrade has added port 'layer5_out_6'
+
+-Upgrade has added port 'layer5_out_6_ap_vld'
+
+-Upgrade has added port 'layer5_out_7'
+
+-Upgrade has added port 'layer5_out_7_ap_vld'
+
+-Upgrade has added port 'layer5_out_8'
+
+-Upgrade has added port 'layer5_out_8_ap_vld'
+
+-Upgrade has added port 'layer5_out_9'
+
+-Upgrade has added port 'layer5_out_9_ap_vld'
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Sun Jul 21 18:13:17 2024
+| Host         : DESKTOP-UUAKG5T running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a35tcpg236-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'autoencoder_constraint_layer_top_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of autoencoder_constraint_layer_top_0_0 (xilinx.com:hls:constraint_layer_top:1.0) from (Rev. 2113654055) to (Rev. 2113655525)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Sun Jul 21 00:47:44 2024
+| Host         : DESKTOP-UUAKG5T running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a35tcpg236-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'autoencoder_decoder_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of autoencoder_decoder_0_0 (xilinx.com:hls:decoder:1.0) from (Rev. 2113654479) to (Rev. 2113654486)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'autoencoder_decoder_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'input_111'
+
+-Upgrade has removed port 'input_111_ap_ack'
+
+-Upgrade has removed port 'input_111_ap_vld'
+
+-Upgrade has removed port 'layer5_out_address0'
+
+-Upgrade has removed port 'layer5_out_address1'
+
+-Upgrade has removed port 'layer5_out_ce0'
+
+-Upgrade has removed port 'layer5_out_ce1'
+
+-Upgrade has removed port 'layer5_out_d0'
+
+-Upgrade has removed port 'layer5_out_d1'
+
+-Upgrade has removed port 'layer5_out_we0'
+
+-Upgrade has removed port 'layer5_out_we1'
+
+-Upgrade has added port 'input_111_0'
+
+-Upgrade has added port 'input_111_0_ap_ack'
+
+-Upgrade has added port 'input_111_0_ap_vld'
+
+-Upgrade has added port 'input_111_1'
+
+-Upgrade has added port 'input_111_1_ap_ack'
+
+-Upgrade has added port 'input_111_1_ap_vld'
+
+-Upgrade has added port 'layer5_out'
+
+-Upgrade has added port 'layer5_out_ap_ack'
+
+-Upgrade has added port 'layer5_out_ap_vld'
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Sun Jul 21 00:40:01 2024
+| Host         : DESKTOP-UUAKG5T running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a35tcpg236-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'autoencoder_decoder_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of autoencoder_decoder_0_0 (xilinx.com:hls:decoder:1.0) from (Rev. 2113654472) to (Rev. 2113654479)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'autoencoder_decoder_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'layer5_out_0'
+
+-Upgrade has removed port 'layer5_out_0_ap_ack'
+
+-Upgrade has removed port 'layer5_out_0_ap_vld'
+
+-Upgrade has removed port 'layer5_out_1'
+
+-Upgrade has removed port 'layer5_out_10'
+
+-Upgrade has removed port 'layer5_out_10_ap_ack'
+
+-Upgrade has removed port 'layer5_out_10_ap_vld'
+
+-Upgrade has removed port 'layer5_out_11'
+
+-Upgrade has removed port 'layer5_out_11_ap_ack'
+
+-Upgrade has removed port 'layer5_out_11_ap_vld'
+
+-Upgrade has removed port 'layer5_out_12'
+
+-Upgrade has removed port 'layer5_out_12_ap_ack'
+
+-Upgrade has removed port 'layer5_out_12_ap_vld'
+
+-Upgrade has removed port 'layer5_out_13'
+
+-Upgrade has removed port 'layer5_out_13_ap_ack'
+
+-Upgrade has removed port 'layer5_out_13_ap_vld'
+
+-Upgrade has removed port 'layer5_out_14'
+
+-Upgrade has removed port 'layer5_out_14_ap_ack'
+
+-Upgrade has removed port 'layer5_out_14_ap_vld'
+
+-Upgrade has removed port 'layer5_out_15'
+
+-Upgrade has removed port 'layer5_out_15_ap_ack'
+
+-Upgrade has removed port 'layer5_out_15_ap_vld'
+
+-Upgrade has removed port 'layer5_out_1_ap_ack'
+
+-Upgrade has removed port 'layer5_out_1_ap_vld'
+
+-Upgrade has removed port 'layer5_out_2'
+
+-Upgrade has removed port 'layer5_out_2_ap_ack'
+
+-Upgrade has removed port 'layer5_out_2_ap_vld'
+
+-Upgrade has removed port 'layer5_out_3'
+
+-Upgrade has removed port 'layer5_out_3_ap_ack'
+
+-Upgrade has removed port 'layer5_out_3_ap_vld'
+
+-Upgrade has removed port 'layer5_out_4'
+
+-Upgrade has removed port 'layer5_out_4_ap_ack'
+
+-Upgrade has removed port 'layer5_out_4_ap_vld'
+
+-Upgrade has removed port 'layer5_out_5'
+
+-Upgrade has removed port 'layer5_out_5_ap_ack'
+
+-Upgrade has removed port 'layer5_out_5_ap_vld'
+
+-Upgrade has removed port 'layer5_out_6'
+
+-Upgrade has removed port 'layer5_out_6_ap_ack'
+
+-Upgrade has removed port 'layer5_out_6_ap_vld'
+
+-Upgrade has removed port 'layer5_out_7'
+
+-Upgrade has removed port 'layer5_out_7_ap_ack'
+
+-Upgrade has removed port 'layer5_out_7_ap_vld'
+
+-Upgrade has removed port 'layer5_out_8'
+
+-Upgrade has removed port 'layer5_out_8_ap_ack'
+
+-Upgrade has removed port 'layer5_out_8_ap_vld'
+
+-Upgrade has removed port 'layer5_out_9'
+
+-Upgrade has removed port 'layer5_out_9_ap_ack'
+
+-Upgrade has removed port 'layer5_out_9_ap_vld'
+
+-Upgrade has added port 'layer5_out_address0'
+
+-Upgrade has added port 'layer5_out_address1'
+
+-Upgrade has added port 'layer5_out_ce0'
+
+-Upgrade has added port 'layer5_out_ce1'
+
+-Upgrade has added port 'layer5_out_d0'
+
+-Upgrade has added port 'layer5_out_d1'
+
+-Upgrade has added port 'layer5_out_we0'
+
+-Upgrade has added port 'layer5_out_we1'
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Sat Jul 20 23:20:52 2024
+| Host         : DESKTOP-UUAKG5T running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a35tcpg236-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'autoencoder_encoder_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of autoencoder_encoder_0_0 (xilinx.com:hls:encoder:1.0) from (Rev. 2113653780) to (Rev. 2113654399)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'autoencoder_encoder_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'input_46'
+
+-Upgrade has removed port 'input_46_ap_vld'
+
+-Upgrade has added port 'input_67'
+
+-Upgrade has added port 'input_67_ap_ack'
+
+-Upgrade has added port 'input_67_ap_vld'
+
+-Upgrade has added port 'layer4_out_0_ap_ack'
+
+-Upgrade has added port 'layer4_out_1_ap_ack'
+
+

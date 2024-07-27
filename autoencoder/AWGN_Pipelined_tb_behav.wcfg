@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="AWGN_Pipelined_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="AWGN_Pipelined_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="200,060.134 ns"></ZoomStartTime>
+      <ZoomEndTime time="200,154.535 ns"></ZoomEndTime>
+      <Cursor1Time time="200,075.867 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="299"></NameColumnWidth>
+      <ValueColumnWidth column_width="222"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="17" />
+   <wvobject fp_name="/AWGN_Pipelined_tb/awgn_out" type="array">
+      <obj_property name="ElementShortName">awgn_out[15:0]</obj_property>
+      <obj_property name="ObjectShortName">awgn_out[15:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/AWGN_Pipelined_tb/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/AWGN_Pipelined_tb/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/AWGN_Pipelined_tb/urng_seed1" type="array">
+      <obj_property name="ElementShortName">urng_seed1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">urng_seed1[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/AWGN_Pipelined_tb/urng_seed2" type="array">
+      <obj_property name="ElementShortName">urng_seed2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">urng_seed2[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/AWGN_Pipelined_tb/urng_seed3" type="array">
+      <obj_property name="ElementShortName">urng_seed3[31:0]</obj_property>
+      <obj_property name="ObjectShortName">urng_seed3[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/AWGN_Pipelined_tb/urng_seed4" type="array">
+      <obj_property name="ElementShortName">urng_seed4[31:0]</obj_property>
+      <obj_property name="ObjectShortName">urng_seed4[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/AWGN_Pipelined_tb/urng_seed5" type="array">
+      <obj_property name="ElementShortName">urng_seed5[31:0]</obj_property>
+      <obj_property name="ObjectShortName">urng_seed5[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/AWGN_Pipelined_tb/urng_seed6" type="array">
+      <obj_property name="ElementShortName">urng_seed6[31:0]</obj_property>
+      <obj_property name="ObjectShortName">urng_seed6[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/AWGN_Pipelined_tb/expected_x0" type="array">
+      <obj_property name="ElementShortName">expected_x0[15:0]</obj_property>
+      <obj_property name="ObjectShortName">expected_x0[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/AWGN_Pipelined_tb/expected_x1" type="array">
+      <obj_property name="ElementShortName">expected_x1[15:0]</obj_property>
+      <obj_property name="ObjectShortName">expected_x1[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/AWGN_Pipelined_tb/x0_fd" type="array">
+      <obj_property name="ElementShortName">x0_fd[31:0]</obj_property>
+      <obj_property name="ObjectShortName">x0_fd[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/AWGN_Pipelined_tb/x1_fd" type="array">
+      <obj_property name="ElementShortName">x1_fd[31:0]</obj_property>
+      <obj_property name="ObjectShortName">x1_fd[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/AWGN_Pipelined_tb/status" type="array">
+      <obj_property name="ElementShortName">status[31:0]</obj_property>
+      <obj_property name="ObjectShortName">status[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/AWGN_Pipelined_tb/num_tests" type="array">
+      <obj_property name="ElementShortName">num_tests[31:0]</obj_property>
+      <obj_property name="ObjectShortName">num_tests[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/AWGN_Pipelined_tb/tests_passed" type="array">
+      <obj_property name="ElementShortName">tests_passed[31:0]</obj_property>
+      <obj_property name="ObjectShortName">tests_passed[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/AWGN_Pipelined_tb/largest_error" type="array">
+      <obj_property name="ElementShortName">largest_error[31:0]</obj_property>
+      <obj_property name="ObjectShortName">largest_error[31:0]</obj_property>
+   </wvobject>
+</wave_config>

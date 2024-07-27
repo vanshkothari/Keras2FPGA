@@ -1,0 +1,17 @@
+Time resolution is 1 ps
+WARNING: File snr_mult.txt referenced on C:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv at line 1405 cannot be opened for reading. Please ensure that this file is available in the current working directory or parent directory of xsim.dir location specified via -xsimdir switch.
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. autoencoder_tb.verification_fifo.inst.gen_fifo.xpm_fifo_axis_inst.xpm_fifo_base_inst.gen_sdpram.xpm_memory_base_inst.config_drc
+Time: 1 ps  Iteration: 0  Process: /autoencoder_tb/verification_fifo/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial302_581  Scope: autoencoder_tb.verification_fifo.inst.gen_fifo.xpm_fifo_axis_inst.xpm_fifo_base_inst.gen_sdpram.xpm_memory_base_inst.config_drc  File: C:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 514
+Iteration    0 , BER =        9559
+Iteration    1 , BER =        7862
+Iteration    2 , BER =        6185
+Iteration    3 , BER =        4310
+Iteration    4 , BER =        2380
+Iteration    5 , BER =         938
+Iteration    6 , BER =         206
+Iteration    7 , BER =          14
+Iteration    8 , BER =           0
+Iteration    9 , BER =           0
+Iteration   10 , BER =           0
+$finish called at time : 15363665 ns : File "C:/Users/Vansh/vck/NN_on_FPGA/autoencoder/autoencoder.srcs/sim_1/new/autoencoder_tb.v" Line 124
+INFO: xsimkernel Simulation Memory Usage: 23044 KB (Peak: 23044 KB), Simulation CPU Usage: 1073437 ms

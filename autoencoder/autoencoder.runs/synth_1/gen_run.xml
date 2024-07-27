@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1722002841" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/autoencoder_wrapper.dcp">
+  <File Type="PA-TCL" Name="autoencoder_wrapper.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="autoencoder_wrapper_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="autoencoder_wrapper_reports.tcl"/>
+  <File Type="RDS-RDS" Name="autoencoder_wrapper.vds"/>
+  <File Type="RDS-UTIL" Name="autoencoder_wrapper_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="autoencoder_wrapper_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="autoencoder_wrapper.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="autoencoder_wrapper_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="autoencoder_wrapper_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/sig2onehot.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/onehot2sig.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/AWGN.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../AWGN_Generator-master/AWGN_Generator-master/RTL project/AWGN/AWGN.srcs/sources_1/new/AWGN.v"/>
+        <Attr Name="ImportTime" Val="1721494007"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/log.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../AWGN_Generator-master/AWGN_Generator-master/RTL project/AWGN/AWGN.srcs/sources_1/new/log.v"/>
+        <Attr Name="ImportTime" Val="1721495960"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/lzdetector.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../AWGN_Generator-master/AWGN_Generator-master/RTL project/AWGN/AWGN.srcs/sources_1/new/lzdetector.v"/>
+        <Attr Name="ImportTime" Val="1721494007"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/shifter.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../AWGN_Generator-master/AWGN_Generator-master/RTL project/AWGN/AWGN.srcs/sources_1/new/shifter.v"/>
+        <Attr Name="ImportTime" Val="1721494007"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/sincos.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../AWGN_Generator-master/AWGN_Generator-master/RTL project/AWGN/AWGN.srcs/sources_1/new/sincos.v"/>
+        <Attr Name="ImportTime" Val="1721495940"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/sqrt.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../AWGN_Generator-master/AWGN_Generator-master/RTL project/AWGN/AWGN.srcs/sources_1/new/sqrt.v"/>
+        <Attr Name="ImportTime" Val="1721496153"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/taus.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../AWGN_Generator-master/AWGN_Generator-master/RTL project/AWGN/AWGN.srcs/sources_1/new/taus.v"/>
+        <Attr Name="ImportTime" Val="1721494007"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/twobitlzd.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../AWGN_Generator-master/AWGN_Generator-master/RTL project/AWGN/AWGN.srcs/sources_1/new/twobitlzd.v"/>
+        <Attr Name="ImportTime" Val="1721494007"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/AWGN_adder.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/autoencoder/autoencoder.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PGENDIR/sources_1/bd/autoencoder/hdl/autoencoder_wrapper.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/AWGN_Pipelined.v">
+      <FileInfo SFType="SVerilog">
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../AWGN_Generator-master/AWGN_Generator-master/RTL project/AWGN/AWGN.srcs/sources_1/new/AWGN_Pipelined.v"/>
+        <Attr Name="ImportTime" Val="1721494007"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/logp.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../AWGN_Generator-master/AWGN_Generator-master/RTL project/AWGN/AWGN.srcs/sources_1/new/logp.v"/>
+        <Attr Name="ImportTime" Val="1721494007"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/log2.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../AWGN_Generator-master/AWGN_Generator-master/RTL project/AWGN/AWGN.srcs/sources_1/new/log2.v"/>
+        <Attr Name="ImportTime" Val="1721494007"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/2bitlzd.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../AWGN_Generator-master/AWGN_Generator-master/RTL project/AWGN/AWGN.srcs/sources_1/new/2bitlzd.v"/>
+        <Attr Name="ImportTime" Val="1721494007"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/lut.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../AWGN_Generator-master/AWGN_Generator-master/RTL project/AWGN/AWGN.srcs/sources_1/new/lut.v"/>
+        <Attr Name="ImportTime" Val="1721494007"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/AWGN_FINAL.v">
+      <FileInfo SFType="SVerilog">
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../AWGN_Generator-master/AWGN_Generator-master/RTL project/AWGN/AWGN.srcs/sources_1/new/AWGN_FINAL.v"/>
+        <Attr Name="ImportTime" Val="1721494007"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/sqrtp.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../AWGN_Generator-master/AWGN_Generator-master/RTL project/AWGN/AWGN.srcs/sources_1/new/sqrtp.v"/>
+        <Attr Name="ImportTime" Val="1721494007"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/cosp.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../AWGN_Generator-master/AWGN_Generator-master/RTL project/AWGN/AWGN.srcs/sources_1/new/cosp.v"/>
+        <Attr Name="ImportTime" Val="1721494007"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="autoencoder_wrapper"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
+    <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/autoencoder_wrapper.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2024">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
+    <Step Id="synth_design"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="autoencoder_AWGN_adder_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="snr_mult"/>
+  <BlockFileSet Type="BlockSrcs" Name="autoencoder_rst_clk_wiz_100M_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="autoencoder_onehot2sig_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="autoencoder_encoder_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="autoencoder_sig2onehot_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="autoencoder_decoder_0_0"/>
+</GenRun>

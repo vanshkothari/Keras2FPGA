@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="autoencoder_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="autoencoder_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="1,119,685.334 ns"></ZoomStartTime>
+      <ZoomEndTime time="1,120,367.335 ns"></ZoomEndTime>
+      <Cursor1Time time="1,120,035.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="256"></NameColumnWidth>
+      <ValueColumnWidth column_width="231"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="46" />
+   <wvobject fp_name="/autoencoder_tb/aclk_0" type="logic">
+      <obj_property name="ElementShortName">aclk_0</obj_property>
+      <obj_property name="ObjectShortName">aclk_0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/autoencoder_tb/ap_ready_0" type="logic">
+      <obj_property name="ElementShortName">ap_ready_0</obj_property>
+      <obj_property name="ObjectShortName">ap_ready_0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/autoencoder_tb/reset_rtl_0" type="logic">
+      <obj_property name="ElementShortName">reset_rtl_0</obj_property>
+      <obj_property name="ObjectShortName">reset_rtl_0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/autoencoder_tb/sig_0" type="array">
+      <obj_property name="ElementShortName">sig_0[3:0]</obj_property>
+      <obj_property name="ObjectShortName">sig_0[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/autoencoder_tb/dut/autoencoder_i/sig2onehot_0/inst/onehot" type="array">
+      <obj_property name="ElementShortName">onehot[15:0]</obj_property>
+      <obj_property name="ObjectShortName">onehot[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/autoencoder_tb/sig_ack_0" type="logic">
+      <obj_property name="ElementShortName">sig_ack_0</obj_property>
+      <obj_property name="ObjectShortName">sig_ack_0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/autoencoder_tb/sig_vld_0" type="logic">
+      <obj_property name="ElementShortName">sig_vld_0</obj_property>
+      <obj_property name="ObjectShortName">sig_vld_0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/autoencoder_tb/sig_ack_1" type="logic">
+      <obj_property name="ElementShortName">sig_ack_1</obj_property>
+      <obj_property name="ObjectShortName">sig_ack_1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/autoencoder_tb/sig_vld_1" type="logic">
+      <obj_property name="ElementShortName">sig_vld_1</obj_property>
+      <obj_property name="ObjectShortName">sig_vld_1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/autoencoder_tb/sig_1" type="array">
+      <obj_property name="ElementShortName">sig_1[3:0]</obj_property>
+      <obj_property name="ObjectShortName">sig_1[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/autoencoder_tb/dut/autoencoder_i/encoder_0/ap_start" type="logic">
+      <obj_property name="ElementShortName">ap_start</obj_property>
+      <obj_property name="ObjectShortName">ap_start</obj_property>
+   </wvobject>
+   <wvobject fp_name="/autoencoder_tb/dut/autoencoder_i/rst_clk_wiz_100M/peripheral_reset" type="array">
+      <obj_property name="ElementShortName">peripheral_reset[0:0]</obj_property>
+      <obj_property name="ObjectShortName">peripheral_reset[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/autoencoder_tb/dut/autoencoder_i/rst_clk_wiz_100M/peripheral_aresetn" type="array">
+      <obj_property name="ElementShortName">peripheral_aresetn[0:0]</obj_property>
+      <obj_property name="ObjectShortName">peripheral_aresetn[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/autoencoder_tb/dut/autoencoder_i/encoder_0/ap_done" type="logic">
+      <obj_property name="ElementShortName">ap_done</obj_property>
+      <obj_property name="ObjectShortName">ap_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/autoencoder_tb/dut/autoencoder_i/encoder_0/ap_idle" type="logic">
+      <obj_property name="ElementShortName">ap_idle</obj_property>
+      <obj_property name="ObjectShortName">ap_idle</obj_property>
+   </wvobject>
+   <wvobject fp_name="/autoencoder_tb/dut/autoencoder_i/encoder_0/ap_ready" type="logic">
+      <obj_property name="ElementShortName">ap_ready</obj_property>
+      <obj_property name="ObjectShortName">ap_ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/autoencoder_tb/dut/autoencoder_i/onehot2sig_0/inst/index_1" type="array">
+      <obj_property name="ElementShortName">index_1[3:0][3:0]</obj_property>
+      <obj_property name="ObjectShortName">index_1[3:0][3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/autoencoder_tb/dut/autoencoder_i/onehot2sig_0/inst/i" type="array">
+      <obj_property name="ElementShortName">i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/autoencoder_tb/dut/autoencoder_i/onehot2sig_0/inst/j" type="array">
+      <obj_property name="ElementShortName">j[31:0]</obj_property>
+      <obj_property name="ObjectShortName">j[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/autoencoder_tb/dut/autoencoder_i/onehot2sig_0/inst/k" type="array">
+      <obj_property name="ElementShortName">k[31:0]</obj_property>
+      <obj_property name="ObjectShortName">k[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/autoencoder_tb/dut/autoencoder_i/onehot2sig_0/inst/index_0" type="array">
+      <obj_property name="ElementShortName">index_0[7:0][3:0]</obj_property>
+      <obj_property name="ObjectShortName">index_0[7:0][3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/autoencoder_tb/dut/autoencoder_i/onehot2sig_0/inst/onehot_0" type="array">
+      <obj_property name="ElementShortName">onehot_0[15:0][15:0]</obj_property>
+      <obj_property name="ObjectShortName">onehot_0[15:0][15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/autoencoder_tb/dut/autoencoder_i/onehot2sig_0/inst/onehot_1" type="array">
+      <obj_property name="ElementShortName">onehot_1[7:0][15:0]</obj_property>
+      <obj_property name="ObjectShortName">onehot_1[7:0][15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/autoencoder_tb/dut/autoencoder_i/onehot2sig_0/inst/onehot_2" type="array">
+      <obj_property name="ElementShortName">onehot_2[3:0][15:0]</obj_property>
+      <obj_property name="ObjectShortName">onehot_2[3:0][15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/autoencoder_tb/dut/autoencoder_i/onehot2sig_0/inst/onehot_3" type="array">
+      <obj_property name="ElementShortName">onehot_3[1:0][15:0]</obj_property>
+      <obj_property name="ObjectShortName">onehot_3[1:0][15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/autoencoder_tb/dut/autoencoder_i/constraint_layer_top_0/encoded_output_0" type="array">
+      <obj_property name="ElementShortName">encoded_output_0[15:0]</obj_property>
+      <obj_property name="ObjectShortName">encoded_output_0[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/autoencoder_tb/dut/autoencoder_i/constraint_layer_top_0/encoded_output_1" type="array">
+      <obj_property name="ElementShortName">encoded_output_1[15:0]</obj_property>
+      <obj_property name="ObjectShortName">encoded_output_1[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/autoencoder_tb/dut/autoencoder_i/sig2onehot_0/sig" type="array">
+      <obj_property name="ElementShortName">sig[3:0]</obj_property>
+      <obj_property name="ObjectShortName">sig[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/autoencoder_tb/dut/autoencoder_i/sig2onehot_0/onehot" type="array">
+      <obj_property name="ElementShortName">onehot[15:0]</obj_property>
+      <obj_property name="ObjectShortName">onehot[15:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/autoencoder_tb/dut/autoencoder_i/AWGN_adder_0/SNR" type="array">
+      <obj_property name="ElementShortName">SNR[3:0]</obj_property>
+      <obj_property name="ObjectShortName">SNR[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/autoencoder_tb/dut/autoencoder_i/AWGN_adder_0/I" type="array">
+      <obj_property name="ElementShortName">I[15:0]</obj_property>
+      <obj_property name="ObjectShortName">I[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/autoencoder_tb/dut/autoencoder_i/AWGN_adder_0/I_vld" type="logic">
+      <obj_property name="ElementShortName">I_vld</obj_property>
+      <obj_property name="ObjectShortName">I_vld</obj_property>
+   </wvobject>
+   <wvobject fp_name="/autoencoder_tb/dut/autoencoder_i/AWGN_adder_0/I_ack" type="logic">
+      <obj_property name="ElementShortName">I_ack</obj_property>
+      <obj_property name="ObjectShortName">I_ack</obj_property>
+   </wvobject>
+   <wvobject fp_name="/autoencoder_tb/dut/autoencoder_i/AWGN_adder_0/Q" type="array">
+      <obj_property name="ElementShortName">Q[15:0]</obj_property>
+      <obj_property name="ObjectShortName">Q[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/autoencoder_tb/dut/autoencoder_i/AWGN_adder_0/Q_vld" type="logic">
+      <obj_property name="ElementShortName">Q_vld</obj_property>
+      <obj_property name="ObjectShortName">Q_vld</obj_property>
+   </wvobject>
+   <wvobject fp_name="/autoencoder_tb/dut/autoencoder_i/AWGN_adder_0/Q_ack" type="logic">
+      <obj_property name="ElementShortName">Q_ack</obj_property>
+      <obj_property name="ObjectShortName">Q_ack</obj_property>
+   </wvobject>
+   <wvobject fp_name="/autoencoder_tb/dut/autoencoder_i/AWGN_adder_0/I_noisy" type="array">
+      <obj_property name="ElementShortName">I_noisy[15:0]</obj_property>
+      <obj_property name="ObjectShortName">I_noisy[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/autoencoder_tb/dut/autoencoder_i/AWGN_adder_0/I_noisy_vld" type="logic">
+      <obj_property name="ElementShortName">I_noisy_vld</obj_property>
+      <obj_property name="ObjectShortName">I_noisy_vld</obj_property>
+   </wvobject>
+   <wvobject fp_name="/autoencoder_tb/dut/autoencoder_i/AWGN_adder_0/I_noisy_ack" type="logic">
+      <obj_property name="ElementShortName">I_noisy_ack</obj_property>
+      <obj_property name="ObjectShortName">I_noisy_ack</obj_property>
+   </wvobject>
+   <wvobject fp_name="/autoencoder_tb/dut/autoencoder_i/AWGN_adder_0/Q_noisy" type="array">
+      <obj_property name="ElementShortName">Q_noisy[15:0]</obj_property>
+      <obj_property name="ObjectShortName">Q_noisy[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/autoencoder_tb/dut/autoencoder_i/AWGN_adder_0/Q_noisy_vld" type="logic">
+      <obj_property name="ElementShortName">Q_noisy_vld</obj_property>
+      <obj_property name="ObjectShortName">Q_noisy_vld</obj_property>
+   </wvobject>
+   <wvobject fp_name="/autoencoder_tb/dut/autoencoder_i/AWGN_adder_0/Q_noisy_ack" type="logic">
+      <obj_property name="ElementShortName">Q_noisy_ack</obj_property>
+      <obj_property name="ObjectShortName">Q_noisy_ack</obj_property>
+   </wvobject>
+   <wvobject fp_name="/autoencoder_tb/dut/autoencoder_i/AWGN_adder_0/inst/snr_multiplier_lut" type="array">
+      <obj_property name="ElementShortName">snr_multiplier_lut[10:0][15:0]</obj_property>
+      <obj_property name="ObjectShortName">snr_multiplier_lut[10:0][15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/autoencoder_tb/dut/autoencoder_i/AWGN_adder_0/inst/noise_q" type="array">
+      <obj_property name="ElementShortName">noise_q[31:0]</obj_property>
+      <obj_property name="ObjectShortName">noise_q[31:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/autoencoder_tb/dut/autoencoder_i/AWGN_adder_0/inst/noise_q" type="array">
+      <obj_property name="ElementShortName">noise_q[31:0]</obj_property>
+      <obj_property name="ObjectShortName">noise_q[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/autoencoder_tb/dut/autoencoder_i/AWGN_adder_0/inst/noise_i" type="array">
+      <obj_property name="ElementShortName">noise_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">noise_i[31:0]</obj_property>
+   </wvobject>
+</wave_config>
