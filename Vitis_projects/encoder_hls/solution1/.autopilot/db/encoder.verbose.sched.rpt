@@ -1,0 +1,273 @@
+
+
+================================================================
+== Vitis HLS Report for 'encoder'
+================================================================
+* Date:           Sun Jul 21 18:31:33 2024
+
+* Version:        2024.1 (Build 5069499 on May 21 2024)
+* Project:        encoder_hls
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: artix7
+* Target device:  xc7a35t-cpg236-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.156 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       13|       13|  0.130 us|  0.130 us|    8|    8|      yes|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 1
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 8, depth = 14
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 14
+* Pipeline : 1
+  Pipeline-0 : II = 8, D = 14, States = { 1 2 3 4 5 6 7 8 9 10 11 12 13 14 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 5.98>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%input_112_read = read i16 @_ssdm_op_Read.ap_hs.i16P0A, i16 %input_112"   --->   Operation 15 'read' 'input_112_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [2/2] (5.98ns)   --->   "%call_ret1 = call i256 @dense_latency<ap_uint<1>, ap_fixed<16, 6, 5, 3, 0>, config2>, i16 %input_112_read" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense.h:41->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/encoder.cpp:37]   --->   Operation 16 'call' 'call_ret1' <Predicate = true> <Delay = 5.98> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 7.15>
+ST_2 : Operation 17 [1/2] (7.15ns)   --->   "%call_ret1 = call i256 @dense_latency<ap_uint<1>, ap_fixed<16, 6, 5, 3, 0>, config2>, i16 %input_112_read" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense.h:41->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/encoder.cpp:37]   --->   Operation 17 'call' 'call_ret1' <Predicate = true> <Delay = 7.15> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%layer2_out = extractvalue i256 %call_ret1" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense.h:41->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/encoder.cpp:37]   --->   Operation 18 'extractvalue' 'layer2_out' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%layer2_out_1 = extractvalue i256 %call_ret1" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense.h:41->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/encoder.cpp:37]   --->   Operation 19 'extractvalue' 'layer2_out_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%layer2_out_2 = extractvalue i256 %call_ret1" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense.h:41->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/encoder.cpp:37]   --->   Operation 20 'extractvalue' 'layer2_out_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%layer2_out_3 = extractvalue i256 %call_ret1" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense.h:41->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/encoder.cpp:37]   --->   Operation 21 'extractvalue' 'layer2_out_3' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%layer2_out_4 = extractvalue i256 %call_ret1" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense.h:41->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/encoder.cpp:37]   --->   Operation 22 'extractvalue' 'layer2_out_4' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%layer2_out_5 = extractvalue i256 %call_ret1" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense.h:41->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/encoder.cpp:37]   --->   Operation 23 'extractvalue' 'layer2_out_5' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%layer2_out_6 = extractvalue i256 %call_ret1" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense.h:41->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/encoder.cpp:37]   --->   Operation 24 'extractvalue' 'layer2_out_6' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%layer2_out_7 = extractvalue i256 %call_ret1" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense.h:41->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/encoder.cpp:37]   --->   Operation 25 'extractvalue' 'layer2_out_7' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%layer2_out_8 = extractvalue i256 %call_ret1" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense.h:41->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/encoder.cpp:37]   --->   Operation 26 'extractvalue' 'layer2_out_8' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%layer2_out_9 = extractvalue i256 %call_ret1" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense.h:41->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/encoder.cpp:37]   --->   Operation 27 'extractvalue' 'layer2_out_9' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%layer2_out_10 = extractvalue i256 %call_ret1" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense.h:41->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/encoder.cpp:37]   --->   Operation 28 'extractvalue' 'layer2_out_10' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 29 [1/1] (0.00ns)   --->   "%layer2_out_11 = extractvalue i256 %call_ret1" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense.h:41->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/encoder.cpp:37]   --->   Operation 29 'extractvalue' 'layer2_out_11' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 30 [1/1] (0.00ns)   --->   "%layer2_out_12 = extractvalue i256 %call_ret1" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense.h:41->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/encoder.cpp:37]   --->   Operation 30 'extractvalue' 'layer2_out_12' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 31 [1/1] (0.00ns)   --->   "%layer2_out_13 = extractvalue i256 %call_ret1" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense.h:41->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/encoder.cpp:37]   --->   Operation 31 'extractvalue' 'layer2_out_13' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 32 [1/1] (0.00ns)   --->   "%layer2_out_14 = extractvalue i256 %call_ret1" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense.h:41->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/encoder.cpp:37]   --->   Operation 32 'extractvalue' 'layer2_out_14' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 33 [1/1] (0.00ns)   --->   "%layer2_out_15 = extractvalue i256 %call_ret1" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense.h:41->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/encoder.cpp:37]   --->   Operation 33 'extractvalue' 'layer2_out_15' <Predicate = true> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 3.14>
+ST_3 : Operation 34 [1/1] (3.14ns)   --->   "%call_ret = call i256 @relu<ap_fixed<16, 6, 5, 3, 0>, ap_fixed<16, 6, 5, 3, 0>, relu_config3>, i16 %layer2_out, i16 %layer2_out_1, i16 %layer2_out_2, i16 %layer2_out_3, i16 %layer2_out_4, i16 %layer2_out_5, i16 %layer2_out_6, i16 %layer2_out_7, i16 %layer2_out_8, i16 %layer2_out_9, i16 %layer2_out_10, i16 %layer2_out_11, i16 %layer2_out_12, i16 %layer2_out_13, i16 %layer2_out_14, i16 %layer2_out_15" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/encoder.cpp:41]   --->   Operation 34 'call' 'call_ret' <Predicate = true> <Delay = 3.14> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 35 [1/1] (0.00ns)   --->   "%layer3_out = extractvalue i256 %call_ret" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/encoder.cpp:41]   --->   Operation 35 'extractvalue' 'layer3_out' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 36 [1/1] (0.00ns)   --->   "%layer3_out_1 = extractvalue i256 %call_ret" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/encoder.cpp:41]   --->   Operation 36 'extractvalue' 'layer3_out_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 37 [1/1] (0.00ns)   --->   "%layer3_out_2 = extractvalue i256 %call_ret" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/encoder.cpp:41]   --->   Operation 37 'extractvalue' 'layer3_out_2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 38 [1/1] (0.00ns)   --->   "%layer3_out_3 = extractvalue i256 %call_ret" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/encoder.cpp:41]   --->   Operation 38 'extractvalue' 'layer3_out_3' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 39 [1/1] (0.00ns)   --->   "%layer3_out_4 = extractvalue i256 %call_ret" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/encoder.cpp:41]   --->   Operation 39 'extractvalue' 'layer3_out_4' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 40 [1/1] (0.00ns)   --->   "%layer3_out_5 = extractvalue i256 %call_ret" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/encoder.cpp:41]   --->   Operation 40 'extractvalue' 'layer3_out_5' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 41 [1/1] (0.00ns)   --->   "%layer3_out_6 = extractvalue i256 %call_ret" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/encoder.cpp:41]   --->   Operation 41 'extractvalue' 'layer3_out_6' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 42 [1/1] (0.00ns)   --->   "%layer3_out_7 = extractvalue i256 %call_ret" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/encoder.cpp:41]   --->   Operation 42 'extractvalue' 'layer3_out_7' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 43 [1/1] (0.00ns)   --->   "%layer3_out_8 = extractvalue i256 %call_ret" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/encoder.cpp:41]   --->   Operation 43 'extractvalue' 'layer3_out_8' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 44 [1/1] (0.00ns)   --->   "%layer3_out_9 = extractvalue i256 %call_ret" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/encoder.cpp:41]   --->   Operation 44 'extractvalue' 'layer3_out_9' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 45 [1/1] (0.00ns)   --->   "%layer3_out_10 = extractvalue i256 %call_ret" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/encoder.cpp:41]   --->   Operation 45 'extractvalue' 'layer3_out_10' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 46 [1/1] (0.00ns)   --->   "%layer3_out_11 = extractvalue i256 %call_ret" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/encoder.cpp:41]   --->   Operation 46 'extractvalue' 'layer3_out_11' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 47 [1/1] (0.00ns)   --->   "%layer3_out_12 = extractvalue i256 %call_ret" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/encoder.cpp:41]   --->   Operation 47 'extractvalue' 'layer3_out_12' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 48 [1/1] (0.00ns)   --->   "%layer3_out_13 = extractvalue i256 %call_ret" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/encoder.cpp:41]   --->   Operation 48 'extractvalue' 'layer3_out_13' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 49 [1/1] (0.00ns)   --->   "%layer3_out_14 = extractvalue i256 %call_ret" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/encoder.cpp:41]   --->   Operation 49 'extractvalue' 'layer3_out_14' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 50 [1/1] (0.00ns)   --->   "%layer3_out_15 = extractvalue i256 %call_ret" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/encoder.cpp:41]   --->   Operation 50 'extractvalue' 'layer3_out_15' <Predicate = true> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 5.57>
+ST_4 : Operation 51 [10/10] (5.57ns)   --->   "%call_ret2 = call i32 @dense_latency<ap_fixed<16, 6, 5, 3, 0>, ap_fixed<16, 6, 5, 3, 0>, config4>, i16 %layer3_out, i16 %layer3_out_1, i16 %layer3_out_2, i16 %layer3_out_3, i16 %layer3_out_4, i16 %layer3_out_5, i16 %layer3_out_6, i16 %layer3_out_7, i16 %layer3_out_8, i16 %layer3_out_9, i16 %layer3_out_10, i16 %layer3_out_11, i16 %layer3_out_12, i16 %layer3_out_13, i16 %layer3_out_14, i16 %layer3_out_15" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense.h:41->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/encoder.cpp:43]   --->   Operation 51 'call' 'call_ret2' <Predicate = true> <Delay = 5.57> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 6.49>
+ST_5 : Operation 52 [9/10] (6.49ns)   --->   "%call_ret2 = call i32 @dense_latency<ap_fixed<16, 6, 5, 3, 0>, ap_fixed<16, 6, 5, 3, 0>, config4>, i16 %layer3_out, i16 %layer3_out_1, i16 %layer3_out_2, i16 %layer3_out_3, i16 %layer3_out_4, i16 %layer3_out_5, i16 %layer3_out_6, i16 %layer3_out_7, i16 %layer3_out_8, i16 %layer3_out_9, i16 %layer3_out_10, i16 %layer3_out_11, i16 %layer3_out_12, i16 %layer3_out_13, i16 %layer3_out_14, i16 %layer3_out_15" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense.h:41->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/encoder.cpp:43]   --->   Operation 52 'call' 'call_ret2' <Predicate = true> <Delay = 6.49> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 6.49>
+ST_6 : Operation 53 [8/10] (6.49ns)   --->   "%call_ret2 = call i32 @dense_latency<ap_fixed<16, 6, 5, 3, 0>, ap_fixed<16, 6, 5, 3, 0>, config4>, i16 %layer3_out, i16 %layer3_out_1, i16 %layer3_out_2, i16 %layer3_out_3, i16 %layer3_out_4, i16 %layer3_out_5, i16 %layer3_out_6, i16 %layer3_out_7, i16 %layer3_out_8, i16 %layer3_out_9, i16 %layer3_out_10, i16 %layer3_out_11, i16 %layer3_out_12, i16 %layer3_out_13, i16 %layer3_out_14, i16 %layer3_out_15" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense.h:41->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/encoder.cpp:43]   --->   Operation 53 'call' 'call_ret2' <Predicate = true> <Delay = 6.49> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 7 <SV = 6> <Delay = 6.49>
+ST_7 : Operation 54 [7/10] (6.49ns)   --->   "%call_ret2 = call i32 @dense_latency<ap_fixed<16, 6, 5, 3, 0>, ap_fixed<16, 6, 5, 3, 0>, config4>, i16 %layer3_out, i16 %layer3_out_1, i16 %layer3_out_2, i16 %layer3_out_3, i16 %layer3_out_4, i16 %layer3_out_5, i16 %layer3_out_6, i16 %layer3_out_7, i16 %layer3_out_8, i16 %layer3_out_9, i16 %layer3_out_10, i16 %layer3_out_11, i16 %layer3_out_12, i16 %layer3_out_13, i16 %layer3_out_14, i16 %layer3_out_15" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense.h:41->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/encoder.cpp:43]   --->   Operation 54 'call' 'call_ret2' <Predicate = true> <Delay = 6.49> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 8 <SV = 7> <Delay = 6.49>
+ST_8 : Operation 55 [6/10] (6.49ns)   --->   "%call_ret2 = call i32 @dense_latency<ap_fixed<16, 6, 5, 3, 0>, ap_fixed<16, 6, 5, 3, 0>, config4>, i16 %layer3_out, i16 %layer3_out_1, i16 %layer3_out_2, i16 %layer3_out_3, i16 %layer3_out_4, i16 %layer3_out_5, i16 %layer3_out_6, i16 %layer3_out_7, i16 %layer3_out_8, i16 %layer3_out_9, i16 %layer3_out_10, i16 %layer3_out_11, i16 %layer3_out_12, i16 %layer3_out_13, i16 %layer3_out_14, i16 %layer3_out_15" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense.h:41->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/encoder.cpp:43]   --->   Operation 55 'call' 'call_ret2' <Predicate = true> <Delay = 6.49> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 9 <SV = 8> <Delay = 6.49>
+ST_9 : Operation 56 [5/10] (6.49ns)   --->   "%call_ret2 = call i32 @dense_latency<ap_fixed<16, 6, 5, 3, 0>, ap_fixed<16, 6, 5, 3, 0>, config4>, i16 %layer3_out, i16 %layer3_out_1, i16 %layer3_out_2, i16 %layer3_out_3, i16 %layer3_out_4, i16 %layer3_out_5, i16 %layer3_out_6, i16 %layer3_out_7, i16 %layer3_out_8, i16 %layer3_out_9, i16 %layer3_out_10, i16 %layer3_out_11, i16 %layer3_out_12, i16 %layer3_out_13, i16 %layer3_out_14, i16 %layer3_out_15" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense.h:41->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/encoder.cpp:43]   --->   Operation 56 'call' 'call_ret2' <Predicate = true> <Delay = 6.49> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 10 <SV = 9> <Delay = 6.49>
+ST_10 : Operation 57 [4/10] (6.49ns)   --->   "%call_ret2 = call i32 @dense_latency<ap_fixed<16, 6, 5, 3, 0>, ap_fixed<16, 6, 5, 3, 0>, config4>, i16 %layer3_out, i16 %layer3_out_1, i16 %layer3_out_2, i16 %layer3_out_3, i16 %layer3_out_4, i16 %layer3_out_5, i16 %layer3_out_6, i16 %layer3_out_7, i16 %layer3_out_8, i16 %layer3_out_9, i16 %layer3_out_10, i16 %layer3_out_11, i16 %layer3_out_12, i16 %layer3_out_13, i16 %layer3_out_14, i16 %layer3_out_15" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense.h:41->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/encoder.cpp:43]   --->   Operation 57 'call' 'call_ret2' <Predicate = true> <Delay = 6.49> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 11 <SV = 10> <Delay = 6.49>
+ST_11 : Operation 58 [3/10] (6.49ns)   --->   "%call_ret2 = call i32 @dense_latency<ap_fixed<16, 6, 5, 3, 0>, ap_fixed<16, 6, 5, 3, 0>, config4>, i16 %layer3_out, i16 %layer3_out_1, i16 %layer3_out_2, i16 %layer3_out_3, i16 %layer3_out_4, i16 %layer3_out_5, i16 %layer3_out_6, i16 %layer3_out_7, i16 %layer3_out_8, i16 %layer3_out_9, i16 %layer3_out_10, i16 %layer3_out_11, i16 %layer3_out_12, i16 %layer3_out_13, i16 %layer3_out_14, i16 %layer3_out_15" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense.h:41->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/encoder.cpp:43]   --->   Operation 58 'call' 'call_ret2' <Predicate = true> <Delay = 6.49> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 12 <SV = 11> <Delay = 6.49>
+ST_12 : Operation 59 [2/10] (6.49ns)   --->   "%call_ret2 = call i32 @dense_latency<ap_fixed<16, 6, 5, 3, 0>, ap_fixed<16, 6, 5, 3, 0>, config4>, i16 %layer3_out, i16 %layer3_out_1, i16 %layer3_out_2, i16 %layer3_out_3, i16 %layer3_out_4, i16 %layer3_out_5, i16 %layer3_out_6, i16 %layer3_out_7, i16 %layer3_out_8, i16 %layer3_out_9, i16 %layer3_out_10, i16 %layer3_out_11, i16 %layer3_out_12, i16 %layer3_out_13, i16 %layer3_out_14, i16 %layer3_out_15" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense.h:41->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/encoder.cpp:43]   --->   Operation 59 'call' 'call_ret2' <Predicate = true> <Delay = 6.49> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 13 <SV = 12> <Delay = 4.03>
+ST_13 : Operation 60 [1/10] (4.03ns)   --->   "%call_ret2 = call i32 @dense_latency<ap_fixed<16, 6, 5, 3, 0>, ap_fixed<16, 6, 5, 3, 0>, config4>, i16 %layer3_out, i16 %layer3_out_1, i16 %layer3_out_2, i16 %layer3_out_3, i16 %layer3_out_4, i16 %layer3_out_5, i16 %layer3_out_6, i16 %layer3_out_7, i16 %layer3_out_8, i16 %layer3_out_9, i16 %layer3_out_10, i16 %layer3_out_11, i16 %layer3_out_12, i16 %layer3_out_13, i16 %layer3_out_14, i16 %layer3_out_15" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense.h:41->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/encoder.cpp:43]   --->   Operation 60 'call' 'call_ret2' <Predicate = true> <Delay = 4.03> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_13 : Operation 61 [1/1] (0.00ns)   --->   "%layer4_out_0_ret = extractvalue i32 %call_ret2" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense.h:41->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/encoder.cpp:43]   --->   Operation 61 'extractvalue' 'layer4_out_0_ret' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 62 [2/2] (0.00ns)   --->   "%write_ln41 = write void @_ssdm_op_Write.ap_hs.i16P0A, i16 %layer4_out_0, i16 %layer4_out_0_ret" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense.h:41->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/encoder.cpp:43]   --->   Operation 62 'write' 'write_ln41' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 63 [1/1] (0.00ns)   --->   "%layer4_out_1_ret = extractvalue i32 %call_ret2" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense.h:41->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/encoder.cpp:43]   --->   Operation 63 'extractvalue' 'layer4_out_1_ret' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 64 [2/2] (0.00ns)   --->   "%write_ln41 = write void @_ssdm_op_Write.ap_hs.i16P0A, i16 %layer4_out_1, i16 %layer4_out_1_ret" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense.h:41->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/encoder.cpp:43]   --->   Operation 64 'write' 'write_ln41' <Predicate = true> <Delay = 0.00>
+
+State 14 <SV = 13> <Delay = 0.00>
+ST_14 : Operation 65 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_0"   --->   Operation 65 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 66 [1/1] (0.00ns)   --->   "%spectopmodule_ln0 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_2"   --->   Operation 66 'spectopmodule' 'spectopmodule_ln0' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 67 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %input_112"   --->   Operation 67 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 68 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %input_112, void @empty, i32 4294967295, i32 4294967295, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0"   --->   Operation 68 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 69 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %layer4_out_0"   --->   Operation 69 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 70 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %layer4_out_0, void @empty, i32 4294967295, i32 4294967295, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0"   --->   Operation 70 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 71 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %layer4_out_1"   --->   Operation 71 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 72 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %layer4_out_1, void @empty, i32 4294967295, i32 4294967295, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0"   --->   Operation 72 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 73 [1/2] (0.00ns)   --->   "%write_ln41 = write void @_ssdm_op_Write.ap_hs.i16P0A, i16 %layer4_out_0, i16 %layer4_out_0_ret" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense.h:41->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/encoder.cpp:43]   --->   Operation 73 'write' 'write_ln41' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 74 [1/2] (0.00ns)   --->   "%write_ln41 = write void @_ssdm_op_Write.ap_hs.i16P0A, i16 %layer4_out_1, i16 %layer4_out_1_ret" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense.h:41->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/encoder.cpp:43]   --->   Operation 74 'write' 'write_ln41' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 75 [1/1] (0.00ns)   --->   "%ret_ln45 = ret" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/encoder.cpp:45]   --->   Operation 75 'ret' 'ret_ln45' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 5.980ns
+The critical path consists of the following:
+	wire read operation ('input_112_read') on port 'input_112' [12]  (0.000 ns)
+	'call' operation 256 bit ('call_ret1', ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense.h:41->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/encoder.cpp:37) to 'dense_latency<ap_uint<1>, ap_fixed<16, 6, 5, 3, 0>, config2>' [13]  (5.980 ns)
+
+ <State 2>: 7.156ns
+The critical path consists of the following:
+	'call' operation 256 bit ('call_ret1', ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense.h:41->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/encoder.cpp:37) to 'dense_latency<ap_uint<1>, ap_fixed<16, 6, 5, 3, 0>, config2>' [13]  (7.156 ns)
+
+ <State 3>: 3.141ns
+The critical path consists of the following:
+	'call' operation 256 bit ('call_ret', ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/encoder.cpp:41) to 'relu<ap_fixed<16, 6, 5, 3, 0>, ap_fixed<16, 6, 5, 3, 0>, relu_config3>' [30]  (3.141 ns)
+
+ <State 4>: 5.570ns
+The critical path consists of the following:
+	'call' operation 32 bit ('call_ret2', ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense.h:41->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/encoder.cpp:43) to 'dense_latency<ap_fixed<16, 6, 5, 3, 0>, ap_fixed<16, 6, 5, 3, 0>, config4>' [47]  (5.570 ns)
+
+ <State 5>: 6.496ns
+The critical path consists of the following:
+	'call' operation 32 bit ('call_ret2', ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense.h:41->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/encoder.cpp:43) to 'dense_latency<ap_fixed<16, 6, 5, 3, 0>, ap_fixed<16, 6, 5, 3, 0>, config4>' [47]  (6.496 ns)
+
+ <State 6>: 6.496ns
+The critical path consists of the following:
+	'call' operation 32 bit ('call_ret2', ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense.h:41->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/encoder.cpp:43) to 'dense_latency<ap_fixed<16, 6, 5, 3, 0>, ap_fixed<16, 6, 5, 3, 0>, config4>' [47]  (6.496 ns)
+
+ <State 7>: 6.496ns
+The critical path consists of the following:
+	'call' operation 32 bit ('call_ret2', ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense.h:41->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/encoder.cpp:43) to 'dense_latency<ap_fixed<16, 6, 5, 3, 0>, ap_fixed<16, 6, 5, 3, 0>, config4>' [47]  (6.496 ns)
+
+ <State 8>: 6.496ns
+The critical path consists of the following:
+	'call' operation 32 bit ('call_ret2', ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense.h:41->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/encoder.cpp:43) to 'dense_latency<ap_fixed<16, 6, 5, 3, 0>, ap_fixed<16, 6, 5, 3, 0>, config4>' [47]  (6.496 ns)
+
+ <State 9>: 6.496ns
+The critical path consists of the following:
+	'call' operation 32 bit ('call_ret2', ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense.h:41->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/encoder.cpp:43) to 'dense_latency<ap_fixed<16, 6, 5, 3, 0>, ap_fixed<16, 6, 5, 3, 0>, config4>' [47]  (6.496 ns)
+
+ <State 10>: 6.496ns
+The critical path consists of the following:
+	'call' operation 32 bit ('call_ret2', ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense.h:41->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/encoder.cpp:43) to 'dense_latency<ap_fixed<16, 6, 5, 3, 0>, ap_fixed<16, 6, 5, 3, 0>, config4>' [47]  (6.496 ns)
+
+ <State 11>: 6.496ns
+The critical path consists of the following:
+	'call' operation 32 bit ('call_ret2', ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense.h:41->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/encoder.cpp:43) to 'dense_latency<ap_fixed<16, 6, 5, 3, 0>, ap_fixed<16, 6, 5, 3, 0>, config4>' [47]  (6.496 ns)
+
+ <State 12>: 6.496ns
+The critical path consists of the following:
+	'call' operation 32 bit ('call_ret2', ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense.h:41->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/encoder.cpp:43) to 'dense_latency<ap_fixed<16, 6, 5, 3, 0>, ap_fixed<16, 6, 5, 3, 0>, config4>' [47]  (6.496 ns)
+
+ <State 13>: 4.037ns
+The critical path consists of the following:
+	'call' operation 32 bit ('call_ret2', ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense.h:41->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/encoder.cpp:43) to 'dense_latency<ap_fixed<16, 6, 5, 3, 0>, ap_fixed<16, 6, 5, 3, 0>, config4>' [47]  (4.037 ns)
+
+ <State 14>: 0.000ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

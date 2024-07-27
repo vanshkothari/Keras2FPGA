@@ -1,0 +1,797 @@
+
+
+================================================================
+== Synthesis Summary Report of 'encoder'
+================================================================
++ General Information: 
+    * Date:           Sun Jul 21 18:31:37 2024
+    * Version:        2024.1 (Build 5069499 on May 21 2024)
+    * Project:        encoder_hls
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: artix7
+    * Target device:  xc7a35t-cpg236-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +--------------------------------------------------------------------+------+------+---------+---------+----------+---------+------+----------+------+--------+-----------+------------+-----+
+    |                               Modules                              | Issue|      | Latency | Latency | Iteration|         | Trip |          |      |        |           |            |     |
+    |                               & Loops                              | Type | Slack| (cycles)|   (ns)  |  Latency | Interval| Count| Pipelined| BRAM |   DSP  |     FF    |     LUT    | URAM|
+    +--------------------------------------------------------------------+------+------+---------+---------+----------+---------+------+----------+------+--------+-----------+------------+-----+
+    |+ encoder                                                           |    II|  0.14|       13|  130.000|         -|        8|     -|       yes|     -|  4 (4%)|  1502 (3%)|  6847 (32%)|    -|
+    | + dense_latency_ap_uint_1_ap_fixed_16_6_5_3_0_config2_s            |     -|  0.14|        1|   10.000|         -|        2|     -|       yes|     -|       -|  205 (~0%)|  5186 (24%)|    -|
+    | + relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config3_s      |    II|  4.16|        0|    0.000|         -|        1|     -|       yes|     -|       -|          -|    608 (2%)|    -|
+    | + dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config4_s  |     -|  0.80|        9|   90.000|         -|        8|     -|       yes|     -|  4 (4%)|   773 (1%)|    947 (4%)|    -|
+    +--------------------------------------------------------------------+------+------+---------+---------+----------+---------+------+----------+------+--------+-----------+------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* Other Ports
++--------------+-------+-----------+----------+
+| Port         | Mode  | Direction | Bitwidth |
++--------------+-------+-----------+----------+
+| input_112    | ap_hs | in        | 16       |
+| layer4_out_0 | ap_hs | out       | 16       |
+| layer4_out_1 | ap_hs | out       | 16       |
++--------------+-------+-----------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------------------------------+
+| Interface | Type       | Ports                             |
++-----------+------------+-----------------------------------+
+| ap_clk    | clock      | ap_clk                            |
+| ap_rst    | reset      | ap_rst                            |
+| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
++-----------+------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++------------+-----------+--------------------------------------+
+| Argument   | Direction | Datatype                             |
++------------+-----------+--------------------------------------+
+| input_112  | in        | ap_uint<1>*                          |
+| layer4_out | out       | ap_fixed<16, 6, AP_TRN, AP_WRAP, 0>* |
++------------+-----------+--------------------------------------+
+
+* SW-to-HW Mapping
++------------+---------------------+---------+
+| Argument   | HW Interface        | HW Type |
++------------+---------------------+---------+
+| input_112  | input_112           | port    |
+| input_112  | input_112_ap_vld    | port    |
+| input_112  | input_112_ap_ack    | port    |
+| layer4_out | layer4_out_0        | port    |
+| layer4_out | layer4_out_0_ap_vld | port    |
+| layer4_out | layer4_out_0_ap_ack | port    |
+| layer4_out | layer4_out_1        | port    |
+| layer4_out | layer4_out_1_ap_vld | port    |
+| layer4_out | layer4_out_1_ap_ack | port    |
++------------+---------------------+---------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++--------------------------------------------------------------------+-----+--------+-----------------+--------+----------+---------+
+| Name                                                               | DSP | Pragma | Variable        | Op     | Impl     | Latency |
++--------------------------------------------------------------------+-----+--------+-----------------+--------+----------+---------+
+| + encoder                                                          | 4   |        |                 |        |          |         |
+|  + dense_latency_ap_uint_1_ap_fixed_16_6_5_3_0_config2_s           | 0   |        |                 |        |          |         |
+|    select_ln58_fu_2212_p3                                          |     |        | select_ln58     | select | auto_sel | 0       |
+|    select_ln58_1_fu_2219_p3                                        |     |        | select_ln58_1   | select | auto_sel | 0       |
+|    select_ln58_2_fu_2226_p3                                        |     |        | select_ln58_2   | select | auto_sel | 0       |
+|    select_ln58_3_fu_2237_p3                                        |     |        | select_ln58_3   | select | auto_sel | 0       |
+|    select_ln58_4_fu_2244_p3                                        |     |        | select_ln58_4   | select | auto_sel | 0       |
+|    select_ln58_5_fu_2251_p3                                        |     |        | select_ln58_5   | select | auto_sel | 0       |
+|    select_ln58_6_fu_924_p3                                         |     |        | select_ln58_6   | select | auto_sel | 0       |
+|    select_ln58_7_fu_932_p3                                         |     |        | select_ln58_7   | select | auto_sel | 0       |
+|    select_ln58_8_fu_940_p3                                         |     |        | select_ln58_8   | select | auto_sel | 0       |
+|    select_ln58_9_fu_952_p3                                         |     |        | select_ln58_9   | select | auto_sel | 0       |
+|    select_ln58_10_fu_960_p3                                        |     |        | select_ln58_10  | select | auto_sel | 0       |
+|    select_ln58_11_fu_968_p3                                        |     |        | select_ln58_11  | select | auto_sel | 0       |
+|    select_ln58_12_fu_2262_p3                                       |     |        | select_ln58_12  | select | auto_sel | 0       |
+|    select_ln58_13_fu_2269_p3                                       |     |        | select_ln58_13  | select | auto_sel | 0       |
+|    select_ln58_14_fu_2276_p3                                       |     |        | select_ln58_14  | select | auto_sel | 0       |
+|    select_ln58_15_fu_980_p3                                        |     |        | select_ln58_15  | select | auto_sel | 0       |
+|    select_ln58_16_fu_988_p3                                        |     |        | select_ln58_16  | select | auto_sel | 0       |
+|    select_ln58_17_fu_996_p3                                        |     |        | select_ln58_17  | select | auto_sel | 0       |
+|    select_ln58_18_fu_2287_p3                                       |     |        | select_ln58_18  | select | auto_sel | 0       |
+|    select_ln58_19_fu_2294_p3                                       |     |        | select_ln58_19  | select | auto_sel | 0       |
+|    select_ln58_20_fu_2301_p3                                       |     |        | select_ln58_20  | select | auto_sel | 0       |
+|    select_ln58_21_fu_1004_p3                                       |     |        | select_ln58_21  | select | auto_sel | 0       |
+|    select_ln58_22_fu_1012_p3                                       |     |        | select_ln58_22  | select | auto_sel | 0       |
+|    select_ln58_23_fu_1020_p3                                       |     |        | select_ln58_23  | select | auto_sel | 0       |
+|    select_ln58_24_fu_1032_p3                                       |     |        | select_ln58_24  | select | auto_sel | 0       |
+|    select_ln58_25_fu_1040_p3                                       |     |        | select_ln58_25  | select | auto_sel | 0       |
+|    select_ln58_26_fu_1048_p3                                       |     |        | select_ln58_26  | select | auto_sel | 0       |
+|    select_ln58_27_fu_2312_p3                                       |     |        | select_ln58_27  | select | auto_sel | 0       |
+|    select_ln58_28_fu_2319_p3                                       |     |        | select_ln58_28  | select | auto_sel | 0       |
+|    select_ln58_29_fu_2326_p3                                       |     |        | select_ln58_29  | select | auto_sel | 0       |
+|    select_ln58_30_fu_2333_p3                                       |     |        | select_ln58_30  | select | auto_sel | 0       |
+|    select_ln58_31_fu_2340_p3                                       |     |        | select_ln58_31  | select | auto_sel | 0       |
+|    select_ln58_32_fu_2347_p3                                       |     |        | select_ln58_32  | select | auto_sel | 0       |
+|    select_ln58_33_fu_1056_p3                                       |     |        | select_ln58_33  | select | auto_sel | 0       |
+|    select_ln58_34_fu_1064_p3                                       |     |        | select_ln58_34  | select | auto_sel | 0       |
+|    select_ln58_35_fu_1072_p3                                       |     |        | select_ln58_35  | select | auto_sel | 0       |
+|    select_ln58_36_fu_2354_p3                                       |     |        | select_ln58_36  | select | auto_sel | 0       |
+|    select_ln58_37_fu_2361_p3                                       |     |        | select_ln58_37  | select | auto_sel | 0       |
+|    select_ln58_38_fu_2368_p3                                       |     |        | select_ln58_38  | select | auto_sel | 0       |
+|    select_ln58_39_fu_2379_p3                                       |     |        | select_ln58_39  | select | auto_sel | 0       |
+|    select_ln58_40_fu_2386_p3                                       |     |        | select_ln58_40  | select | auto_sel | 0       |
+|    select_ln58_41_fu_2393_p3                                       |     |        | select_ln58_41  | select | auto_sel | 0       |
+|    select_ln58_42_fu_1080_p3                                       |     |        | select_ln58_42  | select | auto_sel | 0       |
+|    select_ln58_43_fu_1088_p3                                       |     |        | select_ln58_43  | select | auto_sel | 0       |
+|    select_ln58_44_fu_1096_p3                                       |     |        | select_ln58_44  | select | auto_sel | 0       |
+|    select_ln58_45_fu_2404_p3                                       |     |        | select_ln58_45  | select | auto_sel | 0       |
+|    select_ln58_46_fu_2411_p3                                       |     |        | select_ln58_46  | select | auto_sel | 0       |
+|    select_ln58_47_fu_2418_p3                                       |     |        | select_ln58_47  | select | auto_sel | 0       |
+|    select_ln58_48_fu_2429_p3                                       |     |        | select_ln58_48  | select | auto_sel | 0       |
+|    select_ln58_49_fu_2436_p3                                       |     |        | select_ln58_49  | select | auto_sel | 0       |
+|    select_ln58_50_fu_2443_p3                                       |     |        | select_ln58_50  | select | auto_sel | 0       |
+|    add_ln58_fu_2454_p2                                             |     |        | add_ln58        | add    | fabric   | 0       |
+|    select_ln58_51_fu_2464_p3                                       |     |        | select_ln58_51  | select | auto_sel | 0       |
+|    select_ln58_52_fu_2471_p3                                       |     |        | select_ln58_52  | select | auto_sel | 0       |
+|    select_ln58_53_fu_2478_p3                                       |     |        | select_ln58_53  | select | auto_sel | 0       |
+|    select_ln58_54_fu_2485_p3                                       |     |        | select_ln58_54  | select | auto_sel | 0       |
+|    select_ln58_55_fu_2492_p3                                       |     |        | select_ln58_55  | select | auto_sel | 0       |
+|    select_ln58_56_fu_2499_p3                                       |     |        | select_ln58_56  | select | auto_sel | 0       |
+|    add_ln58_1_fu_2510_p2                                           |     |        | add_ln58_1      | add    | fabric   | 0       |
+|    add_ln58_2_fu_2520_p2                                           |     |        | add_ln58_2      | add    | fabric   | 0       |
+|    select_ln58_57_fu_2530_p3                                       |     |        | select_ln58_57  | select | auto_sel | 0       |
+|    select_ln58_58_fu_2537_p3                                       |     |        | select_ln58_58  | select | auto_sel | 0       |
+|    select_ln58_59_fu_2544_p3                                       |     |        | select_ln58_59  | select | auto_sel | 0       |
+|    select_ln58_60_fu_2555_p3                                       |     |        | select_ln58_60  | select | auto_sel | 0       |
+|    select_ln58_61_fu_2562_p3                                       |     |        | select_ln58_61  | select | auto_sel | 0       |
+|    select_ln58_62_fu_2569_p3                                       |     |        | select_ln58_62  | select | auto_sel | 0       |
+|    select_ln58_63_fu_1104_p3                                       |     |        | select_ln58_63  | select | auto_sel | 0       |
+|    select_ln58_64_fu_1112_p3                                       |     |        | select_ln58_64  | select | auto_sel | 0       |
+|    select_ln58_65_fu_1120_p3                                       |     |        | select_ln58_65  | select | auto_sel | 0       |
+|    select_ln58_66_fu_1132_p3                                       |     |        | select_ln58_66  | select | auto_sel | 0       |
+|    select_ln58_67_fu_1140_p3                                       |     |        | select_ln58_67  | select | auto_sel | 0       |
+|    select_ln58_68_fu_1148_p3                                       |     |        | select_ln58_68  | select | auto_sel | 0       |
+|    add_ln58_4_fu_1156_p2                                           |     |        | add_ln58_4      | add    | fabric   | 0       |
+|    add_ln58_6_fu_2595_p2                                           |     |        | add_ln58_6      | add    | fabric   | 0       |
+|    select_ln58_69_fu_2605_p3                                       |     |        | select_ln58_69  | select | auto_sel | 0       |
+|    select_ln58_70_fu_2612_p3                                       |     |        | select_ln58_70  | select | auto_sel | 0       |
+|    select_ln58_71_fu_2619_p3                                       |     |        | select_ln58_71  | select | auto_sel | 0       |
+|    select_ln58_72_fu_1162_p3                                       |     |        | select_ln58_72  | select | auto_sel | 0       |
+|    select_ln58_73_fu_1170_p3                                       |     |        | select_ln58_73  | select | auto_sel | 0       |
+|    select_ln58_74_fu_1178_p3                                       |     |        | select_ln58_74  | select | auto_sel | 0       |
+|    select_ln58_75_fu_1190_p3                                       |     |        | select_ln58_75  | select | auto_sel | 0       |
+|    select_ln58_76_fu_1198_p3                                       |     |        | select_ln58_76  | select | auto_sel | 0       |
+|    select_ln58_77_fu_1206_p3                                       |     |        | select_ln58_77  | select | auto_sel | 0       |
+|    add_ln58_8_fu_1218_p2                                           |     |        | add_ln58_8      | add    | fabric   | 0       |
+|    select_ln58_78_fu_2649_p3                                       |     |        | select_ln58_78  | select | auto_sel | 0       |
+|    select_ln58_79_fu_2656_p3                                       |     |        | select_ln58_79  | select | auto_sel | 0       |
+|    select_ln58_80_fu_2663_p3                                       |     |        | select_ln58_80  | select | auto_sel | 0       |
+|    select_ln58_81_fu_2674_p3                                       |     |        | select_ln58_81  | select | auto_sel | 0       |
+|    select_ln58_82_fu_2681_p3                                       |     |        | select_ln58_82  | select | auto_sel | 0       |
+|    select_ln58_83_fu_2688_p3                                       |     |        | select_ln58_83  | select | auto_sel | 0       |
+|    select_ln58_84_fu_1224_p3                                       |     |        | select_ln58_84  | select | auto_sel | 0       |
+|    select_ln58_85_fu_1232_p3                                       |     |        | select_ln58_85  | select | auto_sel | 0       |
+|    select_ln58_86_fu_1240_p3                                       |     |        | select_ln58_86  | select | auto_sel | 0       |
+|    select_ln58_87_fu_1252_p3                                       |     |        | select_ln58_87  | select | auto_sel | 0       |
+|    select_ln58_88_fu_1260_p3                                       |     |        | select_ln58_88  | select | auto_sel | 0       |
+|    select_ln58_89_fu_1268_p3                                       |     |        | select_ln58_89  | select | auto_sel | 0       |
+|    add_ln58_11_fu_1280_p2                                          |     |        | add_ln58_11     | add    | fabric   | 0       |
+|    add_ln58_13_fu_2710_p2                                          |     |        | add_ln58_13     | add    | fabric   | 0       |
+|    select_ln58_90_fu_1286_p3                                       |     |        | select_ln58_90  | select | auto_sel | 0       |
+|    select_ln58_91_fu_1294_p3                                       |     |        | select_ln58_91  | select | auto_sel | 0       |
+|    select_ln58_92_fu_1302_p3                                       |     |        | select_ln58_92  | select | auto_sel | 0       |
+|    add_ln58_14_fu_1314_p2                                          |     |        | add_ln58_14     | add    | fabric   | 0       |
+|    select_ln58_93_fu_2723_p3                                       |     |        | select_ln58_93  | select | auto_sel | 0       |
+|    select_ln58_94_fu_2730_p3                                       |     |        | select_ln58_94  | select | auto_sel | 0       |
+|    select_ln58_95_fu_2737_p3                                       |     |        | select_ln58_95  | select | auto_sel | 0       |
+|    select_ln58_96_fu_2744_p3                                       |     |        | select_ln58_96  | select | auto_sel | 0       |
+|    select_ln58_97_fu_2751_p3                                       |     |        | select_ln58_97  | select | auto_sel | 0       |
+|    select_ln58_98_fu_2758_p3                                       |     |        | select_ln58_98  | select | auto_sel | 0       |
+|    select_ln58_99_fu_1320_p3                                       |     |        | select_ln58_99  | select | auto_sel | 0       |
+|    select_ln58_100_fu_1328_p3                                      |     |        | select_ln58_100 | select | auto_sel | 0       |
+|    select_ln58_101_fu_1336_p3                                      |     |        | select_ln58_101 | select | auto_sel | 0       |
+|    select_ln58_102_fu_1348_p3                                      |     |        | select_ln58_102 | select | auto_sel | 0       |
+|    select_ln58_103_fu_1356_p3                                      |     |        | select_ln58_103 | select | auto_sel | 0       |
+|    select_ln58_104_fu_1364_p3                                      |     |        | select_ln58_104 | select | auto_sel | 0       |
+|    add_ln58_17_fu_1376_p2                                          |     |        | add_ln58_17     | add    | fabric   | 0       |
+|    select_ln58_105_fu_2788_p3                                      |     |        | select_ln58_105 | select | auto_sel | 0       |
+|    select_ln58_106_fu_2795_p3                                      |     |        | select_ln58_106 | select | auto_sel | 0       |
+|    select_ln58_107_fu_2802_p3                                      |     |        | select_ln58_107 | select | auto_sel | 0       |
+|    select_ln58_108_fu_2813_p3                                      |     |        | select_ln58_108 | select | auto_sel | 0       |
+|    select_ln58_109_fu_2820_p3                                      |     |        | select_ln58_109 | select | auto_sel | 0       |
+|    select_ln58_110_fu_2827_p3                                      |     |        | select_ln58_110 | select | auto_sel | 0       |
+|    add_ln58_20_fu_2854_p2                                          |     |        | add_ln58_20     | add    | fabric   | 0       |
+|    select_ln58_111_fu_1382_p3                                      |     |        | select_ln58_111 | select | auto_sel | 0       |
+|    select_ln58_112_fu_1390_p3                                      |     |        | select_ln58_112 | select | auto_sel | 0       |
+|    select_ln58_113_fu_1398_p3                                      |     |        | select_ln58_113 | select | auto_sel | 0       |
+|    add_ln58_21_fu_1406_p2                                          |     |        | add_ln58_21     | add    | fabric   | 0       |
+|    select_ln58_114_fu_2867_p3                                      |     |        | select_ln58_114 | select | auto_sel | 0       |
+|    select_ln58_115_fu_2874_p3                                      |     |        | select_ln58_115 | select | auto_sel | 0       |
+|    select_ln58_116_fu_2881_p3                                      |     |        | select_ln58_116 | select | auto_sel | 0       |
+|    select_ln58_117_fu_2892_p3                                      |     |        | select_ln58_117 | select | auto_sel | 0       |
+|    select_ln58_118_fu_2899_p3                                      |     |        | select_ln58_118 | select | auto_sel | 0       |
+|    select_ln58_119_fu_2906_p3                                      |     |        | select_ln58_119 | select | auto_sel | 0       |
+|    select_ln58_120_fu_2933_p3                                      |     |        | select_ln58_120 | select | auto_sel | 0       |
+|    select_ln58_121_fu_2940_p3                                      |     |        | select_ln58_121 | select | auto_sel | 0       |
+|    select_ln58_122_fu_2947_p3                                      |     |        | select_ln58_122 | select | auto_sel | 0       |
+|    select_ln58_123_fu_2958_p3                                      |     |        | select_ln58_123 | select | auto_sel | 0       |
+|    select_ln58_124_fu_2965_p3                                      |     |        | select_ln58_124 | select | auto_sel | 0       |
+|    select_ln58_125_fu_2972_p3                                      |     |        | select_ln58_125 | select | auto_sel | 0       |
+|    add_ln58_24_fu_2983_p2                                          |     |        | add_ln58_24     | add    | fabric   | 0       |
+|    select_ln58_126_fu_2993_p3                                      |     |        | select_ln58_126 | select | auto_sel | 0       |
+|    select_ln58_127_fu_3000_p3                                      |     |        | select_ln58_127 | select | auto_sel | 0       |
+|    select_ln58_128_fu_3007_p3                                      |     |        | select_ln58_128 | select | auto_sel | 0       |
+|    select_ln58_129_fu_3018_p3                                      |     |        | select_ln58_129 | select | auto_sel | 0       |
+|    select_ln58_130_fu_3025_p3                                      |     |        | select_ln58_130 | select | auto_sel | 0       |
+|    select_ln58_131_fu_3032_p3                                      |     |        | select_ln58_131 | select | auto_sel | 0       |
+|    add_ln58_25_fu_3043_p2                                          |     |        | add_ln58_25     | add    | fabric   | 0       |
+|    add_ln58_26_fu_3053_p2                                          |     |        | add_ln58_26     | add    | fabric   | 0       |
+|    add_ln58_27_fu_3063_p2                                          |     |        | add_ln58_27     | add    | fabric   | 0       |
+|    select_ln58_132_fu_3073_p3                                      |     |        | select_ln58_132 | select | auto_sel | 0       |
+|    select_ln58_133_fu_3080_p3                                      |     |        | select_ln58_133 | select | auto_sel | 0       |
+|    select_ln58_134_fu_3087_p3                                      |     |        | select_ln58_134 | select | auto_sel | 0       |
+|    add_ln58_28_fu_3098_p2                                          |     |        | add_ln58_28     | add    | fabric   | 0       |
+|    select_ln58_135_fu_3108_p3                                      |     |        | select_ln58_135 | select | auto_sel | 0       |
+|    select_ln58_136_fu_3115_p3                                      |     |        | select_ln58_136 | select | auto_sel | 0       |
+|    select_ln58_137_fu_3122_p3                                      |     |        | select_ln58_137 | select | auto_sel | 0       |
+|    select_ln58_138_fu_3133_p3                                      |     |        | select_ln58_138 | select | auto_sel | 0       |
+|    select_ln58_139_fu_3140_p3                                      |     |        | select_ln58_139 | select | auto_sel | 0       |
+|    select_ln58_140_fu_3147_p3                                      |     |        | select_ln58_140 | select | auto_sel | 0       |
+|    add_ln58_29_fu_3158_p2                                          |     |        | add_ln58_29     | add    | fabric   | 0       |
+|    add_ln58_30_fu_3168_p2                                          |     |        | add_ln58_30     | add    | fabric   | 0       |
+|    select_ln58_141_fu_3178_p3                                      |     |        | select_ln58_141 | select | auto_sel | 0       |
+|    select_ln58_142_fu_3185_p3                                      |     |        | select_ln58_142 | select | auto_sel | 0       |
+|    select_ln58_143_fu_3192_p3                                      |     |        | select_ln58_143 | select | auto_sel | 0       |
+|    select_ln58_144_fu_3203_p3                                      |     |        | select_ln58_144 | select | auto_sel | 0       |
+|    select_ln58_145_fu_3210_p3                                      |     |        | select_ln58_145 | select | auto_sel | 0       |
+|    select_ln58_146_fu_3217_p3                                      |     |        | select_ln58_146 | select | auto_sel | 0       |
+|    add_ln58_31_fu_3228_p2                                          |     |        | add_ln58_31     | add    | fabric   | 0       |
+|    select_ln58_147_fu_3238_p3                                      |     |        | select_ln58_147 | select | auto_sel | 0       |
+|    select_ln58_148_fu_3245_p3                                      |     |        | select_ln58_148 | select | auto_sel | 0       |
+|    select_ln58_149_fu_3252_p3                                      |     |        | select_ln58_149 | select | auto_sel | 0       |
+|    select_ln58_150_fu_3263_p3                                      |     |        | select_ln58_150 | select | auto_sel | 0       |
+|    select_ln58_151_fu_3270_p3                                      |     |        | select_ln58_151 | select | auto_sel | 0       |
+|    select_ln58_152_fu_3277_p3                                      |     |        | select_ln58_152 | select | auto_sel | 0       |
+|    add_ln58_32_fu_3284_p2                                          |     |        | add_ln58_32     | add    | fabric   | 0       |
+|    add_ln58_33_fu_3294_p2                                          |     |        | add_ln58_33     | add    | fabric   | 0       |
+|    add_ln58_34_fu_3304_p2                                          |     |        | add_ln58_34     | add    | fabric   | 0       |
+|    select_ln58_153_fu_1412_p3                                      |     |        | select_ln58_153 | select | auto_sel | 0       |
+|    select_ln58_154_fu_1420_p3                                      |     |        | select_ln58_154 | select | auto_sel | 0       |
+|    select_ln58_155_fu_1428_p3                                      |     |        | select_ln58_155 | select | auto_sel | 0       |
+|    select_ln58_156_fu_1446_p3                                      |     |        | select_ln58_156 | select | auto_sel | 0       |
+|    select_ln58_157_fu_1454_p3                                      |     |        | select_ln58_157 | select | auto_sel | 0       |
+|    select_ln58_158_fu_1462_p3                                      |     |        | select_ln58_158 | select | auto_sel | 0       |
+|    select_ln58_159_fu_1474_p3                                      |     |        | select_ln58_159 | select | auto_sel | 0       |
+|    select_ln58_160_fu_1482_p3                                      |     |        | select_ln58_160 | select | auto_sel | 0       |
+|    select_ln58_161_fu_1490_p3                                      |     |        | select_ln58_161 | select | auto_sel | 0       |
+|    add_ln58_36_fu_1506_p2                                          |     |        | add_ln58_36     | add    | fabric   | 0       |
+|    select_ln58_162_fu_3317_p3                                      |     |        | select_ln58_162 | select | auto_sel | 0       |
+|    select_ln58_163_fu_3324_p3                                      |     |        | select_ln58_163 | select | auto_sel | 0       |
+|    select_ln58_164_fu_3331_p3                                      |     |        | select_ln58_164 | select | auto_sel | 0       |
+|    select_ln58_165_fu_3342_p3                                      |     |        | select_ln58_165 | select | auto_sel | 0       |
+|    select_ln58_166_fu_3349_p3                                      |     |        | select_ln58_166 | select | auto_sel | 0       |
+|    select_ln58_167_fu_3356_p3                                      |     |        | select_ln58_167 | select | auto_sel | 0       |
+|    add_ln58_38_fu_3367_p2                                          |     |        | add_ln58_38     | add    | fabric   | 0       |
+|    select_ln58_168_fu_3377_p3                                      |     |        | select_ln58_168 | select | auto_sel | 0       |
+|    select_ln58_169_fu_3384_p3                                      |     |        | select_ln58_169 | select | auto_sel | 0       |
+|    select_ln58_170_fu_3391_p3                                      |     |        | select_ln58_170 | select | auto_sel | 0       |
+|    select_ln58_171_fu_3402_p3                                      |     |        | select_ln58_171 | select | auto_sel | 0       |
+|    select_ln58_172_fu_3409_p3                                      |     |        | select_ln58_172 | select | auto_sel | 0       |
+|    select_ln58_173_fu_3416_p3                                      |     |        | select_ln58_173 | select | auto_sel | 0       |
+|    add_ln58_39_fu_3427_p2                                          |     |        | add_ln58_39     | add    | fabric   | 0       |
+|    select_ln58_174_fu_3453_p3                                      |     |        | select_ln58_174 | select | auto_sel | 0       |
+|    select_ln58_175_fu_3460_p3                                      |     |        | select_ln58_175 | select | auto_sel | 0       |
+|    select_ln58_176_fu_3467_p3                                      |     |        | select_ln58_176 | select | auto_sel | 0       |
+|    add_ln58_42_fu_3478_p2                                          |     |        | add_ln58_42     | add    | fabric   | 0       |
+|    select_ln58_177_fu_3488_p3                                      |     |        | select_ln58_177 | select | auto_sel | 0       |
+|    select_ln58_178_fu_3495_p3                                      |     |        | select_ln58_178 | select | auto_sel | 0       |
+|    select_ln58_179_fu_3502_p3                                      |     |        | select_ln58_179 | select | auto_sel | 0       |
+|    select_ln58_180_fu_3513_p3                                      |     |        | select_ln58_180 | select | auto_sel | 0       |
+|    select_ln58_181_fu_3520_p3                                      |     |        | select_ln58_181 | select | auto_sel | 0       |
+|    select_ln58_182_fu_3527_p3                                      |     |        | select_ln58_182 | select | auto_sel | 0       |
+|    add_ln58_43_fu_3538_p2                                          |     |        | add_ln58_43     | add    | fabric   | 0       |
+|    add_ln58_44_fu_3548_p2                                          |     |        | add_ln58_44     | add    | fabric   | 0       |
+|    select_ln58_183_fu_3558_p3                                      |     |        | select_ln58_183 | select | auto_sel | 0       |
+|    select_ln58_184_fu_3565_p3                                      |     |        | select_ln58_184 | select | auto_sel | 0       |
+|    select_ln58_185_fu_3572_p3                                      |     |        | select_ln58_185 | select | auto_sel | 0       |
+|    select_ln58_186_fu_3579_p3                                      |     |        | select_ln58_186 | select | auto_sel | 0       |
+|    select_ln58_187_fu_3586_p3                                      |     |        | select_ln58_187 | select | auto_sel | 0       |
+|    select_ln58_188_fu_3593_p3                                      |     |        | select_ln58_188 | select | auto_sel | 0       |
+|    add_ln58_45_fu_3604_p2                                          |     |        | add_ln58_45     | add    | fabric   | 0       |
+|    select_ln58_189_fu_3614_p3                                      |     |        | select_ln58_189 | select | auto_sel | 0       |
+|    select_ln58_190_fu_3621_p3                                      |     |        | select_ln58_190 | select | auto_sel | 0       |
+|    select_ln58_191_fu_3628_p3                                      |     |        | select_ln58_191 | select | auto_sel | 0       |
+|    select_ln58_192_fu_3635_p3                                      |     |        | select_ln58_192 | select | auto_sel | 0       |
+|    select_ln58_193_fu_3642_p3                                      |     |        | select_ln58_193 | select | auto_sel | 0       |
+|    select_ln58_194_fu_3649_p3                                      |     |        | select_ln58_194 | select | auto_sel | 0       |
+|    add_ln58_46_fu_3660_p2                                          |     |        | add_ln58_46     | add    | fabric   | 0       |
+|    add_ln58_47_fu_3670_p2                                          |     |        | add_ln58_47     | add    | fabric   | 0       |
+|    add_ln58_48_fu_3680_p2                                          |     |        | add_ln58_48     | add    | fabric   | 0       |
+|    select_ln58_195_fu_1522_p3                                      |     |        | select_ln58_195 | select | auto_sel | 0       |
+|    select_ln58_196_fu_1530_p3                                      |     |        | select_ln58_196 | select | auto_sel | 0       |
+|    select_ln58_197_fu_1538_p3                                      |     |        | select_ln58_197 | select | auto_sel | 0       |
+|    add_ln58_49_fu_1546_p2                                          |     |        | add_ln58_49     | add    | fabric   | 0       |
+|    select_ln58_198_fu_3693_p3                                      |     |        | select_ln58_198 | select | auto_sel | 0       |
+|    select_ln58_199_fu_3700_p3                                      |     |        | select_ln58_199 | select | auto_sel | 0       |
+|    select_ln58_200_fu_3707_p3                                      |     |        | select_ln58_200 | select | auto_sel | 0       |
+|    select_ln58_201_fu_3718_p3                                      |     |        | select_ln58_201 | select | auto_sel | 0       |
+|    select_ln58_202_fu_3725_p3                                      |     |        | select_ln58_202 | select | auto_sel | 0       |
+|    select_ln58_203_fu_3732_p3                                      |     |        | select_ln58_203 | select | auto_sel | 0       |
+|    select_ln58_204_fu_3759_p3                                      |     |        | select_ln58_204 | select | auto_sel | 0       |
+|    select_ln58_205_fu_3766_p3                                      |     |        | select_ln58_205 | select | auto_sel | 0       |
+|    select_ln58_206_fu_3773_p3                                      |     |        | select_ln58_206 | select | auto_sel | 0       |
+|    select_ln58_207_fu_3784_p3                                      |     |        | select_ln58_207 | select | auto_sel | 0       |
+|    select_ln58_208_fu_3791_p3                                      |     |        | select_ln58_208 | select | auto_sel | 0       |
+|    select_ln58_209_fu_3798_p3                                      |     |        | select_ln58_209 | select | auto_sel | 0       |
+|    select_ln58_210_fu_1552_p3                                      |     |        | select_ln58_210 | select | auto_sel | 0       |
+|    select_ln58_211_fu_1560_p3                                      |     |        | select_ln58_211 | select | auto_sel | 0       |
+|    select_ln58_212_fu_1568_p3                                      |     |        | select_ln58_212 | select | auto_sel | 0       |
+|    select_ln58_213_fu_1576_p3                                      |     |        | select_ln58_213 | select | auto_sel | 0       |
+|    select_ln58_214_fu_1584_p3                                      |     |        | select_ln58_214 | select | auto_sel | 0       |
+|    select_ln58_215_fu_1592_p3                                      |     |        | select_ln58_215 | select | auto_sel | 0       |
+|    add_ln58_53_fu_1604_p2                                          |     |        | add_ln58_53     | add    | fabric   | 0       |
+|    add_ln58_55_fu_3828_p2                                          |     |        | add_ln58_55     | add    | fabric   | 0       |
+|    select_ln58_216_fu_1610_p3                                      |     |        | select_ln58_216 | select | auto_sel | 0       |
+|    select_ln58_217_fu_1618_p3                                      |     |        | select_ln58_217 | select | auto_sel | 0       |
+|    select_ln58_218_fu_1626_p3                                      |     |        | select_ln58_218 | select | auto_sel | 0       |
+|    add_ln58_56_fu_1634_p2                                          |     |        | add_ln58_56     | add    | fabric   | 0       |
+|    select_ln58_219_fu_3841_p3                                      |     |        | select_ln58_219 | select | auto_sel | 0       |
+|    select_ln58_220_fu_3848_p3                                      |     |        | select_ln58_220 | select | auto_sel | 0       |
+|    select_ln58_221_fu_3855_p3                                      |     |        | select_ln58_221 | select | auto_sel | 0       |
+|    select_ln58_222_fu_3862_p3                                      |     |        | select_ln58_222 | select | auto_sel | 0       |
+|    select_ln58_223_fu_3869_p3                                      |     |        | select_ln58_223 | select | auto_sel | 0       |
+|    select_ln58_224_fu_3876_p3                                      |     |        | select_ln58_224 | select | auto_sel | 0       |
+|    select_ln58_225_fu_3903_p3                                      |     |        | select_ln58_225 | select | auto_sel | 0       |
+|    select_ln58_226_fu_3910_p3                                      |     |        | select_ln58_226 | select | auto_sel | 0       |
+|    select_ln58_227_fu_3917_p3                                      |     |        | select_ln58_227 | select | auto_sel | 0       |
+|    select_ln58_228_fu_3924_p3                                      |     |        | select_ln58_228 | select | auto_sel | 0       |
+|    select_ln58_229_fu_3931_p3                                      |     |        | select_ln58_229 | select | auto_sel | 0       |
+|    select_ln58_230_fu_3938_p3                                      |     |        | select_ln58_230 | select | auto_sel | 0       |
+|    add_ln58_59_fu_3949_p2                                          |     |        | add_ln58_59     | add    | fabric   | 0       |
+|    select_ln58_231_fu_3959_p3                                      |     |        | select_ln58_231 | select | auto_sel | 0       |
+|    select_ln58_232_fu_3966_p3                                      |     |        | select_ln58_232 | select | auto_sel | 0       |
+|    select_ln58_233_fu_3973_p3                                      |     |        | select_ln58_233 | select | auto_sel | 0       |
+|    select_ln58_234_fu_3984_p3                                      |     |        | select_ln58_234 | select | auto_sel | 0       |
+|    select_ln58_235_fu_3991_p3                                      |     |        | select_ln58_235 | select | auto_sel | 0       |
+|    select_ln58_236_fu_3998_p3                                      |     |        | select_ln58_236 | select | auto_sel | 0       |
+|    add_ln58_60_fu_4009_p2                                          |     |        | add_ln58_60     | add    | fabric   | 0       |
+|    add_ln58_61_fu_4019_p2                                          |     |        | add_ln58_61     | add    | fabric   | 0       |
+|    add_ln58_62_fu_4029_p2                                          |     |        | add_ln58_62     | add    | fabric   | 0       |
+|    select_ln58_237_fu_4039_p3                                      |     |        | select_ln58_237 | select | auto_sel | 0       |
+|    select_ln58_238_fu_4046_p3                                      |     |        | select_ln58_238 | select | auto_sel | 0       |
+|    select_ln58_239_fu_4053_p3                                      |     |        | select_ln58_239 | select | auto_sel | 0       |
+|    add_ln58_63_fu_4064_p2                                          |     |        | add_ln58_63     | add    | fabric   | 0       |
+|    select_ln58_240_fu_4074_p3                                      |     |        | select_ln58_240 | select | auto_sel | 0       |
+|    select_ln58_241_fu_4081_p3                                      |     |        | select_ln58_241 | select | auto_sel | 0       |
+|    select_ln58_242_fu_4088_p3                                      |     |        | select_ln58_242 | select | auto_sel | 0       |
+|    select_ln58_243_fu_4099_p3                                      |     |        | select_ln58_243 | select | auto_sel | 0       |
+|    select_ln58_244_fu_4106_p3                                      |     |        | select_ln58_244 | select | auto_sel | 0       |
+|    select_ln58_245_fu_4113_p3                                      |     |        | select_ln58_245 | select | auto_sel | 0       |
+|    add_ln58_64_fu_4120_p2                                          |     |        | add_ln58_64     | add    | fabric   | 0       |
+|    select_ln58_246_fu_1640_p3                                      |     |        | select_ln58_246 | select | auto_sel | 0       |
+|    select_ln58_247_fu_1648_p3                                      |     |        | select_ln58_247 | select | auto_sel | 0       |
+|    select_ln58_248_fu_1656_p3                                      |     |        | select_ln58_248 | select | auto_sel | 0       |
+|    select_ln58_249_fu_1668_p3                                      |     |        | select_ln58_249 | select | auto_sel | 0       |
+|    select_ln58_250_fu_1676_p3                                      |     |        | select_ln58_250 | select | auto_sel | 0       |
+|    select_ln58_251_fu_1684_p3                                      |     |        | select_ln58_251 | select | auto_sel | 0       |
+|    add_ln58_66_fu_1692_p2                                          |     |        | add_ln58_66     | add    | fabric   | 0       |
+|    select_ln58_252_fu_1702_p3                                      |     |        | select_ln58_252 | select | auto_sel | 0       |
+|    select_ln58_253_fu_1710_p3                                      |     |        | select_ln58_253 | select | auto_sel | 0       |
+|    select_ln58_254_fu_1718_p3                                      |     |        | select_ln58_254 | select | auto_sel | 0       |
+|    select_ln58_255_fu_1730_p3                                      |     |        | select_ln58_255 | select | auto_sel | 0       |
+|    select_ln58_256_fu_1738_p3                                      |     |        | select_ln58_256 | select | auto_sel | 0       |
+|    select_ln58_257_fu_1746_p3                                      |     |        | select_ln58_257 | select | auto_sel | 0       |
+|    select_ln58_258_fu_4145_p3                                      |     |        | select_ln58_258 | select | auto_sel | 0       |
+|    select_ln58_259_fu_4152_p3                                      |     |        | select_ln58_259 | select | auto_sel | 0       |
+|    select_ln58_260_fu_4159_p3                                      |     |        | select_ln58_260 | select | auto_sel | 0       |
+|    add_ln58_70_fu_4166_p2                                          |     |        | add_ln58_70     | add    | fabric   | 0       |
+|    select_ln58_261_fu_4176_p3                                      |     |        | select_ln58_261 | select | auto_sel | 0       |
+|    select_ln58_262_fu_4183_p3                                      |     |        | select_ln58_262 | select | auto_sel | 0       |
+|    select_ln58_263_fu_4190_p3                                      |     |        | select_ln58_263 | select | auto_sel | 0       |
+|    select_ln58_264_fu_4197_p3                                      |     |        | select_ln58_264 | select | auto_sel | 0       |
+|    select_ln58_265_fu_4204_p3                                      |     |        | select_ln58_265 | select | auto_sel | 0       |
+|    select_ln58_266_fu_4211_p3                                      |     |        | select_ln58_266 | select | auto_sel | 0       |
+|    add_ln58_71_fu_4218_p2                                          |     |        | add_ln58_71     | add    | fabric   | 0       |
+|    add_ln58_72_fu_4228_p2                                          |     |        | add_ln58_72     | add    | fabric   | 0       |
+|    select_ln58_267_fu_4238_p3                                      |     |        | select_ln58_267 | select | auto_sel | 0       |
+|    select_ln58_268_fu_4245_p3                                      |     |        | select_ln58_268 | select | auto_sel | 0       |
+|    select_ln58_269_fu_4252_p3                                      |     |        | select_ln58_269 | select | auto_sel | 0       |
+|    select_ln58_270_fu_4259_p3                                      |     |        | select_ln58_270 | select | auto_sel | 0       |
+|    select_ln58_271_fu_4266_p3                                      |     |        | select_ln58_271 | select | auto_sel | 0       |
+|    select_ln58_272_fu_4273_p3                                      |     |        | select_ln58_272 | select | auto_sel | 0       |
+|    add_ln58_73_fu_4284_p2                                          |     |        | add_ln58_73     | add    | fabric   | 0       |
+|    select_ln58_273_fu_4294_p3                                      |     |        | select_ln58_273 | select | auto_sel | 0       |
+|    select_ln58_274_fu_4301_p3                                      |     |        | select_ln58_274 | select | auto_sel | 0       |
+|    select_ln58_275_fu_4308_p3                                      |     |        | select_ln58_275 | select | auto_sel | 0       |
+|    select_ln58_276_fu_4319_p3                                      |     |        | select_ln58_276 | select | auto_sel | 0       |
+|    select_ln58_277_fu_4326_p3                                      |     |        | select_ln58_277 | select | auto_sel | 0       |
+|    select_ln58_278_fu_4333_p3                                      |     |        | select_ln58_278 | select | auto_sel | 0       |
+|    add_ln58_74_fu_4340_p2                                          |     |        | add_ln58_74     | add    | fabric   | 0       |
+|    add_ln58_75_fu_4350_p2                                          |     |        | add_ln58_75     | add    | fabric   | 0       |
+|    add_ln58_76_fu_4360_p2                                          |     |        | add_ln58_76     | add    | fabric   | 0       |
+|    select_ln58_279_fu_1770_p3                                      |     |        | select_ln58_279 | select | auto_sel | 0       |
+|    select_ln58_280_fu_1778_p3                                      |     |        | select_ln58_280 | select | auto_sel | 0       |
+|    select_ln58_281_fu_1786_p3                                      |     |        | select_ln58_281 | select | auto_sel | 0       |
+|    add_ln58_77_fu_1794_p2                                          |     |        | add_ln58_77     | add    | fabric   | 0       |
+|    select_ln58_282_fu_4373_p3                                      |     |        | select_ln58_282 | select | auto_sel | 0       |
+|    select_ln58_283_fu_4380_p3                                      |     |        | select_ln58_283 | select | auto_sel | 0       |
+|    select_ln58_284_fu_4387_p3                                      |     |        | select_ln58_284 | select | auto_sel | 0       |
+|    select_ln58_285_fu_4398_p3                                      |     |        | select_ln58_285 | select | auto_sel | 0       |
+|    select_ln58_286_fu_4405_p3                                      |     |        | select_ln58_286 | select | auto_sel | 0       |
+|    select_ln58_287_fu_4412_p3                                      |     |        | select_ln58_287 | select | auto_sel | 0       |
+|    select_ln58_288_fu_1800_p3                                      |     |        | select_ln58_288 | select | auto_sel | 0       |
+|    select_ln58_289_fu_1808_p3                                      |     |        | select_ln58_289 | select | auto_sel | 0       |
+|    select_ln58_290_fu_1816_p3                                      |     |        | select_ln58_290 | select | auto_sel | 0       |
+|    select_ln58_291_fu_1828_p3                                      |     |        | select_ln58_291 | select | auto_sel | 0       |
+|    select_ln58_292_fu_1836_p3                                      |     |        | select_ln58_292 | select | auto_sel | 0       |
+|    select_ln58_293_fu_1844_p3                                      |     |        | select_ln58_293 | select | auto_sel | 0       |
+|    add_ln58_80_fu_1852_p2                                          |     |        | add_ln58_80     | add    | fabric   | 0       |
+|    select_ln58_294_fu_4442_p3                                      |     |        | select_ln58_294 | select | auto_sel | 0       |
+|    select_ln58_295_fu_4449_p3                                      |     |        | select_ln58_295 | select | auto_sel | 0       |
+|    select_ln58_296_fu_4456_p3                                      |     |        | select_ln58_296 | select | auto_sel | 0       |
+|    select_ln58_297_fu_4467_p3                                      |     |        | select_ln58_297 | select | auto_sel | 0       |
+|    select_ln58_298_fu_4474_p3                                      |     |        | select_ln58_298 | select | auto_sel | 0       |
+|    select_ln58_299_fu_4481_p3                                      |     |        | select_ln58_299 | select | auto_sel | 0       |
+|    add_ln58_83_fu_4508_p2                                          |     |        | add_ln58_83     | add    | fabric   | 0       |
+|    select_ln58_300_fu_4518_p3                                      |     |        | select_ln58_300 | select | auto_sel | 0       |
+|    select_ln58_301_fu_4525_p3                                      |     |        | select_ln58_301 | select | auto_sel | 0       |
+|    select_ln58_302_fu_4532_p3                                      |     |        | select_ln58_302 | select | auto_sel | 0       |
+|    select_ln58_303_fu_1858_p3                                      |     |        | select_ln58_303 | select | auto_sel | 0       |
+|    select_ln58_304_fu_1866_p3                                      |     |        | select_ln58_304 | select | auto_sel | 0       |
+|    select_ln58_305_fu_1874_p3                                      |     |        | select_ln58_305 | select | auto_sel | 0       |
+|    select_ln58_306_fu_1886_p3                                      |     |        | select_ln58_306 | select | auto_sel | 0       |
+|    select_ln58_307_fu_1894_p3                                      |     |        | select_ln58_307 | select | auto_sel | 0       |
+|    select_ln58_308_fu_1902_p3                                      |     |        | select_ln58_308 | select | auto_sel | 0       |
+|    add_ln58_85_fu_1914_p2                                          |     |        | add_ln58_85     | add    | fabric   | 0       |
+|    select_ln58_309_fu_4562_p3                                      |     |        | select_ln58_309 | select | auto_sel | 0       |
+|    select_ln58_310_fu_4569_p3                                      |     |        | select_ln58_310 | select | auto_sel | 0       |
+|    select_ln58_311_fu_4576_p3                                      |     |        | select_ln58_311 | select | auto_sel | 0       |
+|    select_ln58_312_fu_4587_p3                                      |     |        | select_ln58_312 | select | auto_sel | 0       |
+|    select_ln58_313_fu_4594_p3                                      |     |        | select_ln58_313 | select | auto_sel | 0       |
+|    select_ln58_314_fu_4601_p3                                      |     |        | select_ln58_314 | select | auto_sel | 0       |
+|    select_ln58_315_fu_1920_p3                                      |     |        | select_ln58_315 | select | auto_sel | 0       |
+|    select_ln58_316_fu_1928_p3                                      |     |        | select_ln58_316 | select | auto_sel | 0       |
+|    select_ln58_317_fu_1936_p3                                      |     |        | select_ln58_317 | select | auto_sel | 0       |
+|    select_ln58_318_fu_1948_p3                                      |     |        | select_ln58_318 | select | auto_sel | 0       |
+|    select_ln58_319_fu_1956_p3                                      |     |        | select_ln58_319 | select | auto_sel | 0       |
+|    select_ln58_320_fu_1964_p3                                      |     |        | select_ln58_320 | select | auto_sel | 0       |
+|    add_ln58_88_fu_1976_p2                                          |     |        | add_ln58_88     | add    | fabric   | 0       |
+|    add_ln58_90_fu_4627_p2                                          |     |        | add_ln58_90     | add    | fabric   | 0       |
+|    select_ln58_321_fu_4637_p3                                      |     |        | select_ln58_321 | select | auto_sel | 0       |
+|    select_ln58_322_fu_4644_p3                                      |     |        | select_ln58_322 | select | auto_sel | 0       |
+|    select_ln58_323_fu_4651_p3                                      |     |        | select_ln58_323 | select | auto_sel | 0       |
+|    add_ln58_91_fu_4666_p2                                          |     |        | add_ln58_91     | add    | fabric   | 0       |
+|    select_ln58_324_fu_4676_p3                                      |     |        | select_ln58_324 | select | auto_sel | 0       |
+|    select_ln58_325_fu_4683_p3                                      |     |        | select_ln58_325 | select | auto_sel | 0       |
+|    select_ln58_326_fu_4690_p3                                      |     |        | select_ln58_326 | select | auto_sel | 0       |
+|    select_ln58_327_fu_4701_p3                                      |     |        | select_ln58_327 | select | auto_sel | 0       |
+|    select_ln58_328_fu_4708_p3                                      |     |        | select_ln58_328 | select | auto_sel | 0       |
+|    select_ln58_329_fu_4715_p3                                      |     |        | select_ln58_329 | select | auto_sel | 0       |
+|    add_ln58_92_fu_4726_p2                                          |     |        | add_ln58_92     | add    | fabric   | 0       |
+|    add_ln58_93_fu_4736_p2                                          |     |        | add_ln58_93     | add    | fabric   | 0       |
+|    select_ln58_330_fu_1982_p3                                      |     |        | select_ln58_330 | select | auto_sel | 0       |
+|    select_ln58_331_fu_1990_p3                                      |     |        | select_ln58_331 | select | auto_sel | 0       |
+|    select_ln58_332_fu_1998_p3                                      |     |        | select_ln58_332 | select | auto_sel | 0       |
+|    select_ln58_333_fu_2010_p3                                      |     |        | select_ln58_333 | select | auto_sel | 0       |
+|    select_ln58_334_fu_2018_p3                                      |     |        | select_ln58_334 | select | auto_sel | 0       |
+|    select_ln58_335_fu_2026_p3                                      |     |        | select_ln58_335 | select | auto_sel | 0       |
+|    add_ln58_94_fu_2038_p2                                          |     |        | add_ln58_94     | add    | fabric   | 0       |
+|    select_ln58_336_fu_4749_p3                                      |     |        | select_ln58_336 | select | auto_sel | 0       |
+|    select_ln58_337_fu_4756_p3                                      |     |        | select_ln58_337 | select | auto_sel | 0       |
+|    select_ln58_338_fu_4763_p3                                      |     |        | select_ln58_338 | select | auto_sel | 0       |
+|    select_ln58_339_fu_4774_p3                                      |     |        | select_ln58_339 | select | auto_sel | 0       |
+|    select_ln58_340_fu_4781_p3                                      |     |        | select_ln58_340 | select | auto_sel | 0       |
+|    select_ln58_341_fu_4788_p3                                      |     |        | select_ln58_341 | select | auto_sel | 0       |
+|    add_ln58_97_fu_4811_p2                                          |     |        | add_ln58_97     | add    | fabric   | 0       |
+|    select_ln58_342_fu_2044_p3                                      |     |        | select_ln58_342 | select | auto_sel | 0       |
+|    select_ln58_343_fu_2052_p3                                      |     |        | select_ln58_343 | select | auto_sel | 0       |
+|    select_ln58_344_fu_2060_p3                                      |     |        | select_ln58_344 | select | auto_sel | 0       |
+|    add_ln58_98_fu_2072_p2                                          |     |        | add_ln58_98     | add    | fabric   | 0       |
+|    select_ln58_345_fu_4824_p3                                      |     |        | select_ln58_345 | select | auto_sel | 0       |
+|    select_ln58_346_fu_4831_p3                                      |     |        | select_ln58_346 | select | auto_sel | 0       |
+|    select_ln58_347_fu_4838_p3                                      |     |        | select_ln58_347 | select | auto_sel | 0       |
+|    select_ln58_348_fu_4845_p3                                      |     |        | select_ln58_348 | select | auto_sel | 0       |
+|    select_ln58_349_fu_4852_p3                                      |     |        | select_ln58_349 | select | auto_sel | 0       |
+|    select_ln58_350_fu_4859_p3                                      |     |        | select_ln58_350 | select | auto_sel | 0       |
+|    select_ln58_351_fu_4886_p3                                      |     |        | select_ln58_351 | select | auto_sel | 0       |
+|    select_ln58_352_fu_4893_p3                                      |     |        | select_ln58_352 | select | auto_sel | 0       |
+|    select_ln58_353_fu_4900_p3                                      |     |        | select_ln58_353 | select | auto_sel | 0       |
+|    select_ln58_354_fu_4911_p3                                      |     |        | select_ln58_354 | select | auto_sel | 0       |
+|    select_ln58_355_fu_4918_p3                                      |     |        | select_ln58_355 | select | auto_sel | 0       |
+|    select_ln58_356_fu_4925_p3                                      |     |        | select_ln58_356 | select | auto_sel | 0       |
+|    add_ln58_101_fu_4936_p2                                         |     |        | add_ln58_101    | add    | fabric   | 0       |
+|    select_ln58_357_fu_4946_p3                                      |     |        | select_ln58_357 | select | auto_sel | 0       |
+|    select_ln58_358_fu_4953_p3                                      |     |        | select_ln58_358 | select | auto_sel | 0       |
+|    select_ln58_359_fu_4960_p3                                      |     |        | select_ln58_359 | select | auto_sel | 0       |
+|    select_ln58_360_fu_4967_p3                                      |     |        | select_ln58_360 | select | auto_sel | 0       |
+|    select_ln58_361_fu_4974_p3                                      |     |        | select_ln58_361 | select | auto_sel | 0       |
+|    select_ln58_362_fu_4981_p3                                      |     |        | select_ln58_362 | select | auto_sel | 0       |
+|    add_ln58_102_fu_4992_p2                                         |     |        | add_ln58_102    | add    | fabric   | 0       |
+|    add_ln58_103_fu_5002_p2                                         |     |        | add_ln58_103    | add    | fabric   | 0       |
+|    add_ln58_104_fu_5012_p2                                         |     |        | add_ln58_104    | add    | fabric   | 0       |
+|    select_ln58_363_fu_5022_p3                                      |     |        | select_ln58_363 | select | auto_sel | 0       |
+|    select_ln58_364_fu_5029_p3                                      |     |        | select_ln58_364 | select | auto_sel | 0       |
+|    select_ln58_365_fu_5036_p3                                      |     |        | select_ln58_365 | select | auto_sel | 0       |
+|    add_ln58_105_fu_5047_p2                                         |     |        | add_ln58_105    | add    | fabric   | 0       |
+|    select_ln58_366_fu_5057_p3                                      |     |        | select_ln58_366 | select | auto_sel | 0       |
+|    select_ln58_367_fu_5064_p3                                      |     |        | select_ln58_367 | select | auto_sel | 0       |
+|    select_ln58_368_fu_5071_p3                                      |     |        | select_ln58_368 | select | auto_sel | 0       |
+|    select_ln58_369_fu_5086_p3                                      |     |        | select_ln58_369 | select | auto_sel | 0       |
+|    select_ln58_370_fu_5093_p3                                      |     |        | select_ln58_370 | select | auto_sel | 0       |
+|    select_ln58_371_fu_5100_p3                                      |     |        | select_ln58_371 | select | auto_sel | 0       |
+|    add_ln58_106_fu_5111_p2                                         |     |        | add_ln58_106    | add    | fabric   | 0       |
+|    select_ln58_372_fu_2078_p3                                      |     |        | select_ln58_372 | select | auto_sel | 0       |
+|    select_ln58_373_fu_2086_p3                                      |     |        | select_ln58_373 | select | auto_sel | 0       |
+|    select_ln58_374_fu_2094_p3                                      |     |        | select_ln58_374 | select | auto_sel | 0       |
+|    select_ln58_375_fu_2106_p3                                      |     |        | select_ln58_375 | select | auto_sel | 0       |
+|    select_ln58_376_fu_2114_p3                                      |     |        | select_ln58_376 | select | auto_sel | 0       |
+|    select_ln58_377_fu_2122_p3                                      |     |        | select_ln58_377 | select | auto_sel | 0       |
+|    select_ln58_378_fu_2140_p3                                      |     |        | select_ln58_378 | select | auto_sel | 0       |
+|    select_ln58_379_fu_2148_p3                                      |     |        | select_ln58_379 | select | auto_sel | 0       |
+|    select_ln58_380_fu_2156_p3                                      |     |        | select_ln58_380 | select | auto_sel | 0       |
+|    select_ln58_381_fu_2168_p3                                      |     |        | select_ln58_381 | select | auto_sel | 0       |
+|    select_ln58_382_fu_2176_p3                                      |     |        | select_ln58_382 | select | auto_sel | 0       |
+|    select_ln58_383_fu_2184_p3                                      |     |        | select_ln58_383 | select | auto_sel | 0       |
+|    add_ln58_109_fu_2196_p2                                         |     |        | add_ln58_109    | add    | fabric   | 0       |
+|  + relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config3_s     | 0   |        |                 |        |          |         |
+|    icmp_ln45_fu_208_p2                                             |     |        | icmp_ln45       | setgt  | auto     | 0       |
+|    datareg_fu_214_p3                                               |     |        | datareg         | select | auto_sel | 0       |
+|    icmp_ln45_1_fu_226_p2                                           |     |        | icmp_ln45_1     | setgt  | auto     | 0       |
+|    datareg_1_fu_232_p3                                             |     |        | datareg_1       | select | auto_sel | 0       |
+|    icmp_ln45_2_fu_244_p2                                           |     |        | icmp_ln45_2     | setgt  | auto     | 0       |
+|    datareg_2_fu_250_p3                                             |     |        | datareg_2       | select | auto_sel | 0       |
+|    icmp_ln45_3_fu_262_p2                                           |     |        | icmp_ln45_3     | setgt  | auto     | 0       |
+|    datareg_3_fu_268_p3                                             |     |        | datareg_3       | select | auto_sel | 0       |
+|    icmp_ln45_4_fu_280_p2                                           |     |        | icmp_ln45_4     | setgt  | auto     | 0       |
+|    datareg_4_fu_286_p3                                             |     |        | datareg_4       | select | auto_sel | 0       |
+|    icmp_ln45_5_fu_298_p2                                           |     |        | icmp_ln45_5     | setgt  | auto     | 0       |
+|    datareg_5_fu_304_p3                                             |     |        | datareg_5       | select | auto_sel | 0       |
+|    icmp_ln45_6_fu_316_p2                                           |     |        | icmp_ln45_6     | setgt  | auto     | 0       |
+|    datareg_6_fu_322_p3                                             |     |        | datareg_6       | select | auto_sel | 0       |
+|    icmp_ln45_7_fu_334_p2                                           |     |        | icmp_ln45_7     | setgt  | auto     | 0       |
+|    datareg_7_fu_340_p3                                             |     |        | datareg_7       | select | auto_sel | 0       |
+|    icmp_ln45_8_fu_352_p2                                           |     |        | icmp_ln45_8     | setgt  | auto     | 0       |
+|    datareg_8_fu_358_p3                                             |     |        | datareg_8       | select | auto_sel | 0       |
+|    icmp_ln45_9_fu_370_p2                                           |     |        | icmp_ln45_9     | setgt  | auto     | 0       |
+|    datareg_9_fu_376_p3                                             |     |        | datareg_9       | select | auto_sel | 0       |
+|    icmp_ln45_10_fu_388_p2                                          |     |        | icmp_ln45_10    | setgt  | auto     | 0       |
+|    datareg_10_fu_394_p3                                            |     |        | datareg_10      | select | auto_sel | 0       |
+|    icmp_ln45_11_fu_406_p2                                          |     |        | icmp_ln45_11    | setgt  | auto     | 0       |
+|    datareg_11_fu_412_p3                                            |     |        | datareg_11      | select | auto_sel | 0       |
+|    icmp_ln45_12_fu_424_p2                                          |     |        | icmp_ln45_12    | setgt  | auto     | 0       |
+|    datareg_12_fu_430_p3                                            |     |        | datareg_12      | select | auto_sel | 0       |
+|    icmp_ln45_13_fu_442_p2                                          |     |        | icmp_ln45_13    | setgt  | auto     | 0       |
+|    datareg_13_fu_448_p3                                            |     |        | datareg_13      | select | auto_sel | 0       |
+|    icmp_ln45_14_fu_460_p2                                          |     |        | icmp_ln45_14    | setgt  | auto     | 0       |
+|    datareg_14_fu_466_p3                                            |     |        | datareg_14      | select | auto_sel | 0       |
+|    icmp_ln45_15_fu_478_p2                                          |     |        | icmp_ln45_15    | setgt  | auto     | 0       |
+|    datareg_15_fu_484_p3                                            |     |        | datareg_15      | select | auto_sel | 0       |
+|  + dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config4_s | 4   |        |                 |        |          |         |
+|    mul_16s_13s_26_1_1_U19                                          | 1   |        | mul_ln42        | mul    | auto     | 0       |
+|    mul_16s_13s_26_1_1_U19                                          | 1   |        | mul_ln73        | mul    | auto     | 0       |
+|    mul_16s_13s_26_1_1_U21                                          | 1   |        | mul_ln42_1      | mul    | auto     | 0       |
+|    mul_16s_14s_26_1_1_U18                                          | 1   |        | mul_ln42_2      | mul    | auto     | 0       |
+|    mul_16s_13s_26_1_1_U20                                          | 1   |        | mul_ln42_3      | mul    | auto     | 0       |
+|    mul_16s_13s_26_1_1_U19                                          | 1   |        | mul_ln42_4      | mul    | auto     | 0       |
+|    mul_16s_13s_26_1_1_U21                                          | 1   |        | mul_ln42_5      | mul    | auto     | 0       |
+|    mul_16s_14s_26_1_1_U18                                          | 1   |        | mul_ln42_6      | mul    | auto     | 0       |
+|    mul_16s_13s_26_1_1_U20                                          | 1   |        | mul_ln42_7      | mul    | auto     | 0       |
+|    mul_16s_13s_26_1_1_U19                                          | 1   |        | mul_ln73_1      | mul    | auto     | 0       |
+|    mul_16s_13s_26_1_1_U21                                          | 1   |        | mul_ln42_8      | mul    | auto     | 0       |
+|    mul_16s_14s_26_1_1_U18                                          | 1   |        | mul_ln42_9      | mul    | auto     | 0       |
+|    mul_16s_13s_26_1_1_U20                                          | 1   |        | mul_ln42_10     | mul    | auto     | 0       |
+|    mul_16s_13s_26_1_1_U19                                          | 1   |        | mul_ln42_11     | mul    | auto     | 0       |
+|    mul_16s_13s_26_1_1_U21                                          | 1   |        | mul_ln42_12     | mul    | auto     | 0       |
+|    mul_16s_14s_26_1_1_U18                                          | 1   |        | mul_ln42_13     | mul    | auto     | 0       |
+|    mul_16s_13s_26_1_1_U20                                          | 1   |        | mul_ln42_14     | mul    | auto     | 0       |
+|    mul_16s_13s_26_1_1_U19                                          | 1   |        | mul_ln42_15     | mul    | auto     | 0       |
+|    mul_16s_13s_26_1_1_U21                                          | 1   |        | mul_ln42_16     | mul    | auto     | 0       |
+|    mul_16s_14s_26_1_1_U18                                          | 1   |        | mul_ln42_17     | mul    | auto     | 0       |
+|    mul_16s_13s_26_1_1_U20                                          | 1   |        | mul_ln42_18     | mul    | auto     | 0       |
+|    mul_16s_14s_26_1_1_U18                                          | 1   |        | mul_ln42_19     | mul    | auto     | 0       |
+|    mul_16s_13s_26_1_1_U20                                          | 1   |        | mul_ln42_20     | mul    | auto     | 0       |
+|    mul_16s_13s_26_1_1_U21                                          | 1   |        | mul_ln42_21     | mul    | auto     | 0       |
+|    mul_16s_13s_26_1_1_U21                                          | 1   |        | mul_ln42_22     | mul    | auto     | 0       |
+|    mul_16s_14s_26_1_1_U18                                          | 1   |        | mul_ln73_2      | mul    | auto     | 0       |
+|    sub_ln73_fu_723_p2                                              |     |        | sub_ln73        | sub    | fabric   | 0       |
+|    mul_16s_13s_26_1_1_U20                                          | 1   |        | mul_ln42_23     | mul    | auto     | 0       |
+|    mul_16s_13s_26_1_1_U19                                          | 1   |        | mul_ln42_24     | mul    | auto     | 0       |
+|    mul_16s_13s_26_1_1_U21                                          | 1   |        | mul_ln42_25     | mul    | auto     | 0       |
+|    mul_16s_14s_26_1_1_U18                                          | 1   |        | mul_ln42_26     | mul    | auto     | 0       |
+|    mul_16s_13s_26_1_1_U20                                          | 1   |        | mul_ln73_3      | mul    | auto     | 0       |
+|    grp_fu_615_p2                                                   |     |        | add_ln58_112    | add    | fabric   | 0       |
+|    grp_fu_615_p2                                                   |     |        | add_ln58_115    | add    | fabric   | 0       |
+|    add_ln58_118_fu_870_p2                                          |     |        | add_ln58_118    | add    | fabric   | 0       |
+|    add_ln58_119_fu_881_p2                                          |     |        | add_ln58_119    | add    | fabric   | 0       |
+|    add_ln58_128_fu_801_p2                                          |     |        | add_ln58_128    | add    | fabric   | 0       |
+|    add_ln58_131_fu_852_p2                                          |     |        | add_ln58_131    | add    | fabric   | 0       |
+|    add_ln58_134_fu_875_p2                                          |     |        | add_ln58_134    | add    | fabric   | 0       |
+|    add_ln58_135_fu_897_p2                                          |     |        | add_ln58_135    | add    | fabric   | 0       |
++--------------------------------------------------------------------+-----+--------+-----------------+--------+----------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++----------------------+----------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
+| Type                 | Options                                                  | Location                                                                                                                             |
++----------------------+----------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
+| array_reshape        | variable=input_112 complete dim=0                        | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/encoder.cpp:12 in encoder, input_112                                         |
+| array_partition      | variable=layer4_out complete dim=0                       | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/encoder.cpp:13 in encoder, layer4_out                                        |
+| interface            | ap_hs port=input_112,layer4_out                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/encoder.cpp:14 in encoder, input_112,layer4_out                              |
+| pipeline             |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/encoder.cpp:15 in encoder                                                    |
+| array_partition      | variable=layer2_out complete dim=0                       | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/encoder.cpp:36 in encoder, layer2_out                                        |
+| array_partition      | variable=layer3_out complete dim=0                       | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/encoder.cpp:40 in encoder, layer3_out                                        |
+| pipeline             |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation.h:29 in linear                                    |
+| pipeline             |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation.h:40 in relu                                      |
+| pipeline             |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation.h:54 in relu_max                                  |
+| pipeline             |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation.h:109 in sigmoid                                  |
+| pipeline             |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation.h:171 in softmax_latency                          |
+| array_partition      | variable=exp_res complete                                | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation.h:193 in softmax_latency, exp_res                 |
+| unroll               |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation.h:196 in softmax_latency                          |
+| unroll               |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation.h:210 in softmax_latency                          |
+| pipeline             |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation.h:217 in softmax_stable                           |
+| unroll               |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation.h:244 in softmax_stable                           |
+| array_partition      | variable=exp_res complete                                | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation.h:250 in softmax_stable, exp_res                  |
+| unroll               |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation.h:253 in softmax_stable                           |
+| unroll               |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation.h:267 in softmax_stable                           |
+| pipeline             |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation.h:315 in softmax_legacy                           |
+| unroll               |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation.h:360 in softmax_argmax                           |
+| pipeline             |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation.h:368 in softmax_argmax                           |
+| inline               |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation.h:380 in softmax                                  |
+| pipeline             |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation.h:427 in tanh                                     |
+| pipeline             |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation.h:449 in hard_sigmoid                             |
+| pipeline             |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation.h:464 in hard_tanh                                |
+| pipeline             |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation.h:482 in leaky_relu                               |
+| pipeline             |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation.h:499 in thresholded_relu                         |
+| pipeline             |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation.h:544 in softplus                                 |
+| pipeline             |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation.h:593 in softsign                                 |
+| pipeline             |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation.h:642 in elu                                      |
+| pipeline             |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation.h:698 in selu                                     |
+| pipeline             |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation.h:721 in prelu                                    |
+| pipeline             |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation.h:738 in binary_tanh                              |
+| pipeline             |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation.h:758 in ternary_tanh                             |
+| pipeline             |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation_stream.h:20 in linear                             |
+| unroll               |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation_stream.h:28 in linear                             |
+| pipeline             |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation_stream.h:42 in relu                               |
+| unroll               |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation_stream.h:50 in relu                               |
+| pipeline             |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation_stream.h:81 in sigmoid                            |
+| unroll               |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation_stream.h:89 in sigmoid                            |
+| array_partition      | variable=exp_res complete                                | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation_stream.h:133 in softmax_latency, exp_res          |
+| pipeline             | II=ii                                                    | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation_stream.h:137 in softmax_latency                   |
+| unroll               |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation_stream.h:142 in softmax_latency                   |
+| unroll               |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation_stream.h:161 in softmax_latency                   |
+| allocation           | operation instances=mul limit=multiplier_limit           | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation_stream.h:162 in softmax_latency                   |
+| array_partition      | variable=data_array complete                             | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation_stream.h:194 in softmax_stable, data_array        |
+| pipeline             | II=ii                                                    | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation_stream.h:197 in softmax_stable                    |
+| unroll               |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation_stream.h:202 in softmax_stable                    |
+| unroll               |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation_stream.h:214 in softmax_stable                    |
+| array_partition      | variable=exp_res complete                                | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation_stream.h:220 in softmax_stable, exp_res           |
+| unroll               |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation_stream.h:223 in softmax_stable                    |
+| unroll               |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation_stream.h:242 in softmax_stable                    |
+| allocation           | operation instances=mul limit=multiplier_limit           | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation_stream.h:243 in softmax_stable                    |
+| pipeline             |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation_stream.h:275 in softmax_legacy                    |
+| unroll               |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation_stream.h:279 in softmax_legacy                    |
+| unroll               |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation_stream.h:286 in softmax_legacy                    |
+| unroll               |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation_stream.h:289 in softmax_legacy                    |
+| unroll               |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation_stream.h:312 in softmax_legacy                    |
+| pipeline             |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation_stream.h:329 in softmax_argmax                    |
+| unroll               |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation_stream.h:334 in softmax_argmax                    |
+| pipeline             |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation_stream.h:342 in softmax_argmax                    |
+| pipeline             |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation_stream.h:393 in tanh                              |
+| unroll               |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation_stream.h:401 in tanh                              |
+| pipeline             |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation_stream.h:424 in hard_sigmoid                      |
+| unroll               |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation_stream.h:432 in hard_sigmoid                      |
+| pipeline             |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation_stream.h:449 in hard_tanh                         |
+| unroll               |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation_stream.h:457 in hard_tanh                         |
+| pipeline             |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation_stream.h:478 in leaky_relu                        |
+| unroll               |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation_stream.h:486 in leaky_relu                        |
+| pipeline             |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation_stream.h:504 in thresholded_relu                  |
+| unroll               |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation_stream.h:512 in thresholded_relu                  |
+| pipeline             |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation_stream.h:543 in softplus                          |
+| unroll               |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation_stream.h:551 in softplus                          |
+| pipeline             |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation_stream.h:584 in softsign                          |
+| unroll               |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation_stream.h:592 in softsign                          |
+| pipeline             |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation_stream.h:625 in elu                               |
+| unroll               |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation_stream.h:633 in elu                               |
+| pipeline             |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation_stream.h:673 in selu                              |
+| unroll               |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation_stream.h:681 in selu                              |
+| pipeline             |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation_stream.h:705 in prelu                             |
+| unroll               |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation_stream.h:713 in prelu                             |
+| pipeline             |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation_stream.h:730 in binary_tanh                       |
+| unroll               |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation_stream.h:738 in binary_tanh                       |
+| pipeline             |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation_stream.h:755 in ternary_tanh                      |
+| unroll               |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_activation_stream.h:763 in ternary_tanh                      |
+| inline               |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense.h:39 in dense                                          |
+| unroll               |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_compressed.h:15 in fill_mult                           |
+| array_partition      | variable=acc complete                                    | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_compressed.h:29 in dense_compressed, acc               |
+| array_partition      | variable=biases complete                                 | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_compressed.h:30 in dense_compressed, biases            |
+| array_reshape        | variable=weights block factor=multiplier_limit           | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_compressed.h:31 in dense_compressed, weights           |
+| aggregate            | variable=weights                                         | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_compressed.h:34 in dense_compressed, weights           |
+| unroll               |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_compressed.h:41 in dense_compressed                    |
+| pipeline             | II=1 rewind                                              | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_compressed.h:49 in dense_compressed                    |
+| array_partition      | variable=mult complete                                   | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_compressed.h:52 in dense_compressed, mult              |
+| unroll               |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_compressed.h:56 in dense_compressed                    |
+| unroll               |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_compressed.h:62 in dense_compressed                    |
+| unroll               |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_compressed.h:82 in dense_compressed                    |
+| function_instantiate | variable=weights,biases                                  | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:21 in dense_latency, weights,biases          |
+| pipeline             | II=CONFIG_T::reuse_factor                                | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:26 in dense_latency                          |
+| array_partition      | variable=biases complete                                 | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:29 in dense_latency, biases                  |
+| array_partition      | variable=mult complete                                   | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:30 in dense_latency, mult                    |
+| array_partition      | variable=acc complete                                    | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:31 in dense_latency, acc                     |
+| allocation           | operation instances=mul limit=CONFIG_T::multiplier_limit | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:33 in dense_latency                          |
+| array_partition      | variable=biases complete                                 | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_resource.h:30 in dense_resource_rf_leq_nin, biases     |
+| array_partition      | variable=acc complete                                    | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_resource.h:33 in dense_resource_rf_leq_nin, acc        |
+| unroll               |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_resource.h:37 in dense_resource_rf_leq_nin             |
+| pipeline             | II=1 rewind                                              | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_resource.h:43 in dense_resource_rf_leq_nin             |
+| unroll               |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_resource.h:51 in dense_resource_rf_leq_nin             |
+| unroll               |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_resource.h:75 in dense_resource_rf_leq_nin             |
+| array_partition      | variable=biases complete                                 | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_resource.h:98 in dense_resource_rf_gt_nin_rem0, biases |
+| array_partition      | variable=acc complete                                    | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_resource.h:101 in dense_resource_rf_gt_nin_rem0, acc   |
+| unroll               |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_resource.h:105 in dense_resource_rf_gt_nin_rem0        |
+| pipeline             | II=1 rewind                                              | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_resource.h:125 in dense_resource_rf_gt_nin_rem0        |
+| unroll               |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_resource.h:131 in dense_resource_rf_gt_nin_rem0        |
+| unroll               |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_resource.h:150 in dense_resource_rf_gt_nin_rem0        |
+| array_partition      | variable=biases complete                                 | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_resource.h:172 in dense_resource_rf_gt_nin, biases     |
+| array_partition      | variable=acc complete                                    | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_resource.h:175 in dense_resource_rf_gt_nin, acc        |
+| unroll               |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_resource.h:179 in dense_resource_rf_gt_nin             |
+| pipeline             | II=1 rewind                                              | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_resource.h:185 in dense_resource_rf_gt_nin             |
+| array_partition      | variable=tmpmult complete                                | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_resource.h:187 in dense_resource_rf_gt_nin, tmpmult    |
+| unroll               |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_resource.h:191 in dense_resource_rf_gt_nin             |
+| array_partition      | variable=mult complete                                   | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_resource.h:199 in dense_resource_rf_gt_nin, mult       |
+| unroll               |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_resource.h:203 in dense_resource_rf_gt_nin             |
+| unroll               |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_resource.h:209 in dense_resource_rf_gt_nin             |
+| unroll               |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_resource.h:219 in dense_resource_rf_gt_nin             |
+| unroll               |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_resource.h:227 in dense_resource_rf_gt_nin             |
+| inline               | recursive                                                | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_resource.h:237 in dense_resource                       |
+| pipeline             | II=CONFIG_T::reuse_factor                                | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_stream.h:16 in dense_latency_wrapper                   |
+| inline               |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_stream.h:29 in data_prepare                            |
+| pipeline             |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_stream.h:34 in data_prepare                            |
+| unroll               |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_stream.h:38 in data_prepare                            |
+| unroll               |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_stream.h:46 in data_prepare                            |
+| inline               |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_stream.h:54 in res_write                               |
+| pipeline             |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_stream.h:59 in res_write                               |
+| unroll               |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_stream.h:64 in res_write                               |
+| unroll               |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_stream.h:74 in res_write                               |
+| inline               | recursive                                                | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_stream.h:85 in dense                                   |
+| array_partition      | variable=data complete                                   | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_stream.h:88 in dense, data                             |
+| array_partition      | variable=res complete                                    | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_stream.h:91 in dense, res                              |
+| inline               |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_mult.h:25 in product                                         |
+| inline               |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_mult.h:34 in product                                         |
+| inline               |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_mult.h:46 in product                                         |
+| inline               |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_mult.h:58 in product                                         |
+| inline               |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_mult.h:72 in product                                         |
+| inline               |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_mult.h:82 in product                                         |
+| pipeline             |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_stream.h:23 in clone_stream                                  |
+| unroll               |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_stream.h:33 in clone_stream                                  |
+| pipeline             |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_stream.h:47 in clone_stream                                  |
+| unroll               |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_stream.h:59 in clone_stream                                  |
+| pipeline             |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_stream.h:74 in repack_stream                                 |
+| unroll               |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_stream.h:81 in repack_stream                                 |
+| pipeline             |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_stream.h:91 in repack_stream                                 |
+| pipeline             |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_stream.h:99 in repack_stream                                 |
+| unroll               |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_stream.h:103 in repack_stream                                |
+| pipeline             |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_stream.h:114 in repack_stream                                |
+| unroll               |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_stream.h:118 in repack_stream                                |
+| pipeline             |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_stream.h:139 in broadcast_stream_1x1xc                       |
+| pipeline             |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_stream.h:142 in broadcast_stream_1x1xc                       |
+| unroll               |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_stream.h:146 in broadcast_stream_1x1xc                       |
+| pipeline             |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_stream.h:160 in broadcast_stream_hxwx1                       |
+| unroll               |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_stream.h:165 in broadcast_stream_hxwx1                       |
+| array_partition      | variable=data_array complete                             | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_stream.h:185 in transpose_2d, data_array                     |
+| pipeline             |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_stream.h:188 in transpose_2d                                 |
+| pipeline             |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_stream.h:196 in transpose_2d                                 |
+| unroll               |                                                          | ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_types.h:28 in operator=                                      |
++----------------------+----------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
+
+

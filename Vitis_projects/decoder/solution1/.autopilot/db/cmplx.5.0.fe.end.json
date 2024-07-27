@@ -1,0 +1,59 @@
+{
+    "1": {
+        "name": "relu<ap_fixed<16, 6, 5, 3, 0>, ap_fixed<16, 6, 5, 3, 0>, relu_config3>",
+        "file": "..\/..\/..\/..\/vck\/NN_on_FPGA\/decoder\/decoder_hls\/firmware\/nnet_utils\/nnet_activation.h",
+        "fileloc": "42",
+        "instructions": "98",
+        "total_instructions": "98",
+        "calls": "",
+        "basicblocks": "1"
+    },
+    "2": {
+        "name": "dense_latency<ap_fixed<16, 6, 5, 3, 0>, ap_fixed<16, 6, 5, 3, 0>, config2>",
+        "file": "..\/..\/..\/..\/vck\/NN_on_FPGA\/decoder\/decoder_hls\/firmware\/nnet_utils\/nnet_dense_latency.h",
+        "fileloc": "33",
+        "instructions": "128",
+        "total_instructions": "128",
+        "calls": "",
+        "basicblocks": "1"
+    },
+    "3": {
+        "name": "reduce<ap_fixed<18, 8, 0, 0, 0>, 4, Op_add<ap_fixed<18, 8, 0, 0, 0> > >",
+        "file": "..\/..\/..\/..\/vck\/NN_on_FPGA\/decoder\/decoder_hls\/firmware\/nnet_utils\/nnet_common.h",
+        "fileloc": "45",
+        "instructions": "48",
+        "total_instructions": "48",
+        "calls": "",
+        "basicblocks": "1"
+    },
+    "0": {
+        "name": "decoder",
+        "file": "decoder.cpp",
+        "fileloc": "6",
+        "instructions": "64",
+        "total_instructions": "1832",
+        "calls": "2 1 5 4",
+        "basicblocks": "1"
+    },
+    "4": {
+        "name": "softmax_stable<ap_fixed,ap_fixed<16,6,5,3,0>,softmax_config5>",
+        "file": "..\/..\/..\/..\/vck\/NN_on_FPGA\/decoder\/decoder_hls\/firmware\/nnet_utils\/nnet_activation.h",
+        "fileloc": "239",
+        "instructions": "363",
+        "total_instructions": "555",
+        "calls": "3 3 3 3",
+        "basicblocks": "1",
+        "loads": {
+            "G": "17"
+        }
+    },
+    "5": {
+        "name": "dense_latency<ap_fixed<16, 6, 5, 3, 0>, ap_fixed<16, 6, 5, 3, 0>, config4>",
+        "file": "..\/..\/..\/..\/vck\/NN_on_FPGA\/decoder\/decoder_hls\/firmware\/nnet_utils\/nnet_dense_latency.h",
+        "fileloc": "17",
+        "instructions": "987",
+        "total_instructions": "987",
+        "calls": "",
+        "basicblocks": "1"
+    }
+}

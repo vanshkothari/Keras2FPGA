@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog/>
+      <simLog>
+        <logs message="WARNING: [HLS 200-484] The 'set_directive_top -location' command is deprecated and will be removed in a future release." projectName="constraint_layer" solutionName="solution1" date="2024-07-26T22:40:29.007+1000" type="Warning"/>
+        <logs message="WARNING: [HLS 200-484] The 'set_directive_top -name' command is deprecated and will be removed in a future release." projectName="constraint_layer" solutionName="solution1" date="2024-07-26T22:40:29.002+1000" type="Warning"/>
+        <logs message="WARNING: [HLS 200-2053] The vitis_hls executable is deprecated. Consider using vitis-run --mode hls --tcl&#xD;&#xA;Sourcing Tcl script 'C:/Users/Vansh/AppData/Roaming/Xilinx/Vivado/constraint_layer/solution1/cosim.tcl'" projectName="constraint_layer" solutionName="solution1" date="2024-07-26T22:40:27.038+1000" type="Warning"/>
+      </simLog>
+      <mgLog/>
+      <packageLog>
+        <logs message="WARNING: [HLS 200-484] The 'set_directive_top -location' command is deprecated and will be removed in a future release." projectName="constraint_layer" solutionName="solution1" date="2024-07-26T22:41:43.163+1000" type="Warning"/>
+        <logs message="WARNING: [HLS 200-484] The 'set_directive_top -name' command is deprecated and will be removed in a future release." projectName="constraint_layer" solutionName="solution1" date="2024-07-26T22:41:43.155+1000" type="Warning"/>
+        <logs message="WARNING: [HLS 200-2053] The vitis_hls executable is deprecated. Consider using vitis-run --mode hls --tcl&#xD;&#xA;Sourcing Tcl script 'C:/Users/Vansh/AppData/Roaming/Xilinx/Vivado/constraint_layer/solution1/export.tcl'" projectName="constraint_layer" solutionName="solution1" date="2024-07-26T22:41:41.219+1000" type="Warning"/>
+      </packageLog>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

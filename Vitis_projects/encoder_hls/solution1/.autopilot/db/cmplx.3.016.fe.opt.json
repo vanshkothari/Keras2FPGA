@@ -1,0 +1,51 @@
+{
+  "0": {
+    "basicblocks": 1,
+    "calls": "3 2 1",
+    "file": "encoder.cpp",
+    "fileloc": 6,
+    "instructions": 77,
+    "loads": {
+      "L": 32,
+      "T": 1
+    },
+    "name": "encoder",
+    "total_instructions": 908
+  },
+  "1": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "nnet_dense_latency.h",
+    "fileloc": 13,
+    "instructions": 149,
+    "name": "dense_latency<ap_fixed<16, 6, AP_TRN, AP_WRAP, 0>, ap_fixed<16, 6, AP_TRN, AP_WRAP, 0>, config4>",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 149
+  },
+  "2": {
+    "basicblocks": 49,
+    "calls": "",
+    "file": "nnet_activation.h",
+    "fileloc": 39,
+    "instructions": 98,
+    "name": "relu<ap_fixed<16, 6, AP_TRN, AP_WRAP, 0>, ap_fixed<16, 6, AP_TRN, AP_WRAP, 0>, relu_config3>",
+    "stores": {
+      "L": 32
+    },
+    "total_instructions": 98
+  },
+  "3": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "nnet_dense_latency.h",
+    "fileloc": 13,
+    "instructions": 584,
+    "name": "dense_latency<ap_uint<1>, ap_fixed<16, 6, AP_TRN, AP_WRAP, 0>, config2>",
+    "stores": {
+      "L": 16
+    },
+    "total_instructions": 584
+  }
+}

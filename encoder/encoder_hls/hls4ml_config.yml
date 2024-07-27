@@ -1,0 +1,49 @@
+Backend: Vitis
+ClockPeriod: 5
+HLSConfig:
+  LayerName:
+    batch_normalization_14:
+      Precision:
+        bias: fixed<16,6>
+        result: fixed<16,6>
+        scale: fixed<16,6>
+      Trace: false
+    dense_56:
+      Precision:
+        bias: fixed<16,6>
+        result: fixed<16,6>
+        weight: fixed<16,6>
+      Trace: false
+    dense_56_relu:
+      Precision:
+        result: fixed<16,6>
+      Trace: false
+    dense_57:
+      Precision:
+        bias: fixed<16,6>
+        result: fixed<16,6>
+        weight: fixed<16,6>
+      Trace: false
+    dense_57_linear:
+      Precision:
+        result: fixed<16,6>
+      Trace: false
+    input_43:
+      Precision:
+        result: ap_uint<1>
+      Trace: false
+  Model:
+    BramFactor: 1000000000
+    Precision: fixed<16,6>
+    ReuseFactor: 8
+    Strategy: Latency
+    TraceOutput: false
+IOType: io_parallel
+InputData: encoder/tb_input_features.npy
+KerasModel: !keras_model 'encoder/encoder_hls/keras_model.h5'
+OutputDir: encoder/encoder_hls
+OutputPredictions: encoder/tb_output_predictions.npy
+Part: xc7a35tcpg236-1
+ProjectName: encoder
+Stamp: aF9D58EC
+Version: 1.0.0

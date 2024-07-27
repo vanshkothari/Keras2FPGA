@@ -1,0 +1,3 @@
+27 errors generated.
+Error while processing C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\constraint_layer\solution1\.autopilot\db\constraint_layer.pp.0.cpp.
+clang-tidy applied 131 of 131 suggested fixes.

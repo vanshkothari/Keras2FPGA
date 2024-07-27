@@ -1,0 +1,44 @@
+[
+  {
+    "functionLabel": "",
+    "functionName": "encoder",
+    "id": 0,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "encoder"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "C:/Users/Vansh/AppData/Roaming/Xilinx/Vivado/encoder_hls/solution1/directives.tcl",
+    "sourceLine": 7,
+    "success": true
+  },
+  {
+    "functionLabel": "",
+    "functionName": "encoder",
+    "id": 1,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "encoder"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "C:/Users/Vansh/AppData/Roaming/Xilinx/Vivado/encoder_hls/solution1/csynth.tcl",
+    "sourceLine": 21,
+    "success": true
+  }
+]

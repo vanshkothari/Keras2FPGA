@@ -1,0 +1,697 @@
+---
+MainSourceFile:  'C:/Users/Vansh/AppData/Roaming/Xilinx/Vivado/decoder/solution1/.autopilot/db/decoder.pp.0.cpp'
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1223_1:  '
+    FileOffset:      1223
+    FilePath:        'C:\Xilinx\Vitis_HLS\2024.1\common\technology\autopilot\etc\ap_int_base.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          799254
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1223_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_676_1:  '
+    FileOffset:      676
+    FilePath:        'C:\Xilinx\Vitis_HLS\2024.1\common\technology\autopilot\etc\ap_int_ref.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          1026620
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_676_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_690_1:  '
+    FileOffset:      690
+    FilePath:        'C:\Xilinx\Vitis_HLS\2024.1\common\technology\autopilot\etc\ap_int_ref.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          1027084
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_690_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_704_1:  '
+    FileOffset:      704
+    FilePath:        'C:\Xilinx\Vitis_HLS\2024.1\common\technology\autopilot\etc\ap_int_ref.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          1027549
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_704_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1247_1:  '
+    FileOffset:      1247
+    FilePath:        'C:\Xilinx\Vitis_HLS\2024.1\common\technology\autopilot\etc\ap_fixed_base.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          1310473
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1247_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_27_1:  '
+    FileOffset:      27
+    FilePath:        'C:\Users\Vansh\vck\NN_on_FPGA\decoder\decoder_hls\firmware\nnet_utils\nnet_types.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          1685915
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_27_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_40_1:  '
+    FileOffset:      40
+    FilePath:        'C:\Users\Vansh\vck\NN_on_FPGA\decoder\decoder_hls\firmware\nnet_utils\nnet_types.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          1686290
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_40_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_265_1:  '
+    FileOffset:      265
+    FilePath:        'C:\Users\Vansh\vck\NN_on_FPGA\decoder\decoder_hls\firmware\nnet_utils\nnet_helpers.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          2291847
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_265_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_275_1:  '
+    FileOffset:      275
+    FilePath:        'C:\Users\Vansh\vck\NN_on_FPGA\decoder\decoder_hls\firmware\nnet_utils\nnet_helpers.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          2292234
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_275_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_286_1:  '
+    FileOffset:      286
+    FilePath:        'C:\Users\Vansh\vck\NN_on_FPGA\decoder\decoder_hls\firmware\nnet_utils\nnet_helpers.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          2292569
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_286_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_293_1:  '
+    FileOffset:      293
+    FilePath:        'C:\Users\Vansh\vck\NN_on_FPGA\decoder\decoder_hls\firmware\nnet_utils\nnet_helpers.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          2292792
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_293_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_295_2:  '
+    FileOffset:      295
+    FilePath:        'C:\Users\Vansh\vck\NN_on_FPGA\decoder\decoder_hls\firmware\nnet_utils\nnet_helpers.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          2292887
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_295_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_307_1:  '
+    FileOffset:      307
+    FilePath:        'C:\Users\Vansh\vck\NN_on_FPGA\decoder\decoder_hls\firmware\nnet_utils\nnet_helpers.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          2293251
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_307_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_309_2:  '
+    FileOffset:      309
+    FilePath:        'C:\Users\Vansh\vck\NN_on_FPGA\decoder\decoder_hls\firmware\nnet_utils\nnet_helpers.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          2293333
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_309_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_324_1:  '
+    FileOffset:      324
+    FilePath:        'C:\Users\Vansh\vck\NN_on_FPGA\decoder\decoder_hls\firmware\nnet_utils\nnet_helpers.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          2293676
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_324_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_344_1:  '
+    FileOffset:      344
+    FilePath:        'C:\Users\Vansh\vck\NN_on_FPGA\decoder\decoder_hls\firmware\nnet_utils\nnet_helpers.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          2294129
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_344_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_345_2:  '
+    FileOffset:      345
+    FilePath:        'C:\Users\Vansh\vck\NN_on_FPGA\decoder\decoder_hls\firmware\nnet_utils\nnet_helpers.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          2294174
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_345_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_360_1:  '
+    FileOffset:      360
+    FilePath:        'C:\Users\Vansh\vck\NN_on_FPGA\decoder\decoder_hls\firmware\nnet_utils\nnet_helpers.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          2294583
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_360_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_367_1:  '
+    FileOffset:      367
+    FilePath:        'C:\Users\Vansh\vck\NN_on_FPGA\decoder\decoder_hls\firmware\nnet_utils\nnet_helpers.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          2294796
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_367_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_31_1:  '
+    FileOffset:      31
+    FilePath:        'C:\Users\Vansh\vck\NN_on_FPGA\decoder\decoder_hls\firmware\nnet_utils\nnet_activation.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          2298272
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_31_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_43_1:  '
+    FileOffset:      43
+    FilePath:        'C:\Users\Vansh\vck\NN_on_FPGA\decoder\decoder_hls\firmware\nnet_utils\nnet_activation.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          2298525
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_43_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_57_1:  '
+    FileOffset:      57
+    FilePath:        'C:\Users\Vansh\vck\NN_on_FPGA\decoder\decoder_hls\firmware\nnet_utils\nnet_activation.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          2298886
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_57_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_84_1:  '
+    FileOffset:      84
+    FilePath:        'C:\Users\Vansh\vck\NN_on_FPGA\decoder\decoder_hls\firmware\nnet_utils\nnet_activation.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          2299702
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_84_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_114_1:  '
+    FileOffset:      114
+    FilePath:        'C:\Users\Vansh\vck\NN_on_FPGA\decoder\decoder_hls\firmware\nnet_utils\nnet_activation.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          2300363
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_114_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_151_1:  '
+    FileOffset:      151
+    FilePath:        'C:\Users\Vansh\vck\NN_on_FPGA\decoder\decoder_hls\firmware\nnet_utils\nnet_activation.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          2301497
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_151_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_162_1:  '
+    FileOffset:      162
+    FilePath:        'C:\Users\Vansh\vck\NN_on_FPGA\decoder\decoder_hls\firmware\nnet_utils\nnet_activation.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          2301859
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_162_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_195_1:  '
+    FileOffset:      195
+    FilePath:        'C:\Users\Vansh\vck\NN_on_FPGA\decoder\decoder_hls\firmware\nnet_utils\nnet_activation.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          2302762
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_195_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_209_2:  '
+    FileOffset:      209
+    FilePath:        'C:\Users\Vansh\vck\NN_on_FPGA\decoder\decoder_hls\firmware\nnet_utils\nnet_activation.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          2303281
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_209_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_243_1:  '
+    FileOffset:      243
+    FilePath:        'C:\Users\Vansh\vck\NN_on_FPGA\decoder\decoder_hls\firmware\nnet_utils\nnet_activation.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          2304121
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_243_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_252_2:  '
+    FileOffset:      252
+    FilePath:        'C:\Users\Vansh\vck\NN_on_FPGA\decoder\decoder_hls\firmware\nnet_utils\nnet_activation.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          2304391
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_252_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_266_3:  '
+    FileOffset:      266
+    FilePath:        'C:\Users\Vansh\vck\NN_on_FPGA\decoder\decoder_hls\firmware\nnet_utils\nnet_activation.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          2304915
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_266_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_273_1:  '
+    FileOffset:      273
+    FilePath:        'C:\Users\Vansh\vck\NN_on_FPGA\decoder\decoder_hls\firmware\nnet_utils\nnet_activation.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          2305149
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_273_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_286_1:  '
+    FileOffset:      286
+    FilePath:        'C:\Users\Vansh\vck\NN_on_FPGA\decoder\decoder_hls\firmware\nnet_utils\nnet_activation.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          2305509
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_286_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_323_1:  '
+    FileOffset:      323
+    FilePath:        'C:\Users\Vansh\vck\NN_on_FPGA\decoder\decoder_hls\firmware\nnet_utils\nnet_activation.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          2306438
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_323_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_328_2:  '
+    FileOffset:      328
+    FilePath:        'C:\Users\Vansh\vck\NN_on_FPGA\decoder\decoder_hls\firmware\nnet_utils\nnet_activation.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          2306555
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_328_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_329_3:  '
+    FileOffset:      329
+    FilePath:        'C:\Users\Vansh\vck\NN_on_FPGA\decoder\decoder_hls\firmware\nnet_utils\nnet_activation.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          2306609
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_329_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_346_4:  '
+    FileOffset:      346
+    FilePath:        'C:\Users\Vansh\vck\NN_on_FPGA\decoder\decoder_hls\firmware\nnet_utils\nnet_activation.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          2307190
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_346_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_359_1:  '
+    FileOffset:      359
+    FilePath:        'C:\Users\Vansh\vck\NN_on_FPGA\decoder\decoder_hls\firmware\nnet_utils\nnet_activation.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          2307677
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_359_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_367_2:  '
+    FileOffset:      367
+    FilePath:        'C:\Users\Vansh\vck\NN_on_FPGA\decoder\decoder_hls\firmware\nnet_utils\nnet_activation.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          2307818
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_367_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_402_1:  '
+    FileOffset:      402
+    FilePath:        'C:\Users\Vansh\vck\NN_on_FPGA\decoder\decoder_hls\firmware\nnet_utils\nnet_activation.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          2308783
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_402_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_432_1:  '
+    FileOffset:      432
+    FilePath:        'C:\Users\Vansh\vck\NN_on_FPGA\decoder\decoder_hls\firmware\nnet_utils\nnet_activation.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          2309420
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_432_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_451_1:  '
+    FileOffset:      451
+    FilePath:        'C:\Users\Vansh\vck\NN_on_FPGA\decoder\decoder_hls\firmware\nnet_utils\nnet_activation.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          2309933
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_451_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_467_1:  '
+    FileOffset:      467
+    FilePath:        'C:\Users\Vansh\vck\NN_on_FPGA\decoder\decoder_hls\firmware\nnet_utils\nnet_activation.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          2310391
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_467_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_485_1:  '
+    FileOffset:      485
+    FilePath:        'C:\Users\Vansh\vck\NN_on_FPGA\decoder\decoder_hls\firmware\nnet_utils\nnet_activation.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          2310845
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_485_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_502_1:  '
+    FileOffset:      502
+    FilePath:        'C:\Users\Vansh\vck\NN_on_FPGA\decoder\decoder_hls\firmware\nnet_utils\nnet_activation.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          2311232
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_502_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_519_1:  '
+    FileOffset:      519
+    FilePath:        'C:\Users\Vansh\vck\NN_on_FPGA\decoder\decoder_hls\firmware\nnet_utils\nnet_activation.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          2311627
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_519_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_549_1:  '
+    FileOffset:      549
+    FilePath:        'C:\Users\Vansh\vck\NN_on_FPGA\decoder\decoder_hls\firmware\nnet_utils\nnet_activation.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          2312293
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_549_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_568_1:  '
+    FileOffset:      568
+    FilePath:        'C:\Users\Vansh\vck\NN_on_FPGA\decoder\decoder_hls\firmware\nnet_utils\nnet_activation.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          2312867
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_568_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_598_1:  '
+    FileOffset:      598
+    FilePath:        'C:\Users\Vansh\vck\NN_on_FPGA\decoder\decoder_hls\firmware\nnet_utils\nnet_activation.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          2313533
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_598_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_617_1:  '
+    FileOffset:      617
+    FilePath:        'C:\Users\Vansh\vck\NN_on_FPGA\decoder\decoder_hls\firmware\nnet_utils\nnet_activation.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          2314087
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_617_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_647_1:  '
+    FileOffset:      647
+    FilePath:        'C:\Users\Vansh\vck\NN_on_FPGA\decoder\decoder_hls\firmware\nnet_utils\nnet_activation.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          2314719
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_647_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_674_1:  '
+    FileOffset:      674
+    FilePath:        'C:\Users\Vansh\vck\NN_on_FPGA\decoder\decoder_hls\firmware\nnet_utils\nnet_activation.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          2315545
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_674_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_703_1:  '
+    FileOffset:      703
+    FilePath:        'C:\Users\Vansh\vck\NN_on_FPGA\decoder\decoder_hls\firmware\nnet_utils\nnet_activation.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          2316163
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_703_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_724_1:  '
+    FileOffset:      724
+    FilePath:        'C:\Users\Vansh\vck\NN_on_FPGA\decoder\decoder_hls\firmware\nnet_utils\nnet_activation.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          2316774
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_724_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_742_1:  '
+    FileOffset:      742
+    FilePath:        'C:\Users\Vansh\vck\NN_on_FPGA\decoder\decoder_hls\firmware\nnet_utils\nnet_activation.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          2317163
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_742_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_762_1:  '
+    FileOffset:      762
+    FilePath:        'C:\Users\Vansh\vck\NN_on_FPGA\decoder\decoder_hls\firmware\nnet_utils\nnet_activation.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          2317559
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_762_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_73_1:  '
+    FileOffset:      73
+    FilePath:        'C:\Users\Vansh\vck\NN_on_FPGA\decoder\decoder_hls\firmware\nnet_utils\nnet_stream.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          2319776
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_73_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_80_2:  '
+    FileOffset:      80
+    FilePath:        'C:\Users\Vansh\vck\NN_on_FPGA\decoder\decoder_hls\firmware\nnet_utils\nnet_stream.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          2319916
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_80_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_89_3:  '
+    FileOffset:      89
+    FilePath:        'C:\Users\Vansh\vck\NN_on_FPGA\decoder\decoder_hls\firmware\nnet_utils\nnet_stream.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          2320181
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_89_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_98_4:  '
+    FileOffset:      98
+    FilePath:        'C:\Users\Vansh\vck\NN_on_FPGA\decoder\decoder_hls\firmware\nnet_utils\nnet_stream.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          2320375
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_98_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_102_5:  '
+    FileOffset:      102
+    FilePath:        'C:\Users\Vansh\vck\NN_on_FPGA\decoder\decoder_hls\firmware\nnet_utils\nnet_stream.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          2320468
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_102_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_113_6:  '
+    FileOffset:      113
+    FilePath:        'C:\Users\Vansh\vck\NN_on_FPGA\decoder\decoder_hls\firmware\nnet_utils\nnet_stream.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          2320794
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_113_6: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_117_7:  '
+    FileOffset:      117
+    FilePath:        'C:\Users\Vansh\vck\NN_on_FPGA\decoder\decoder_hls\firmware\nnet_utils\nnet_stream.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          2320904
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_117_7: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_141_1:  '
+    FileOffset:      141
+    FilePath:        'C:\Users\Vansh\vck\NN_on_FPGA\decoder\decoder_hls\firmware\nnet_utils\nnet_stream.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          2321870
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_141_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_145_2:  '
+    FileOffset:      145
+    FilePath:        'C:\Users\Vansh\vck\NN_on_FPGA\decoder\decoder_hls\firmware\nnet_utils\nnet_stream.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          2321956
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_145_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_164_1:  '
+    FileOffset:      164
+    FilePath:        'C:\Users\Vansh\vck\NN_on_FPGA\decoder\decoder_hls\firmware\nnet_utils\nnet_stream.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          2322632
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_164_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_187_1:  '
+    FileOffset:      187
+    FilePath:        'C:\Users\Vansh\vck\NN_on_FPGA\decoder\decoder_hls\firmware\nnet_utils\nnet_stream.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          2323564
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_187_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_190_2:  '
+    FileOffset:      190
+    FilePath:        'C:\Users\Vansh\vck\NN_on_FPGA\decoder\decoder_hls\firmware\nnet_utils\nnet_stream.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          2323702
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_190_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_195_3:  '
+    FileOffset:      195
+    FilePath:        'C:\Users\Vansh\vck\NN_on_FPGA\decoder\decoder_hls\firmware\nnet_utils\nnet_stream.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          2323852
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_195_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_199_4:  '
+    FileOffset:      199
+    FilePath:        'C:\Users\Vansh\vck\NN_on_FPGA\decoder\decoder_hls\firmware\nnet_utils\nnet_stream.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          2323976
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_199_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_213_1:  '
+    FileOffset:      213
+    FilePath:        'C:\Users\Vansh\vck\NN_on_FPGA\decoder\decoder_hls\firmware\nnet_utils\nnet_activation_stream.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          2329895
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_213_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_222_2:  '
+    FileOffset:      222
+    FilePath:        'C:\Users\Vansh\vck\NN_on_FPGA\decoder\decoder_hls\firmware\nnet_utils\nnet_activation_stream.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          2330179
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_222_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_328_1:  '
+    FileOffset:      328
+    FilePath:        'C:\Users\Vansh\vck\NN_on_FPGA\decoder\decoder_hls\firmware\nnet_utils\nnet_activation_stream.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          2333392
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_328_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_333_2:  '
+    FileOffset:      333
+    FilePath:        'C:\Users\Vansh\vck\NN_on_FPGA\decoder\decoder_hls\firmware\nnet_utils\nnet_activation_stream.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          2333534
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_333_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_341_3:  '
+    FileOffset:      341
+    FilePath:        'C:\Users\Vansh\vck\NN_on_FPGA\decoder\decoder_hls\firmware\nnet_utils\nnet_activation_stream.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          2333738
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_341_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_14_1:  '
+    FileOffset:      14
+    FilePath:        'C:\Users\Vansh\vck\NN_on_FPGA\decoder\decoder_hls\firmware\nnet_utils\nnet_dense_compressed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          2360412
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_14_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_74_1:  '
+    FileOffset:      74
+    FilePath:        'C:\Users\Vansh\vck\NN_on_FPGA\decoder\decoder_hls\firmware\nnet_utils\nnet_dense_compressed.h'
+    Replacements:    
+      - FilePath:        'C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\decoder\solution1\.autopilot\db\decoder.pp.0.cpp'
+        Offset:          2362283
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_74_1: '
+...

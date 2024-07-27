@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="constraint_layer.cpp" path="C:\Users\Vansh\vck\NN_on_FPGA\constraint_layer_src\constraint_layer.cpp"/>
+    <originFiles name="constraint_layer.h" path="C:\Users\Vansh\vck\NN_on_FPGA\constraint_layer_src\constraint_layer.h"/>
+    <originFiles name="fxp_sqrt.h" path="C:\Users\Vansh\vck\NN_on_FPGA\constraint_layer_src\fxp_sqrt.h"/>
+    <originFiles name="fxp_sqrt_top.cpp" path="C:\Users\Vansh\vck\NN_on_FPGA\constraint_layer_src\fxp_sqrt_top.cpp"/>
+    <originFiles name="fxp_sqrt_top.h" path="C:\Users\Vansh\vck\NN_on_FPGA\constraint_layer_src\fxp_sqrt_top.h"/>
+  </source>
+  <testbench>
+    <originFiles name="constraint_layer_test.cpp" path="C:\Users\Vansh\vck\NN_on_FPGA\constraint_layer_src\constraint_layer_test.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

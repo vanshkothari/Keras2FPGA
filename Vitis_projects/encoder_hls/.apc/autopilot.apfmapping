@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="defines.h" path="C:\Users\Vansh\vck\NN_on_FPGA\encoder\encoder_hls\firmware\defines.h"/>
+    <originFiles name="encoder.cpp" path="C:\Users\Vansh\vck\NN_on_FPGA\encoder\encoder_hls\firmware\encoder.cpp"/>
+    <originFiles name="encoder.h" path="C:\Users\Vansh\vck\NN_on_FPGA\encoder\encoder_hls\firmware\encoder.h"/>
+    <originFiles name="parameters.h" path="C:\Users\Vansh\vck\NN_on_FPGA\encoder\encoder_hls\firmware\parameters.h"/>
+  </source>
+  <testbench>
+    <originFiles name="encoder_test.cpp" path="C:\Users\Vansh\vck\NN_on_FPGA\encoder\encoder_hls\encoder_test.cpp"/>
+    <originFiles name="tb_data" path="C:\Users\Vansh\vck\NN_on_FPGA\encoder\encoder_hls\tb_data"/>
+    <originFiles name="weights" path="C:\Users\Vansh\vck\NN_on_FPGA\encoder\encoder_hls\firmware\weights"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

@@ -1,0 +1,46 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Fri Jul 26 22:41:47 2024
+# Process ID: 58580
+# Current directory: C:/Users/Vansh/AppData/Roaming/Xilinx/Vivado/constraint_layer/solution1/impl/ip
+# Command line: vivado.exe -notrace -mode batch -source run_ippack.tcl
+# Log file: C:/Users/Vansh/AppData/Roaming/Xilinx/Vivado/constraint_layer/solution1/impl/ip/vivado.log
+# Journal file: C:/Users/Vansh/AppData/Roaming/Xilinx/Vivado/constraint_layer/solution1/impl/ip\vivado.jou
+# Running On        :DESKTOP-UUAKG5T
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :22631
+# Processor Detail  :AMD Ryzen 5 5500U with Radeon Graphics         
+# CPU Frequency     :2096 MHz
+# CPU Physical cores:6
+# CPU Logical cores :12
+# Host memory       :16483 MB
+# Swap memory       :30064 MB
+# Total Virtual     :46548 MB
+# Available Virtual :11719 MB
+#-----------------------------------------------------------
+source run_ippack.tcl -notrace
+INFO: calling package_hls_ip ip_types=vitis sysgen json_file=C:/Users/Vansh/AppData/Roaming/Xilinx/Vivado/constraint_layer/solution1/solution1_data.json outdir=C:/Users/Vansh/AppData/Roaming/Xilinx/Vivado/constraint_layer/solution1/impl/ip srcdir=C:/Users/Vansh/AppData/Roaming/Xilinx/Vivado/constraint_layer/solution1 sort_interfaces_ports=false
+INFO: Copied 1 ipmisc file(s) to C:/Users/Vansh/AppData/Roaming/Xilinx/Vivado/constraint_layer/solution1/impl/ip/misc
+INFO: Copied 6 verilog file(s) to C:/Users/Vansh/AppData/Roaming/Xilinx/Vivado/constraint_layer/solution1/impl/ip/hdl/verilog
+INFO: Copied 6 vhdl file(s) to C:/Users/Vansh/AppData/Roaming/Xilinx/Vivado/constraint_layer/solution1/impl/ip/hdl/vhdl
+ipx::create_core: Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 519.211 ; gain = 193.832
+INFO: Import ports from HDL: C:/Users/Vansh/AppData/Roaming/Xilinx/Vivado/constraint_layer/solution1/impl/ip/hdl/vhdl/constraint_layer_top.vhd (constraint_layer_top)
+INFO: Add clock interface ap_clk
+INFO: Add reset interface ap_rst
+INFO: Add ap_ctrl interface ap_ctrl
+INFO: Add data interface encoded_input_0
+INFO: Add data interface encoded_input_1
+INFO: Add data interface encoded_output_0
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2024.1/data/ip'.
+INFO: Add data interface encoded_output_1
+INFO: Calling post_process_vitis to specialize IP
+INFO: Calling post_process_sysgen to specialize IP
+Generating sysgen info xml from json file
+INFO: Created IP C:/Users/Vansh/AppData/Roaming/Xilinx/Vivado/constraint_layer/solution1/impl/ip/component.xml
+INFO: Created IP archive C:/Users/Vansh/AppData/Roaming/Xilinx/Vivado/constraint_layer/solution1/impl/ip/xilinx_com_hls_constraint_layer_top_1_0.zip
+INFO: [Common 17-206] Exiting Vivado at Fri Jul 26 22:42:00 2024...

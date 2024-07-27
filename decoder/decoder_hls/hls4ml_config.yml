@@ -1,0 +1,43 @@
+Backend: Vitis
+ClockPeriod: 5
+HLSConfig:
+  LayerName:
+    dense_30:
+      Precision:
+        bias: fixed<16,6>
+        result: fixed<16,6>
+        weight: fixed<16,6>
+      Trace: false
+    dense_30_relu:
+      Precision:
+        result: fixed<16,6>
+      Trace: false
+    dense_31:
+      Precision:
+        bias: fixed<16,6>
+        result: fixed<16,6>
+        weight: fixed<16,6>
+      Trace: false
+    dense_31_softmax:
+      Precision:
+        result: fixed<16,6>
+      Trace: false
+    input_24:
+      Precision:
+        result: fixed<16,6>
+      Trace: false
+  Model:
+    BramFactor: 1000000000
+    Precision: fixed<16,6>
+    ReuseFactor: 8
+    Strategy: Latency
+    TraceOutput: false
+IOType: io_parallel
+InputData: decoder/tb_input_features.npy
+KerasModel: !keras_model 'decoder/decoder_hls/keras_model.h5'
+OutputDir: decoder/decoder_hls
+OutputPredictions: decoder/tb_output_predictions.npy
+Part: xc7a35tcpg236-1
+ProjectName: decoder
+Stamp: e4A8FC1F
+Version: 1.0.0

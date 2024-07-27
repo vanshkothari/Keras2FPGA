@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'softmax_stable&lt;ap_fixed,ap_fixed&lt;16,6,5,3,0>,softmax_config5>' to 'softmax_stable_ap_fixed_ap_fixed_16_6_5_3_0_softmax_config5_s'." projectName="decoder" solutionName="solution1" date="2024-07-26T23:06:35.187+1000" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'reduce&lt;ap_fixed&lt;18, 8, 0, 0, 0>, 4, Op_add&lt;ap_fixed&lt;18, 8, 0, 0, 0> > >' to 'reduce_ap_fixed_18_8_0_0_0_4_Op_add_ap_fixed_18_8_0_0_0_s'." projectName="decoder" solutionName="solution1" date="2024-07-26T23:06:35.168+1000" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'dense_latency&lt;ap_fixed&lt;16, 6, 5, 3, 0>, ap_fixed&lt;16, 6, 5, 3, 0>, config4>' to 'dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config4_s'." projectName="decoder" solutionName="solution1" date="2024-07-26T23:06:35.162+1000" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'relu&lt;ap_fixed&lt;16, 6, 5, 3, 0>, ap_fixed&lt;16, 6, 5, 3, 0>, relu_config3>' to 'relu_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_relu_config3_s'." projectName="decoder" solutionName="solution1" date="2024-07-26T23:06:35.156+1000" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'dense_latency&lt;ap_fixed&lt;16, 6, 5, 3, 0>, ap_fixed&lt;16, 6, 5, 3, 0>, config2>' to 'dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config2_s'." projectName="decoder" solutionName="solution1" date="2024-07-26T23:06:35.149+1000" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5292] unused parameter 'partition' (../../../../vck/NN_on_FPGA/decoder/decoder_hls/firmware/nnet_utils/nnet_code_gen.h:23:32)" projectName="decoder" solutionName="solution1" date="2024-07-26T23:06:16.545+1000" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5292] unused parameter 'buffer' (../../../../vck/NN_on_FPGA/decoder/decoder_hls/firmware/nnet_utils/nnet_code_gen.h:22:24)" projectName="decoder" solutionName="solution1" date="2024-07-26T23:06:16.518+1000" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5292] unused parameter 'data' (../../../../vck/NN_on_FPGA/decoder/decoder_hls/firmware/nnet_utils/nnet_code_gen.h:21:24)" projectName="decoder" solutionName="solution1" date="2024-07-26T23:06:16.504+1000" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5292] unused parameter 'partition' (../../../../vck/NN_on_FPGA/decoder/decoder_hls/firmware/nnet_utils/nnet_code_gen.h:13:44)" projectName="decoder" solutionName="solution1" date="2024-07-26T23:06:16.495+1000" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5292] unused parameter 'buffer' (../../../../vck/NN_on_FPGA/decoder/decoder_hls/firmware/nnet_utils/nnet_code_gen.h:12:36)" projectName="decoder" solutionName="solution1" date="2024-07-26T23:06:16.486+1000" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5292] unused parameter 'data' (../../../../vck/NN_on_FPGA/decoder/decoder_hls/firmware/nnet_utils/nnet_code_gen.h:11:36)" projectName="decoder" solutionName="solution1" date="2024-07-26T23:06:16.482+1000" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5292] unused parameter 'keep' (../../../../vck/NN_on_FPGA/decoder/decoder_hls/firmware/nnet_utils/nnet_helpers.h:285:99)" projectName="decoder" solutionName="solution1" date="2024-07-26T23:06:16.475+1000" type="Warning"/>
+        <logs message="WARNING: [HLS 200-484] The 'set_directive_top -location' command is deprecated and will be removed in a future release." projectName="decoder" solutionName="solution1" date="2024-07-26T23:05:57.945+1000" type="Warning"/>
+        <logs message="WARNING: [HLS 200-484] The 'set_directive_top -name' command is deprecated and will be removed in a future release." projectName="decoder" solutionName="solution1" date="2024-07-26T23:05:57.930+1000" type="Warning"/>
+        <logs message="WARNING: [HLS 200-2053] The vitis_hls executable is deprecated. Consider using vitis-run --mode hls --tcl&#xD;&#xA;Sourcing Tcl script 'C:/Users/Vansh/AppData/Roaming/Xilinx/Vivado/decoder/solution1/csynth.tcl'" projectName="decoder" solutionName="solution1" date="2024-07-26T23:05:55.327+1000" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog>
+        <logs message="WARNING: [HLS 200-484] The 'set_directive_top -location' command is deprecated and will be removed in a future release." projectName="decoder" solutionName="solution1" date="2024-07-26T23:50:55.631+1000" type="Warning"/>
+        <logs message="WARNING: [HLS 200-484] The 'set_directive_top -name' command is deprecated and will be removed in a future release." projectName="decoder" solutionName="solution1" date="2024-07-26T23:50:55.626+1000" type="Warning"/>
+        <logs message="WARNING: [HLS 200-2053] The vitis_hls executable is deprecated. Consider using vitis-run --mode hls --tcl&#xD;&#xA;Sourcing Tcl script 'C:/Users/Vansh/AppData/Roaming/Xilinx/Vivado/decoder/solution1/csim.tcl'" projectName="decoder" solutionName="solution1" date="2024-07-26T23:50:53.095+1000" type="Warning"/>
+      </csimLog>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

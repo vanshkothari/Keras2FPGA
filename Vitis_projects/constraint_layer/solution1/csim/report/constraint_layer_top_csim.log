@@ -1,0 +1,14 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch CLANG as the compiler.
+   Compiling ../../../../../../../../vck/NN_on_FPGA/constraint_layer_src/constraint_layer_test.cpp in debug mode
+   Compiling ../../../../../../../../vck/NN_on_FPGA/constraint_layer_src/constraint_layer.cpp in debug mode
+   Compiling ../../../../../../../../vck/NN_on_FPGA/constraint_layer_src/fxp_sqrt_top.cpp in debug mode
+   Generating csim.exe
+Input
+2 2
+8
+0.6875
+Output
+1.375 1.375
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

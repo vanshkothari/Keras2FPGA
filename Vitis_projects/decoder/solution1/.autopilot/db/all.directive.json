@@ -1,0 +1,44 @@
+[
+  {
+    "functionLabel": "",
+    "functionName": "decoder",
+    "id": 0,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "decoder"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "C:/Users/Vansh/AppData/Roaming/Xilinx/Vivado/decoder/solution1/directives.tcl",
+    "sourceLine": 7,
+    "success": true
+  },
+  {
+    "functionLabel": "",
+    "functionName": "decoder",
+    "id": 1,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "decoder"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "C:/Users/Vansh/AppData/Roaming/Xilinx/Vivado/decoder/solution1/csynth.tcl",
+    "sourceLine": 22,
+    "success": true
+  }
+]

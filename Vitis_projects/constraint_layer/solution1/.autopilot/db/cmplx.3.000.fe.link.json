@@ -1,0 +1,61 @@
+{
+  "0": {
+    "basicblocks": 5,
+    "calls": "4",
+    "file": "constraint_layer.cpp",
+    "fileloc": 4,
+    "instructions": 118,
+    "loads": {
+      "G": 2,
+      "L": 4
+    },
+    "name": "constraint_layer_top",
+    "stores": {
+      "G": 4,
+      "T": 2
+    },
+    "total_instructions": 3268
+  },
+  "1": {
+    "basicblocks": 12,
+    "calls": "",
+    "file": "fxp_sqrt.h",
+    "fileloc": 71,
+    "instructions": 236,
+    "loads": {
+      "L": 7
+    },
+    "name": "fxp_sqrt<8, 4, 16, 6>",
+    "stores": {
+      "L": 7
+    },
+    "total_instructions": 1932
+  },
+  "2": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "constraint_layer.h",
+    "fileloc": 9,
+    "instructions": 2,
+    "name": "__cxx_global_var_init",
+    "total_instructions": 388
+  },
+  "3": {
+    "basicblocks": 1,
+    "calls": "2",
+    "file": "constraint_layer.pp.0.cpp",
+    "fileloc": 0,
+    "instructions": 2,
+    "name": "",
+    "total_instructions": 390
+  },
+  "4": {
+    "basicblocks": 1,
+    "calls": "1",
+    "file": "fxp_sqrt_top.cpp",
+    "fileloc": 20,
+    "instructions": 2,
+    "name": "fxp_sqrt_top",
+    "total_instructions": 1934
+  }
+}

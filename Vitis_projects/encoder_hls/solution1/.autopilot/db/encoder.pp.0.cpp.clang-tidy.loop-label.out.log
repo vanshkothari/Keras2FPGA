@@ -1,0 +1,385 @@
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:26877:7: warning: Added loop label VITIS_LOOP_1223_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1223_1: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:26877:7: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:27851:5: warning: Added loop label VITIS_LOOP_676_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_676_1: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:27851:5: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:27865:5: warning: Added loop label VITIS_LOOP_690_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_690_1: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:27865:5: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:27879:5: warning: Added loop label VITIS_LOOP_704_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_704_1: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:27879:5: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:29496:7: warning: Added loop label VITIS_LOOP_1247_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1247_1: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:29496:7: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:31513:9: warning: Added loop label VITIS_LOOP_27_1:   [xilinx-label-all-loops]
+        for (unsigned i = 0; i < N; i++) {
+        ^~~
+        VITIS_LOOP_27_1: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:31513:9: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:31526:9: warning: Added loop label VITIS_LOOP_40_1:   [xilinx-label-all-loops]
+        for (size_t i = 0; i < N; i++) {
+        ^~~
+        VITIS_LOOP_40_1: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:31526:9: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:52907:5: warning: Added loop label VITIS_LOOP_265_1:   [xilinx-label-all-loops]
+    for (typename std::vector<src_T>::const_iterator i = in_begin; i != in_end; ++i) {
+    ^~~
+    VITIS_LOOP_265_1: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:52907:5: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:52917:5: warning: Added loop label VITIS_LOOP_275_1:   [xilinx-label-all-loops]
+    for (auto i = 0; i < SIZE; i++)
+    ^~~
+    VITIS_LOOP_275_1: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:52917:5: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:52928:5: warning: Added loop label VITIS_LOOP_286_1:   [xilinx-label-all-loops]
+    for (int i = 0; i < SIZE; i++) {
+    ^~~
+    VITIS_LOOP_286_1: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:52928:5: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:52935:5: warning: Added loop label VITIS_LOOP_293_1:   [xilinx-label-all-loops]
+    for (int i = 0; i < SIZE / res_T::size; i++) {
+    ^~~
+    VITIS_LOOP_293_1: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:52935:5: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:52937:9: warning: Added loop label VITIS_LOOP_295_2:   [xilinx-label-all-loops]
+        for (int j = 0; j < res_T::size; j++) {
+        ^~~
+        VITIS_LOOP_295_2: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:52937:9: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:52949:5: warning: Added loop label VITIS_LOOP_307_1:   [xilinx-label-all-loops]
+    for (int i = 0; i < SIZE / data_T::size; i++) {
+    ^~~
+    VITIS_LOOP_307_1: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:52949:5: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:52951:9: warning: Added loop label VITIS_LOOP_309_2:   [xilinx-label-all-loops]
+        for (int j = 0; j < data_T::size; j++) {
+        ^~~
+        VITIS_LOOP_309_2: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:52951:9: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:52966:5: warning: Added loop label VITIS_LOOP_324_1:   [xilinx-label-all-loops]
+    for (int ii = 0; ii < nrows; ii++) {
+    ^~~
+    VITIS_LOOP_324_1: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:52966:5: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:52986:5: warning: Added loop label VITIS_LOOP_344_1:   [xilinx-label-all-loops]
+    for (int ii = 0; ii < nrows; ii++) {
+    ^~~
+    VITIS_LOOP_344_1: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:52986:5: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:52987:9: warning: Added loop label VITIS_LOOP_345_2:   [xilinx-label-all-loops]
+        for (int jj = 0; jj < ncols; jj++) {
+        ^~~
+        VITIS_LOOP_345_2: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:52987:9: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53002:5: warning: Added loop label VITIS_LOOP_360_1:   [xilinx-label-all-loops]
+    for (int ii = 0; ii < N_IN; ii++) {
+    ^~~
+    VITIS_LOOP_360_1: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53002:5: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53009:5: warning: Added loop label VITIS_LOOP_367_1:   [xilinx-label-all-loops]
+    for (int ii = 0; ii < N_IN; ii++) {
+    ^~~
+    VITIS_LOOP_367_1: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53009:5: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53132:2: warning: Added loop label VITIS_LOOP_31_1:   [xilinx-label-all-loops]
+ for (int ii = 0; ii < CONFIG_T::n_in; ii++) {
+ ^~~
+ VITIS_LOOP_31_1: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53132:2: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53144:5: warning: Added loop label VITIS_LOOP_43_1:   [xilinx-label-all-loops]
+    for (int ii = 0; ii < CONFIG_T::n_in; ii++) {
+    ^~~
+    VITIS_LOOP_43_1: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53144:5: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53158:5: warning: Added loop label VITIS_LOOP_57_1:   [xilinx-label-all-loops]
+    for (int ii = 0; ii < CONFIG_T::n_in; ii++) {
+    ^~~
+    VITIS_LOOP_57_1: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53158:5: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53185:5: warning: Added loop label VITIS_LOOP_84_1:   [xilinx-label-all-loops]
+    for (int ii = 0; ii < N_TABLE; ii++) {
+    ^~~
+    VITIS_LOOP_84_1: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53185:5: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53215:5: warning: Added loop label VITIS_LOOP_114_1:   [xilinx-label-all-loops]
+    for (int ii = 0; ii < CONFIG_T::n_in; ii++) {
+    ^~~
+    VITIS_LOOP_114_1: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53215:5: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53252:5: warning: Added loop label VITIS_LOOP_151_1:   [xilinx-label-all-loops]
+    for (unsigned i = 0; i < CONFIG_T::table_size; i++) {
+    ^~~
+    VITIS_LOOP_151_1: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53252:5: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53263:5: warning: Added loop label VITIS_LOOP_162_1:   [xilinx-label-all-loops]
+    for (unsigned i = 0; i < CONFIG_T::table_size; i++) {
+    ^~~
+    VITIS_LOOP_162_1: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53263:5: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53296:5: warning: Added loop label VITIS_LOOP_195_1:   [xilinx-label-all-loops]
+    for (unsigned i = 0; i < CONFIG_T::n_in; i++) {
+    ^~~
+    VITIS_LOOP_195_1: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53296:5: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53310:5: warning: Added loop label VITIS_LOOP_209_2:   [xilinx-label-all-loops]
+    for (unsigned i = 0; i < CONFIG_T::n_in; i++) {
+    ^~~
+    VITIS_LOOP_209_2: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53310:5: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53344:5: warning: Added loop label VITIS_LOOP_243_1:   [xilinx-label-all-loops]
+    for (unsigned i = 0; i < CONFIG_T::n_in; i++) {
+    ^~~
+    VITIS_LOOP_243_1: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53344:5: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53353:5: warning: Added loop label VITIS_LOOP_252_2:   [xilinx-label-all-loops]
+    for (unsigned i = 0; i < CONFIG_T::n_in; i++) {
+    ^~~
+    VITIS_LOOP_252_2: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53353:5: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53367:5: warning: Added loop label VITIS_LOOP_266_3:   [xilinx-label-all-loops]
+    for (unsigned i = 0; i < CONFIG_T::n_in; i++) {
+    ^~~
+    VITIS_LOOP_266_3: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53367:5: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53374:5: warning: Added loop label VITIS_LOOP_273_1:   [xilinx-label-all-loops]
+    for (int ii = 0; ii < N_TABLE; ii++) {
+    ^~~
+    VITIS_LOOP_273_1: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53374:5: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53387:5: warning: Added loop label VITIS_LOOP_286_1:   [xilinx-label-all-loops]
+    for (int ii = 0; ii < N_TABLE; ii++) {
+    ^~~
+    VITIS_LOOP_286_1: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53387:5: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53424:5: warning: Added loop label VITIS_LOOP_323_1:   [xilinx-label-all-loops]
+    for (int ii = 0; ii < CONFIG_T::n_in; ii++) {
+    ^~~
+    VITIS_LOOP_323_1: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53424:5: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53429:5: warning: Added loop label VITIS_LOOP_328_2:   [xilinx-label-all-loops]
+    for (int ii = 0; ii < CONFIG_T::n_in; ii++) {
+    ^~~
+    VITIS_LOOP_328_2: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53429:5: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53430:9: warning: Added loop label VITIS_LOOP_329_3:   [xilinx-label-all-loops]
+        for (int jj = 0; jj < CONFIG_T::n_in; jj++) {
+        ^~~
+        VITIS_LOOP_329_3: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53430:9: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53447:5: warning: Added loop label VITIS_LOOP_346_4:   [xilinx-label-all-loops]
+    for (int ii = 0; ii < CONFIG_T::n_in; ii++) {
+    ^~~
+    VITIS_LOOP_346_4: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53447:5: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53460:5: warning: Added loop label VITIS_LOOP_359_1:   [xilinx-label-all-loops]
+    for (int i = 0; i < CONFIG_T::n_in; i++) {
+    ^~~
+    VITIS_LOOP_359_1: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53460:5: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53468:5: warning: Added loop label VITIS_LOOP_367_2:   [xilinx-label-all-loops]
+    for (int i = 1; i < CONFIG_T::n_in; i++) {
+    ^~~
+    VITIS_LOOP_367_2: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53468:5: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53503:5: warning: Added loop label VITIS_LOOP_402_1:   [xilinx-label-all-loops]
+    for (int ii = 0; ii < N_TABLE; ii++) {
+    ^~~
+    VITIS_LOOP_402_1: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53503:5: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53533:5: warning: Added loop label VITIS_LOOP_432_1:   [xilinx-label-all-loops]
+    for (int ii = 0; ii < CONFIG_T::n_in; ii++) {
+    ^~~
+    VITIS_LOOP_432_1: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53533:5: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53552:2: warning: Added loop label VITIS_LOOP_451_1:   [xilinx-label-all-loops]
+ for (int ii = 0; ii < CONFIG_T::n_in; ii++) {
+ ^~~
+ VITIS_LOOP_451_1: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53552:2: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53568:5: warning: Added loop label VITIS_LOOP_467_1:   [xilinx-label-all-loops]
+    for (int ii = 0; ii < CONFIG_T::n_in; ii++) {
+    ^~~
+    VITIS_LOOP_467_1: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53568:5: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53586:5: warning: Added loop label VITIS_LOOP_485_1:   [xilinx-label-all-loops]
+    for (int ii = 0; ii < CONFIG_T::n_in; ii++) {
+    ^~~
+    VITIS_LOOP_485_1: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53586:5: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53603:5: warning: Added loop label VITIS_LOOP_502_1:   [xilinx-label-all-loops]
+    for (int ii = 0; ii < CONFIG_T::n_in; ii++) {
+    ^~~
+    VITIS_LOOP_502_1: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53603:5: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53620:5: warning: Added loop label VITIS_LOOP_519_1:   [xilinx-label-all-loops]
+    for (int ii = 0; ii < N_TABLE; ii++) {
+    ^~~
+    VITIS_LOOP_519_1: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53620:5: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53650:5: warning: Added loop label VITIS_LOOP_549_1:   [xilinx-label-all-loops]
+    for (int ii = 0; ii < CONFIG_T::n_in; ii++) {
+    ^~~
+    VITIS_LOOP_549_1: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53650:5: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53669:5: warning: Added loop label VITIS_LOOP_568_1:   [xilinx-label-all-loops]
+    for (int ii = 0; ii < N_TABLE; ii++) {
+    ^~~
+    VITIS_LOOP_568_1: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53669:5: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53699:5: warning: Added loop label VITIS_LOOP_598_1:   [xilinx-label-all-loops]
+    for (int ii = 0; ii < CONFIG_T::n_in; ii++) {
+    ^~~
+    VITIS_LOOP_598_1: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53699:5: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53718:5: warning: Added loop label VITIS_LOOP_617_1:   [xilinx-label-all-loops]
+    for (int ii = 0; ii < N_TABLE; ii++) {
+    ^~~
+    VITIS_LOOP_617_1: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53718:5: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53748:5: warning: Added loop label VITIS_LOOP_647_1:   [xilinx-label-all-loops]
+    for (int ii = 0; ii < CONFIG_T::n_in; ii++) {
+    ^~~
+    VITIS_LOOP_647_1: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53748:5: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53775:5: warning: Added loop label VITIS_LOOP_674_1:   [xilinx-label-all-loops]
+    for (int ii = 0; ii < N_TABLE; ii++) {
+    ^~~
+    VITIS_LOOP_674_1: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53775:5: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53804:5: warning: Added loop label VITIS_LOOP_703_1:   [xilinx-label-all-loops]
+    for (int ii = 0; ii < CONFIG_T::n_in; ii++) {
+    ^~~
+    VITIS_LOOP_703_1: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53804:5: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53825:5: warning: Added loop label VITIS_LOOP_724_1:   [xilinx-label-all-loops]
+    for (int ii = 0; ii < CONFIG_T::n_in; ii++) {
+    ^~~
+    VITIS_LOOP_724_1: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53825:5: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53843:5: warning: Added loop label VITIS_LOOP_742_1:   [xilinx-label-all-loops]
+    for (int ii = 0; ii < CONFIG_T::n_in; ii++) {
+    ^~~
+    VITIS_LOOP_742_1: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53843:5: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53863:5: warning: Added loop label VITIS_LOOP_762_1:   [xilinx-label-all-loops]
+    for (int ii = 0; ii < CONFIG_T::n_in; ii++) {
+    ^~~
+    VITIS_LOOP_762_1: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53863:5: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53959:9: warning: Added loop label VITIS_LOOP_73_1:   [xilinx-label-all-loops]
+        for (int i = 0; i < N / data_T::size; i++) {
+        ^~~
+        VITIS_LOOP_73_1: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53959:9: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53966:13: warning: Added loop label VITIS_LOOP_80_2:   [xilinx-label-all-loops]
+            for (int j = 0; j < data_T::size; j++) {
+            ^~~
+            VITIS_LOOP_80_2: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53966:13: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53975:9: warning: Added loop label VITIS_LOOP_89_3:   [xilinx-label-all-loops]
+        for (int i = 0; i < N / data_T::size; i++) {
+        ^~~
+        VITIS_LOOP_89_3: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53975:9: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53984:13: warning: Added loop label VITIS_LOOP_98_4:   [xilinx-label-all-loops]
+            for (int j = 0; j < pack_diff; j++) {
+            ^~~
+            VITIS_LOOP_98_4: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53984:13: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53988:17: warning: Added loop label VITIS_LOOP_102_5:   [xilinx-label-all-loops]
+                for (int k = 0; k < res_T::size; k++) {
+                ^~~
+                VITIS_LOOP_102_5: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53988:17: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53999:9: warning: Added loop label VITIS_LOOP_113_6:   [xilinx-label-all-loops]
+        for (int i = 0; i < N / data_T::size; i++) {
+        ^~~
+        VITIS_LOOP_113_6: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:53999:9: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:54003:13: warning: Added loop label VITIS_LOOP_117_7:   [xilinx-label-all-loops]
+            for (int j = 0; j < data_T::size; j++) {
+            ^~~
+            VITIS_LOOP_117_7: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:54003:13: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:54027:9: warning: Added loop label VITIS_LOOP_141_1:   [xilinx-label-all-loops]
+        for (int j = 0; j < n_dupl; j++) {
+        ^~~
+        VITIS_LOOP_141_1: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:54027:9: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:54031:13: warning: Added loop label VITIS_LOOP_145_2:   [xilinx-label-all-loops]
+            for (int k = 0; k < res_T::size; k++) {
+            ^~~
+            VITIS_LOOP_145_2: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:54031:13: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:54050:9: warning: Added loop label VITIS_LOOP_164_1:   [xilinx-label-all-loops]
+        for (int k = 0; k < res_T::size; k++) {
+        ^~~
+        VITIS_LOOP_164_1: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:54050:9: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:54073:2: warning: Added loop label VITIS_LOOP_187_1:   [xilinx-label-all-loops]
+ for (int i = 0; i < CONFIG_T::height * CONFIG_T::width / data_T::size; i++) {
+ ^~~
+ VITIS_LOOP_187_1: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:54073:2: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:54076:9: warning: Added loop label VITIS_LOOP_190_2:   [xilinx-label-all-loops]
+        for (int j = 0; j < data_T::size; j++) {
+        ^~~
+        VITIS_LOOP_190_2: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:54076:9: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:54081:5: warning: Added loop label VITIS_LOOP_195_3:   [xilinx-label-all-loops]
+    for (int i = 0; i < CONFIG_T::height * CONFIG_T::width / res_T::size; i++) {
+    ^~~
+    VITIS_LOOP_195_3: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:54081:5: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:54085:9: warning: Added loop label VITIS_LOOP_199_4:   [xilinx-label-all-loops]
+        for (int j = 0; j < res_T::size; j++) {
+        ^~~
+        VITIS_LOOP_199_4: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:54085:9: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:54299:9: warning: Added loop label VITIS_LOOP_213_1:   [xilinx-label-all-loops]
+        for (unsigned j = 0; j < data_T::size; j++) {
+        ^~~
+        VITIS_LOOP_213_1: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:54299:9: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:54308:9: warning: Added loop label VITIS_LOOP_222_2:   [xilinx-label-all-loops]
+        for (unsigned j = 0; j < data_T::size; j++) {
+        ^~~
+        VITIS_LOOP_222_2: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:54308:9: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:54414:5: warning: Added loop label VITIS_LOOP_328_1:   [xilinx-label-all-loops]
+    for (int i = 0; i < CONFIG_T::n_in / res_T::size; i++) {
+    ^~~
+    VITIS_LOOP_328_1: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:54414:5: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:54419:9: warning: Added loop label VITIS_LOOP_333_2:   [xilinx-label-all-loops]
+        for (int i = 0; i < res_T::size; i++) {
+        ^~~
+        VITIS_LOOP_333_2: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:54419:9: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:54427:9: warning: Added loop label VITIS_LOOP_341_3:   [xilinx-label-all-loops]
+        for (int i = 1; i < res_T::size; i++) {
+        ^~~
+        VITIS_LOOP_341_3: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:54427:9: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:55367:5: warning: Added loop label VITIS_LOOP_14_1:   [xilinx-label-all-loops]
+    for (unsigned k = 0; k < CONFIG_T::n_out; k++) {
+    ^~~
+    VITIS_LOOP_14_1: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:55367:5: note: FIX-IT applied suggested code changes
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:55427:9: warning: Added loop label VITIS_LOOP_74_1:   [xilinx-label-all-loops]
+        for (int im = 0; im < CONFIG_T::n_out; im++) {
+        ^~~
+        VITIS_LOOP_74_1: 
+C:\Users\Vansh\AppData\Roaming\Xilinx\Vivado\encoder_hls\solution1\.autopilot\db\encoder.pp.0.cpp:55427:9: note: FIX-IT applied suggested code changes

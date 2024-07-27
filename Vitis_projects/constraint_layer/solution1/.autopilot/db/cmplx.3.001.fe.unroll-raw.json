@@ -1,0 +1,44 @@
+{
+  "0": {
+    "basicblocks": 64,
+    "calls": "2",
+    "file": "constraint_layer.cpp",
+    "fileloc": 4,
+    "instructions": 140,
+    "loads": {
+      "G": 6,
+      "L": 1,
+      "T": 6
+    },
+    "name": "constraint_layer_top",
+    "stores": {
+      "G": 2,
+      "T": 2
+    },
+    "total_instructions": 472
+  },
+  "1": {
+    "basicblocks": 87,
+    "calls": "",
+    "file": "fxp_sqrt.h",
+    "fileloc": 71,
+    "instructions": 330,
+    "loads": {
+      "G": 1
+    },
+    "name": "fxp_sqrt<8, 4, 16, 6>",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 330
+  },
+  "2": {
+    "basicblocks": 1,
+    "calls": "1",
+    "file": "fxp_sqrt_top.cpp",
+    "fileloc": 20,
+    "instructions": 2,
+    "name": "fxp_sqrt_top",
+    "total_instructions": 332
+  }
+}

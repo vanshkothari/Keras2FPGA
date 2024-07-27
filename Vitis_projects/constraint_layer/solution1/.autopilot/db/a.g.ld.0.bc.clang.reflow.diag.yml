@@ -1,0 +1,83 @@
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ../../../../vck/NN_on_FPGA/constraint_layer_src/fxp_sqrt.h, 
+                   Line: 89, Column: 22 }
+Function:        _Z8fxp_sqrtILi8ELi4ELi16ELi6EEvR9ap_ufixedIXT_EXT0_EL9ap_q_mode5EL9ap_o_mode3ELi0EERS0_IXT1_EXT2_ELS1_5ELS2_3ELi0EE
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_89_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../../../../vck/NN_on_FPGA/constraint_layer_src/fxp_sqrt.h, 
+                   Line: 71, Column: 0 }
+Function:        _Z8fxp_sqrtILi8ELi4ELi16ELi6EEvR9ap_ufixedIXT_EXT0_EL9ap_q_mode5EL9ap_o_mode3ELi0EERS0_IXT1_EXT2_ELS1_5ELS2_3ELi0EE
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_89_1
+  - String:          ''' ('
+  - LoopLoc:         '../../../../vck/NN_on_FPGA/constraint_layer_src/fxp_sqrt.h:89:22'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          'fxp_sqrt<8, 4, 16, 6>'
+  - String:          ''' completely with a factor of '
+  - Factor:          '9'
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: ../../../../vck/NN_on_FPGA/constraint_layer_src/constraint_layer.cpp, 
+                   Line: 4, Column: 0 }
+Function:        _Z20constraint_layer_topP8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'fxp_sqrt_top(ap_ufixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: ../../../../vck/NN_on_FPGA/constraint_layer_src/fxp_sqrt_top.cpp, 
+                       Line: 20, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'constraint_layer_top(ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>*)'
+    DebugLoc:        { File: ../../../../vck/NN_on_FPGA/constraint_layer_src/constraint_layer.cpp, 
+                       Line: 4, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ../../../../vck/NN_on_FPGA/constraint_layer_src/constraint_layer.cpp, 
+                   Line: 4, Column: 0 }
+Function:        _Z20constraint_layer_topP8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          encoded_input
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ../../../../vck/NN_on_FPGA/constraint_layer_src/constraint_layer.cpp, 
+                   Line: 4, Column: 0 }
+Function:        _Z20constraint_layer_topP8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          encoded_output
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...

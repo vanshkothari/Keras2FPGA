@@ -1,0 +1,328 @@
+
+
+================================================================
+== Vitis HLS Report for 'dense_latency_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config4_s'
+================================================================
+* Date:           Sun Jul 21 18:31:33 2024
+
+* Version:        2024.1 (Build 5069499 on May 21 2024)
+* Project:        encoder_hls
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: artix7
+* Target device:  xc7a35t-cpg236-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.496 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |        9|        9|  90.000 ns|  90.000 ns|    8|    8|      yes|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 1
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 8, depth = 10
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 10
+* Pipeline : 1
+  Pipeline-0 : II = 8, D = 10, States = { 1 2 3 4 5 6 7 8 9 10 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 5.57>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%data_15_val_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %data_15_val" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_mult.h:70->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 11 'read' 'data_15_val_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%data_14_val_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %data_14_val" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_mult.h:70->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 12 'read' 'data_14_val_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%sext_ln73_4 = sext i16 %data_14_val_read" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_mult.h:73->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 13 'sext' 'sext_ln73_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (5.57ns)   --->   "%mul_ln42_24 = mul i26 %sext_ln73_4, i26 67107392" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 14 'mul' 'mul_ln42_24' <Predicate = true> <Delay = 5.57> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 5.57> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%trunc_ln42_27 = partselect i16 @_ssdm_op_PartSelect.i16.i26.i32.i32, i26 %mul_ln42_24, i32 10, i32 25" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 15 'partselect' 'trunc_ln42_27' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (5.57ns)   --->   "%mul_ln42_25 = mul i26 %sext_ln73_4, i26 67107154" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 16 'mul' 'mul_ln42_25' <Predicate = true> <Delay = 5.57> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 5.57> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%trunc_ln42_28 = partselect i16 @_ssdm_op_PartSelect.i16.i26.i32.i32, i26 %mul_ln42_25, i32 10, i32 25" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 17 'partselect' 'trunc_ln42_28' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%sext_ln70_3 = sext i16 %data_15_val_read" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_mult.h:70->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 18 'sext' 'sext_ln70_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%sext_ln42_7 = sext i16 %data_15_val_read" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 19 'sext' 'sext_ln42_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (5.57ns)   --->   "%mul_ln42_26 = mul i26 %sext_ln42_7, i26 1386" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 20 'mul' 'mul_ln42_26' <Predicate = true> <Delay = 5.57> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 5.57> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%trunc_ln42_29 = partselect i16 @_ssdm_op_PartSelect.i16.i26.i32.i32, i26 %mul_ln42_26, i32 10, i32 25" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 21 'partselect' 'trunc_ln42_29' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (5.57ns)   --->   "%mul_ln73_3 = mul i25 %sext_ln70_3, i25 33554181" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_mult.h:73->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 22 'mul' 'mul_ln73_3' <Predicate = true> <Delay = 5.57> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 5.57> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%trunc_ln42_30 = partselect i15 @_ssdm_op_PartSelect.i15.i25.i32.i32, i25 %mul_ln73_3, i32 10, i32 24" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 23 'partselect' 'trunc_ln42_30' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 5.57>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%data_13_val_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %data_13_val" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_mult.h:70->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 24 'read' 'data_13_val_read' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%data_12_val_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %data_12_val" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_mult.h:70->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 25 'read' 'data_12_val_read' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%data_0_val_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %data_0_val" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_mult.h:70->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 26 'read' 'data_0_val_read' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%sext_ln70 = sext i16 %data_0_val_read" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_mult.h:70->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 27 'sext' 'sext_ln70' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 28 [1/1] (5.57ns)   --->   "%mul_ln42 = mul i26 %sext_ln70, i26 67107689" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 28 'mul' 'mul_ln42' <Predicate = true> <Delay = 5.57> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 5.57> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 29 [1/1] (0.00ns)   --->   "%trunc_ln = partselect i16 @_ssdm_op_PartSelect.i16.i26.i32.i32, i26 %mul_ln42, i32 10, i32 25" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 29 'partselect' 'trunc_ln' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 30 [1/1] (0.00ns)   --->   "%sext_ln70_2 = sext i16 %data_12_val_read" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_mult.h:70->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 30 'sext' 'sext_ln70_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 31 [1/1] (5.57ns)   --->   "%mul_ln42_22 = mul i26 %sext_ln70_2, i26 786" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 31 'mul' 'mul_ln42_22' <Predicate = true> <Delay = 5.57> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 5.57> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 32 [1/1] (0.00ns)   --->   "%trunc_ln42_23 = partselect i16 @_ssdm_op_PartSelect.i16.i26.i32.i32, i26 %mul_ln42_22, i32 10, i32 25" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 32 'partselect' 'trunc_ln42_23' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 33 [1/1] (5.57ns)   --->   "%mul_ln73_2 = mul i26 %sext_ln70_2, i26 269" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_mult.h:73->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 33 'mul' 'mul_ln73_2' <Predicate = true> <Delay = 5.57> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 5.57> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 34 [1/1] (0.00ns)   --->   "%trunc_ln42_24 = partselect i16 @_ssdm_op_PartSelect.i16.i26.i32.i32, i26 %mul_ln73_2, i32 10, i32 25" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 34 'partselect' 'trunc_ln42_24' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 35 [1/1] (0.00ns)   --->   "%sext_ln42_6 = sext i16 %data_13_val_read" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 35 'sext' 'sext_ln42_6' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 36 [1/1] (5.57ns)   --->   "%mul_ln42_23 = mul i26 %sext_ln42_6, i26 67105862" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 36 'mul' 'mul_ln42_23' <Predicate = true> <Delay = 5.57> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 5.57> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 37 [1/1] (0.00ns)   --->   "%trunc_ln42_26 = partselect i16 @_ssdm_op_PartSelect.i16.i26.i32.i32, i26 %mul_ln42_23, i32 10, i32 25" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 37 'partselect' 'trunc_ln42_26' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 38 [1/1] (0.00ns)   --->   "%sext_ln42_8 = sext i15 %trunc_ln42_30" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 38 'sext' 'sext_ln42_8' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 39 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln58_122 = add i16 %trunc_ln42_29, i16 868" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:58]   --->   Operation 39 'add' 'add_ln58_122' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.01> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 40 [1/1] (4.03ns) (root node of TernaryAdder)   --->   "%add_ln58_123 = add i16 %add_ln58_122, i16 %trunc_ln42_27" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:58]   --->   Operation 40 'add' 'add_ln58_123' <Predicate = true> <Delay = 4.03> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.01> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 41 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln58_138 = add i16 %sext_ln42_8, i16 1515" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:58]   --->   Operation 41 'add' 'add_ln58_138' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.01> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 42 [1/1] (4.03ns) (root node of TernaryAdder)   --->   "%add_ln58_139 = add i16 %add_ln58_138, i16 %trunc_ln42_28" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:58]   --->   Operation 42 'add' 'add_ln58_139' <Predicate = true> <Delay = 4.03> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.01> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+
+State 3 <SV = 2> <Delay = 6.49>
+ST_3 : Operation 43 [1/1] (0.00ns)   --->   "%data_2_val_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %data_2_val" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_mult.h:70->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 43 'read' 'data_2_val_read' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 44 [1/1] (0.00ns)   --->   "%data_1_val_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %data_1_val" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_mult.h:70->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 44 'read' 'data_1_val_read' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 45 [1/1] (5.57ns)   --->   "%mul_ln73 = mul i26 %sext_ln70, i26 303" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_mult.h:73->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 45 'mul' 'mul_ln73' <Predicate = true> <Delay = 5.57> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 5.57> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 46 [1/1] (0.00ns)   --->   "%trunc_ln42_1 = partselect i16 @_ssdm_op_PartSelect.i16.i26.i32.i32, i26 %mul_ln73, i32 10, i32 25" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 46 'partselect' 'trunc_ln42_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 47 [1/1] (0.00ns)   --->   "%sext_ln73 = sext i16 %data_1_val_read" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_mult.h:73->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 47 'sext' 'sext_ln73' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 48 [1/1] (5.57ns)   --->   "%mul_ln42_1 = mul i26 %sext_ln73, i26 1991" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 48 'mul' 'mul_ln42_1' <Predicate = true> <Delay = 5.57> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 5.57> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 49 [1/1] (0.00ns)   --->   "%trunc_ln42_2 = partselect i16 @_ssdm_op_PartSelect.i16.i26.i32.i32, i26 %mul_ln42_1, i32 10, i32 25" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 49 'partselect' 'trunc_ln42_2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 50 [1/1] (5.57ns)   --->   "%mul_ln42_2 = mul i26 %sext_ln73, i26 67107058" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 50 'mul' 'mul_ln42_2' <Predicate = true> <Delay = 5.57> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 5.57> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 51 [1/1] (0.00ns)   --->   "%trunc_ln42_3 = partselect i16 @_ssdm_op_PartSelect.i16.i26.i32.i32, i26 %mul_ln42_2, i32 10, i32 25" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 51 'partselect' 'trunc_ln42_3' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 52 [1/1] (0.00ns)   --->   "%sext_ln73_1 = sext i16 %data_2_val_read" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_mult.h:73->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 52 'sext' 'sext_ln73_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 53 [1/1] (5.57ns)   --->   "%mul_ln42_3 = mul i26 %sext_ln73_1, i26 67106290" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 53 'mul' 'mul_ln42_3' <Predicate = true> <Delay = 5.57> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 5.57> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 54 [1/1] (0.00ns)   --->   "%trunc_ln42_4 = partselect i16 @_ssdm_op_PartSelect.i16.i26.i32.i32, i26 %mul_ln42_3, i32 10, i32 25" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 54 'partselect' 'trunc_ln42_4' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 55 [1/1] (0.00ns)   --->   "%tmp = bitconcatenate i25 @_ssdm_op_BitConcatenate.i25.i16.i9, i16 %data_13_val_read, i9 0" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_mult.h:73->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 55 'bitconcatenate' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 56 [1/1] (0.00ns)   --->   "%sext_ln73_5 = sext i25 %tmp" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_mult.h:73->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 56 'sext' 'sext_ln73_5' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 57 [1/1] (0.00ns)   --->   "%tmp_1 = bitconcatenate i21 @_ssdm_op_BitConcatenate.i21.i16.i5, i16 %data_13_val_read, i5 0" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_mult.h:73->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 57 'bitconcatenate' 'tmp_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 58 [1/1] (0.00ns)   --->   "%sext_ln73_6 = sext i21 %tmp_1" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_mult.h:73->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 58 'sext' 'sext_ln73_6' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 59 [1/1] (2.45ns)   --->   "%sub_ln73 = sub i26 %sext_ln73_6, i26 %sext_ln73_5" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_mult.h:73->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 59 'sub' 'sub_ln73' <Predicate = true> <Delay = 2.45> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.45> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 60 [1/1] (0.00ns)   --->   "%trunc_ln42_25 = partselect i16 @_ssdm_op_PartSelect.i16.i26.i32.i32, i26 %sub_ln73, i32 10, i32 25" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 60 'partselect' 'trunc_ln42_25' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 61 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln58_121 = add i16 %trunc_ln42_23, i16 %trunc_ln42_25" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:58]   --->   Operation 61 'add' 'add_ln58_121' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.01> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 62 [1/1] (4.03ns) (root node of TernaryAdder)   --->   "%add_ln58_124 = add i16 %add_ln58_123, i16 %add_ln58_121" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:58]   --->   Operation 62 'add' 'add_ln58_124' <Predicate = true> <Delay = 4.03> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.01> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 63 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln58_137 = add i16 %trunc_ln42_24, i16 %trunc_ln42_26" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:58]   --->   Operation 63 'add' 'add_ln58_137' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.01> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 64 [1/1] (4.03ns) (root node of TernaryAdder)   --->   "%add_ln58_140 = add i16 %add_ln58_139, i16 %add_ln58_137" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:58]   --->   Operation 64 'add' 'add_ln58_140' <Predicate = true> <Delay = 4.03> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.01> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+
+State 4 <SV = 3> <Delay = 5.57>
+ST_4 : Operation 65 [1/1] (0.00ns)   --->   "%data_4_val_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %data_4_val" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_mult.h:70->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 65 'read' 'data_4_val_read' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 66 [1/1] (0.00ns)   --->   "%data_3_val_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %data_3_val" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_mult.h:70->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 66 'read' 'data_3_val_read' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 67 [1/1] (5.57ns)   --->   "%mul_ln42_4 = mul i26 %sext_ln73_1, i26 67106368" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 67 'mul' 'mul_ln42_4' <Predicate = true> <Delay = 5.57> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 5.57> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 68 [1/1] (0.00ns)   --->   "%trunc_ln42_5 = partselect i16 @_ssdm_op_PartSelect.i16.i26.i32.i32, i26 %mul_ln42_4, i32 10, i32 25" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 68 'partselect' 'trunc_ln42_5' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 69 [1/1] (0.00ns)   --->   "%sext_ln42 = sext i16 %data_3_val_read" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 69 'sext' 'sext_ln42' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 70 [1/1] (5.57ns)   --->   "%mul_ln42_5 = mul i26 %sext_ln42, i26 1631" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 70 'mul' 'mul_ln42_5' <Predicate = true> <Delay = 5.57> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 5.57> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 71 [1/1] (0.00ns)   --->   "%trunc_ln42_6 = partselect i16 @_ssdm_op_PartSelect.i16.i26.i32.i32, i26 %mul_ln42_5, i32 10, i32 25" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 71 'partselect' 'trunc_ln42_6' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 72 [1/1] (5.57ns)   --->   "%mul_ln42_6 = mul i26 %sext_ln42, i26 2092" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 72 'mul' 'mul_ln42_6' <Predicate = true> <Delay = 5.57> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 5.57> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 73 [1/1] (0.00ns)   --->   "%trunc_ln42_7 = partselect i16 @_ssdm_op_PartSelect.i16.i26.i32.i32, i26 %mul_ln42_6, i32 10, i32 25" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 73 'partselect' 'trunc_ln42_7' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 74 [1/1] (0.00ns)   --->   "%sext_ln70_1 = sext i16 %data_4_val_read" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_mult.h:70->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 74 'sext' 'sext_ln70_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 75 [1/1] (5.57ns)   --->   "%mul_ln42_7 = mul i26 %sext_ln70_1, i26 67107945" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 75 'mul' 'mul_ln42_7' <Predicate = true> <Delay = 5.57> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 5.57> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 76 [1/1] (0.00ns)   --->   "%trunc_ln42_8 = partselect i16 @_ssdm_op_PartSelect.i16.i26.i32.i32, i26 %mul_ln42_7, i32 10, i32 25" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 76 'partselect' 'trunc_ln42_8' <Predicate = true> <Delay = 0.00>
+
+State 5 <SV = 4> <Delay = 6.18>
+ST_5 : Operation 77 [1/1] (0.00ns)   --->   "%data_6_val_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %data_6_val" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_mult.h:70->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 77 'read' 'data_6_val_read' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 78 [1/1] (0.00ns)   --->   "%data_5_val_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %data_5_val" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_mult.h:70->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 78 'read' 'data_5_val_read' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 79 [1/1] (5.57ns)   --->   "%mul_ln73_1 = mul i26 %sext_ln70_1, i26 458" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_mult.h:73->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 79 'mul' 'mul_ln73_1' <Predicate = true> <Delay = 5.57> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 5.57> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 80 [1/1] (0.00ns)   --->   "%trunc_ln42_9 = partselect i16 @_ssdm_op_PartSelect.i16.i26.i32.i32, i26 %mul_ln73_1, i32 10, i32 25" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 80 'partselect' 'trunc_ln42_9' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 81 [1/1] (0.00ns)   --->   "%sext_ln42_1 = sext i16 %data_5_val_read" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 81 'sext' 'sext_ln42_1' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 82 [1/1] (5.57ns)   --->   "%mul_ln42_8 = mul i26 %sext_ln42_1, i26 67106415" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 82 'mul' 'mul_ln42_8' <Predicate = true> <Delay = 5.57> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 5.57> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 83 [1/1] (0.00ns)   --->   "%trunc_ln42_10 = partselect i16 @_ssdm_op_PartSelect.i16.i26.i32.i32, i26 %mul_ln42_8, i32 10, i32 25" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 83 'partselect' 'trunc_ln42_10' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 84 [1/1] (5.57ns)   --->   "%mul_ln42_9 = mul i26 %sext_ln42_1, i26 1544" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 84 'mul' 'mul_ln42_9' <Predicate = true> <Delay = 5.57> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 5.57> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 85 [1/1] (0.00ns)   --->   "%trunc_ln42_11 = partselect i16 @_ssdm_op_PartSelect.i16.i26.i32.i32, i26 %mul_ln42_9, i32 10, i32 25" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 85 'partselect' 'trunc_ln42_11' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 86 [1/1] (0.00ns)   --->   "%sext_ln42_2 = sext i16 %data_6_val_read" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 86 'sext' 'sext_ln42_2' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 87 [1/1] (5.57ns)   --->   "%mul_ln42_10 = mul i26 %sext_ln42_2, i26 1879" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 87 'mul' 'mul_ln42_10' <Predicate = true> <Delay = 5.57> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 5.57> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 88 [1/1] (0.00ns)   --->   "%trunc_ln42_12 = partselect i16 @_ssdm_op_PartSelect.i16.i26.i32.i32, i26 %mul_ln42_10, i32 10, i32 25" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 88 'partselect' 'trunc_ln42_12' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 89 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln58 = add i16 %trunc_ln, i16 %trunc_ln42_2" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:58]   --->   Operation 89 'add' 'add_ln58' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.01> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 90 [1/1] (2.14ns)   --->   "%add_ln58_112 = add i16 %trunc_ln42_4, i16 %trunc_ln42_6" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:58]   --->   Operation 90 'add' 'add_ln58_112' <Predicate = true> <Delay = 2.14> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.14> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 91 [1/1] (4.03ns) (root node of TernaryAdder)   --->   "%add_ln58_113 = add i16 %add_ln58_112, i16 %add_ln58" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:58]   --->   Operation 91 'add' 'add_ln58_113' <Predicate = true> <Delay = 4.03> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.01> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 92 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln58_127 = add i16 %trunc_ln42_1, i16 %trunc_ln42_3" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:58]   --->   Operation 92 'add' 'add_ln58_127' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.01> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 93 [1/1] (2.14ns)   --->   "%add_ln58_128 = add i16 %trunc_ln42_5, i16 %trunc_ln42_7" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:58]   --->   Operation 93 'add' 'add_ln58_128' <Predicate = true> <Delay = 2.14> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.14> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 94 [1/1] (4.03ns) (root node of TernaryAdder)   --->   "%add_ln58_129 = add i16 %add_ln58_128, i16 %add_ln58_127" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:58]   --->   Operation 94 'add' 'add_ln58_129' <Predicate = true> <Delay = 4.03> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.01> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+
+State 6 <SV = 5> <Delay = 5.57>
+ST_6 : Operation 95 [1/1] (0.00ns)   --->   "%data_8_val_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %data_8_val" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_mult.h:70->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 95 'read' 'data_8_val_read' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 96 [1/1] (0.00ns)   --->   "%data_7_val_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %data_7_val" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_mult.h:70->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 96 'read' 'data_7_val_read' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 97 [1/1] (5.57ns)   --->   "%mul_ln42_11 = mul i26 %sext_ln42_2, i26 67106624" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 97 'mul' 'mul_ln42_11' <Predicate = true> <Delay = 5.57> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 5.57> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 98 [1/1] (0.00ns)   --->   "%trunc_ln42_13 = partselect i16 @_ssdm_op_PartSelect.i16.i26.i32.i32, i26 %mul_ln42_11, i32 10, i32 25" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 98 'partselect' 'trunc_ln42_13' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 99 [1/1] (0.00ns)   --->   "%sext_ln73_2 = sext i16 %data_7_val_read" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_mult.h:73->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 99 'sext' 'sext_ln73_2' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 100 [1/1] (5.57ns)   --->   "%mul_ln42_12 = mul i26 %sext_ln73_2, i26 67106743" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 100 'mul' 'mul_ln42_12' <Predicate = true> <Delay = 5.57> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 5.57> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 101 [1/1] (0.00ns)   --->   "%trunc_ln42_14 = partselect i16 @_ssdm_op_PartSelect.i16.i26.i32.i32, i26 %mul_ln42_12, i32 10, i32 25" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 101 'partselect' 'trunc_ln42_14' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 102 [1/1] (5.57ns)   --->   "%mul_ln42_13 = mul i26 %sext_ln73_2, i26 67106603" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 102 'mul' 'mul_ln42_13' <Predicate = true> <Delay = 5.57> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 5.57> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 103 [1/1] (0.00ns)   --->   "%trunc_ln42_s = partselect i16 @_ssdm_op_PartSelect.i16.i26.i32.i32, i26 %mul_ln42_13, i32 10, i32 25" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 103 'partselect' 'trunc_ln42_s' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 104 [1/1] (0.00ns)   --->   "%sext_ln42_3 = sext i16 %data_8_val_read" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 104 'sext' 'sext_ln42_3' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 105 [1/1] (5.57ns)   --->   "%mul_ln42_14 = mul i26 %sext_ln42_3, i26 830" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 105 'mul' 'mul_ln42_14' <Predicate = true> <Delay = 5.57> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 5.57> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 106 [1/1] (0.00ns)   --->   "%trunc_ln42_15 = partselect i16 @_ssdm_op_PartSelect.i16.i26.i32.i32, i26 %mul_ln42_14, i32 10, i32 25" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 106 'partselect' 'trunc_ln42_15' <Predicate = true> <Delay = 0.00>
+
+State 7 <SV = 6> <Delay = 6.18>
+ST_7 : Operation 107 [1/1] (0.00ns)   --->   "%data_10_val_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %data_10_val" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_mult.h:70->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 107 'read' 'data_10_val_read' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 108 [1/1] (0.00ns)   --->   "%data_9_val_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %data_9_val" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_mult.h:70->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 108 'read' 'data_9_val_read' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 109 [1/1] (5.57ns)   --->   "%mul_ln42_15 = mul i26 %sext_ln42_3, i26 67106122" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 109 'mul' 'mul_ln42_15' <Predicate = true> <Delay = 5.57> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 5.57> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 110 [1/1] (0.00ns)   --->   "%trunc_ln42_16 = partselect i16 @_ssdm_op_PartSelect.i16.i26.i32.i32, i26 %mul_ln42_15, i32 10, i32 25" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 110 'partselect' 'trunc_ln42_16' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 111 [1/1] (0.00ns)   --->   "%sext_ln42_4 = sext i16 %data_9_val_read" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 111 'sext' 'sext_ln42_4' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 112 [1/1] (5.57ns)   --->   "%mul_ln42_16 = mul i26 %sext_ln42_4, i26 67106084" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 112 'mul' 'mul_ln42_16' <Predicate = true> <Delay = 5.57> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 5.57> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 113 [1/1] (0.00ns)   --->   "%trunc_ln42_17 = partselect i16 @_ssdm_op_PartSelect.i16.i26.i32.i32, i26 %mul_ln42_16, i32 10, i32 25" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 113 'partselect' 'trunc_ln42_17' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 114 [1/1] (5.57ns)   --->   "%mul_ln42_17 = mul i26 %sext_ln42_4, i26 67107380" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 114 'mul' 'mul_ln42_17' <Predicate = true> <Delay = 5.57> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 5.57> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 115 [1/1] (0.00ns)   --->   "%trunc_ln42_18 = partselect i16 @_ssdm_op_PartSelect.i16.i26.i32.i32, i26 %mul_ln42_17, i32 10, i32 25" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 115 'partselect' 'trunc_ln42_18' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 116 [1/1] (0.00ns)   --->   "%sext_ln42_5 = sext i16 %data_10_val_read" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 116 'sext' 'sext_ln42_5' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 117 [1/1] (5.57ns)   --->   "%mul_ln42_18 = mul i26 %sext_ln42_5, i26 67106298" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 117 'mul' 'mul_ln42_18' <Predicate = true> <Delay = 5.57> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 5.57> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 118 [1/1] (0.00ns)   --->   "%trunc_ln42_19 = partselect i16 @_ssdm_op_PartSelect.i16.i26.i32.i32, i26 %mul_ln42_18, i32 10, i32 25" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 118 'partselect' 'trunc_ln42_19' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 119 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln58_114 = add i16 %trunc_ln42_8, i16 %trunc_ln42_10" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:58]   --->   Operation 119 'add' 'add_ln58_114' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.01> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 120 [1/1] (2.14ns)   --->   "%add_ln58_115 = add i16 %trunc_ln42_12, i16 %trunc_ln42_14" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:58]   --->   Operation 120 'add' 'add_ln58_115' <Predicate = true> <Delay = 2.14> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.14> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 121 [1/1] (4.03ns) (root node of TernaryAdder)   --->   "%add_ln58_116 = add i16 %add_ln58_115, i16 %add_ln58_114" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:58]   --->   Operation 121 'add' 'add_ln58_116' <Predicate = true> <Delay = 4.03> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.01> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 122 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln58_130 = add i16 %trunc_ln42_9, i16 %trunc_ln42_11" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:58]   --->   Operation 122 'add' 'add_ln58_130' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.01> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 123 [1/1] (2.14ns)   --->   "%add_ln58_131 = add i16 %trunc_ln42_13, i16 %trunc_ln42_s" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:58]   --->   Operation 123 'add' 'add_ln58_131' <Predicate = true> <Delay = 2.14> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.14> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 124 [1/1] (4.03ns) (root node of TernaryAdder)   --->   "%add_ln58_132 = add i16 %add_ln58_131, i16 %add_ln58_130" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:58]   --->   Operation 124 'add' 'add_ln58_132' <Predicate = true> <Delay = 4.03> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.01> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+
+State 8 <SV = 7> <Delay = 5.57>
+ST_8 : Operation 125 [1/1] (0.00ns)   --->   "%data_11_val_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %data_11_val" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_mult.h:70->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 125 'read' 'data_11_val_read' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 126 [1/1] (5.57ns)   --->   "%mul_ln42_19 = mul i26 %sext_ln42_5, i26 725" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 126 'mul' 'mul_ln42_19' <Predicate = true> <Delay = 5.57> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 5.57> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 127 [1/1] (0.00ns)   --->   "%trunc_ln42_20 = partselect i16 @_ssdm_op_PartSelect.i16.i26.i32.i32, i26 %mul_ln42_19, i32 10, i32 25" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 127 'partselect' 'trunc_ln42_20' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 128 [1/1] (0.00ns)   --->   "%sext_ln73_3 = sext i16 %data_11_val_read" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_mult.h:73->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 128 'sext' 'sext_ln73_3' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 129 [1/1] (5.57ns)   --->   "%mul_ln42_20 = mul i26 %sext_ln73_3, i26 67107017" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 129 'mul' 'mul_ln42_20' <Predicate = true> <Delay = 5.57> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 5.57> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 130 [1/1] (0.00ns)   --->   "%trunc_ln42_21 = partselect i16 @_ssdm_op_PartSelect.i16.i26.i32.i32, i26 %mul_ln42_20, i32 10, i32 25" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 130 'partselect' 'trunc_ln42_21' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 131 [1/1] (5.57ns)   --->   "%mul_ln42_21 = mul i26 %sext_ln73_3, i26 67107369" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 131 'mul' 'mul_ln42_21' <Predicate = true> <Delay = 5.57> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 5.57> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 132 [1/1] (0.00ns)   --->   "%trunc_ln42_22 = partselect i16 @_ssdm_op_PartSelect.i16.i26.i32.i32, i26 %mul_ln42_21, i32 10, i32 25" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42]   --->   Operation 132 'partselect' 'trunc_ln42_22' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 133 [1/1] (2.14ns)   --->   "%add_ln58_118 = add i16 %trunc_ln42_15, i16 %trunc_ln42_17" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:58]   --->   Operation 133 'add' 'add_ln58_118' <Predicate = true> <Delay = 2.14> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.14> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 134 [1/1] (2.14ns)   --->   "%add_ln58_134 = add i16 %trunc_ln42_16, i16 %trunc_ln42_18" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:58]   --->   Operation 134 'add' 'add_ln58_134' <Predicate = true> <Delay = 2.14> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.14> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 6.18>
+ST_9 : Operation 135 [1/1] (2.14ns)   --->   "%add_ln58_119 = add i16 %trunc_ln42_19, i16 %trunc_ln42_21" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:58]   --->   Operation 135 'add' 'add_ln58_119' <Predicate = true> <Delay = 2.14> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.14> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 136 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln58_120 = add i16 %add_ln58_119, i16 %add_ln58_118" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:58]   --->   Operation 136 'add' 'add_ln58_120' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.01> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_9 : Operation 137 [1/1] (4.03ns) (root node of TernaryAdder)   --->   "%add_ln58_125 = add i16 %add_ln58_124, i16 %add_ln58_120" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:58]   --->   Operation 137 'add' 'add_ln58_125' <Predicate = true> <Delay = 4.03> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.01> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_9 : Operation 138 [1/1] (2.14ns)   --->   "%add_ln58_135 = add i16 %trunc_ln42_20, i16 %trunc_ln42_22" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:58]   --->   Operation 138 'add' 'add_ln58_135' <Predicate = true> <Delay = 2.14> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.14> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 139 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln58_136 = add i16 %add_ln58_135, i16 %add_ln58_134" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:58]   --->   Operation 139 'add' 'add_ln58_136' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.01> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_9 : Operation 140 [1/1] (4.03ns) (root node of TernaryAdder)   --->   "%add_ln58_141 = add i16 %add_ln58_140, i16 %add_ln58_136" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:58]   --->   Operation 140 'add' 'add_ln58_141' <Predicate = true> <Delay = 4.03> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.01> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+
+State 10 <SV = 9> <Delay = 4.03>
+ST_10 : Operation 141 [1/1] (0.00ns)   --->   "%specpipeline_ln33 = specpipeline void @_ssdm_op_SpecPipeline, i32 8, i32 0, i32 0, i32 0, void @empty_0" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:33]   --->   Operation 141 'specpipeline' 'specpipeline_ln33' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 142 [1/1] (0.00ns)   --->   "%specresourcelimit_ln33 = specresourcelimit void @_ssdm_op_SpecResourceLimit, i64 4, void @empty_1, void @empty_0, void @empty_0, void @empty_0" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:33]   --->   Operation 142 'specresourcelimit' 'specresourcelimit_ln33' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 143 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln58_117 = add i16 %add_ln58_116, i16 %add_ln58_113" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:58]   --->   Operation 143 'add' 'add_ln58_117' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.01> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_10 : Operation 144 [1/1] (4.03ns) (root node of TernaryAdder)   --->   "%add_ln58_126 = add i16 %add_ln58_125, i16 %add_ln58_117" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:58]   --->   Operation 144 'add' 'add_ln58_126' <Predicate = true> <Delay = 4.03> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.01> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_10 : Operation 145 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln58_133 = add i16 %add_ln58_132, i16 %add_ln58_129" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:58]   --->   Operation 145 'add' 'add_ln58_133' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.01> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_10 : Operation 146 [1/1] (4.03ns) (root node of TernaryAdder)   --->   "%add_ln58_142 = add i16 %add_ln58_141, i16 %add_ln58_133" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:58]   --->   Operation 146 'add' 'add_ln58_142' <Predicate = true> <Delay = 4.03> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.01> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_10 : Operation 147 [1/1] (0.00ns)   --->   "%mrv = insertvalue i32 <undef>, i16 %add_ln58_126" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:68]   --->   Operation 147 'insertvalue' 'mrv' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 148 [1/1] (0.00ns)   --->   "%mrv_1 = insertvalue i32 %mrv, i16 %add_ln58_142" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:68]   --->   Operation 148 'insertvalue' 'mrv_1' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 149 [1/1] (0.00ns)   --->   "%ret_ln68 = ret i32 %mrv_1" [../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:68]   --->   Operation 149 'ret' 'ret_ln68' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 5.570ns
+The critical path consists of the following:
+	wire read operation ('data_14_val_read', ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_mult.h:70->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42) on port 'data_14_val' (../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_mult.h:70->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42) [20]  (0.000 ns)
+	'mul' operation 26 bit ('mul_ln42_24', ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42) [110]  (5.570 ns)
+
+ <State 2>: 5.570ns
+The critical path consists of the following:
+	wire read operation ('data_0_val_read', ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_mult.h:70->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42) on port 'data_0_val' (../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_mult.h:70->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42) [34]  (0.000 ns)
+	'mul' operation 26 bit ('mul_ln42', ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42) [36]  (5.570 ns)
+
+ <State 3>: 6.496ns
+The critical path consists of the following:
+	'sub' operation 26 bit ('sub_ln73', ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_mult.h:73->../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42) [105]  (2.459 ns)
+	'add' operation 16 bit ('add_ln58_121', ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:58) [131]  (0.000 ns)
+	'add' operation 16 bit ('add_ln58_124', ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:58) [134]  (4.037 ns)
+
+ <State 4>: 5.570ns
+The critical path consists of the following:
+	'mul' operation 26 bit ('mul_ln42_4', ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42) [48]  (5.570 ns)
+
+ <State 5>: 6.183ns
+The critical path consists of the following:
+	'add' operation 16 bit ('add_ln58_112', ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:58) [122]  (2.146 ns)
+	'add' operation 16 bit ('add_ln58_113', ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:58) [123]  (4.037 ns)
+
+ <State 6>: 5.570ns
+The critical path consists of the following:
+	'mul' operation 26 bit ('mul_ln42_11', ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42) [68]  (5.570 ns)
+
+ <State 7>: 6.183ns
+The critical path consists of the following:
+	'add' operation 16 bit ('add_ln58_115', ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:58) [125]  (2.146 ns)
+	'add' operation 16 bit ('add_ln58_116', ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:58) [126]  (4.037 ns)
+
+ <State 8>: 5.570ns
+The critical path consists of the following:
+	'mul' operation 26 bit ('mul_ln42_19', ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:42) [88]  (5.570 ns)
+
+ <State 9>: 6.183ns
+The critical path consists of the following:
+	'add' operation 16 bit ('add_ln58_119', ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:58) [129]  (2.146 ns)
+	'add' operation 16 bit ('add_ln58_120', ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:58) [130]  (0.000 ns)
+	'add' operation 16 bit ('add_ln58_125', ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:58) [135]  (4.037 ns)
+
+ <State 10>: 4.037ns
+The critical path consists of the following:
+	'add' operation 16 bit ('add_ln58_117', ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:58) [127]  (0.000 ns)
+	'add' operation 16 bit ('add_ln58_126', ../../../../vck/NN_on_FPGA/encoder/encoder_hls/firmware/nnet_utils/nnet_dense_latency.h:58) [136]  (4.037 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A
